@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Copy of FreeRTOS823_LM3S1968_Lab8/Tasks/Task_ADCDriveServo.c&apos;" deleteContents="false" description="Delete resource &apos;Copy of FreeRTOS823_LM3S1968_Lab8/Tasks/Task_ADCDriveServo.c&apos;" element1="/Copy of FreeRTOS823_LM3S1968_Lab8/Tasks/Task_ADCDriveServo.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1479238919263"/>
+</session>

@@ -1,0 +1,123 @@
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:22:46 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+../Tasks/AsmCompute.asm                                              PAGE    1
+
+       1                    ;;*****************************************************************************
+       2                    ;;
+       3                    ;; Assembly language subroutine
+       4                    ;;
+       5                    ;; Author: Gary J. Minden
+       6                    ;; Organization: KU/EECS/EECS 388
+       7                    ;; Date: 2014-04-18
+       8                    ;; Version: 1.0
+       9                    ;;
+      10                    ;; Purpose: Assembly language subroutine
+      11                    ;;
+      12                    ;; Notes:
+      13                    ;;
+      14                    ;;*****************************************************************************
+      15                    ;;
+      16                    ;;
+      17                    ;; This subroutine computes a value based on four input arguments.
+      18                    ;; The arguments are assumed to be in CPU registers R0 - R3
+      19                    ;; (aka A1 - A4).
+      20                    ;; The result is returned in R0.
+      21                    ;;
+      22                    ;; Declare sections and external references
+      23                    
+      24                                    .global AsmCompute ; Declare entry point as a global symbol
+      25                    
+      26                    ;; No constant data
+      27                    ;; No variable allocation
+      28                    ;; Program instructions
+      29                    
+      30 00000000                           .text ; Program section
+      31                    
+      32 00000000           AsmCompute: ; Entry point
+      33                    
+      34                    ;;
+      35                    ;; Save necessary registers
+      36                    ;;
+      37                    ;; Since this subroutine does not use registers other than R0 - R3,
+      38                    ;; and we do not call another subroutine, we don't need to save
+      39                    ;; any registers.
+      40                    ;;
+      41                    ;;
+      42                    ;; Allocate local variables on the Stack
+      43                    ;;
+      44                    ;; Since this subroutine does not have local variables,
+      45                    ;; no Stack space need be allocated.
+      46                    ;;
+      47                    ;;
+      48                    ;; For demonstration, this subroutine computes R0 + R1 + R2 + R3
+      49                    ;; and returns the result in R0.
+      50                    ;;
+      51                    ;; You should replace the following three instructions with the
+      52                    ;; the instructions necessary to carry out your assigned
+      53                    ;; algebraic assignment statements.
+      54                    ;;
+      55                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:22:46 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+../Tasks/AsmCompute.asm                                              PAGE    2
+
+      56 00000000 B430              PUSH {R4,R5} ; [ORIG 16-BIT INS]
+      57                    
+      58 00000002 4604              MOV R4,R0 ; [ORIG 16-BIT INS]
+      59 00000004 4615              MOV R5,R2 ; [ORIG 16-BIT INS]
+      60                    
+      61 00000006 F401FB04          MUL R4,R1 ; [KEEP 32-BIT INS]
+      62 0000000a F503FB05          MUL R5,R3 ; [KEEP 32-BIT INS]
+      63                    
+      64 0000000e 1964              ADDS R4,R5                      ; store X value in R4 ; [ORIG 16-BIT INS]
+      65                                                                    ; no longer need value in R5
+      66                                                                    ; Equation no longer needs C
+      67                                                                    ; I can now use R2 as I please
+      68                    
+      69 00000010 460D              MOV R5,R1                       ; Load R5 with B (stored in R1) ; [ORIG 16-BIT INS]
+      70 00000012 0201F04F          MOV R2,#1                       ; I will use R2 as my incrementer starting at value 1 ; [KEEP 
+      71                    
+      72 00000016           Start:
+      73 00000016 4282              CMP R2,R0               ; Need to loop A (stored in R0) times ; [ORIG 16-BIT INS]
+      74                                                            ; does R2 (my incrementer) == A yet?
+      75 00000018 DA03              BGE Exit                ; greater than or equal to? EXIT ; [ORIG 16-BIT INS]
+      76 0000001a F501FB05          MUL R5,R1               ; Multiply value stored in R5 by B (stored in R1) ; [KEEP 32-BIT INS]
+      77 0000001e 1C52              ADDS R2,R2,#1   ; increment index ; [ORIG 16-BIT INS]
+      78 00000020 E7F9              B Start ; [ORIG 16-BIT INS]
+      79                    
+      80 00000022           Exit:
+      81 00000022 18ED              ADDS R5,R3                      ; Y now stored in R5 ; [ORIG 16-BIT INS]
+      82                                                                    ; X still stored in R4
+      83 00000024 2C00              CMP     R4,#0 ; [ORIG 16-BIT INS]
+      84 00000026 D003              BEQ X ; [ORIG 16-BIT INS]
+      85 00000028 E7FF              B       Y ; [ORIG 16-BIT INS]
+      86                    
+      87 0000002a           Y:
+      88 0000002a 0000F04F          MOV R0,#0 ; [KEEP 32-BIT INS]
+      89 0000002e E001              B Finished ; [ORIG 16-BIT INS]
+      90 00000030           X:
+      91 00000030 4628              MOV R0,R5 ; [ORIG 16-BIT INS]
+      92 00000032 E7FF              B Finished ; [ORIG 16-BIT INS]
+      93                    
+      94 00000034           Finished:
+      95                    
+      96 00000034 BC30              POP {R4,R5} ; [ORIG 16-BIT INS]
+      97                    
+      98                    ;; Return from the subroutine with the result in R0
+      99                    ;;
+     100                    
+     101 00000036 4770                      BX LR ; Branch to the program address in the Link Register ; [ORIG 16-BIT INS]
+     102                                    .end
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 18 (78%)
+Number of Thumb2 ins encoded as Thumb2 = 5 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 0
+
+
+No Assembly Errors, No Assembly Warnings

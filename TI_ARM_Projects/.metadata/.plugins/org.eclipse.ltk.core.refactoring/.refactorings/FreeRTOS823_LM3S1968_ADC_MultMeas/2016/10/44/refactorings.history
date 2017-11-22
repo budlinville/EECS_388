@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FreeRTOS823_LM3S1968_ADC_MultMeas/Tasks/Task_DisplayADCReadings.c&apos; to &apos;Task_DisplayADCReadingsPutty.c&apos;" description="Rename resource &apos;Task_DisplayADCReadings.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Tasks/Task_DisplayADCReadings.c" name="Task_DisplayADCReadingsPutty.c" stamp="1477415773730" updateReferences="true"/>
+</session>

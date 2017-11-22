@@ -1,0 +1,1552 @@
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                       PC v15.12.1.LTS *
+       3                    ;* Date/Time created: Tue Sep 13 14:24:38 2016                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Program_Speakerbuzz.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v15.12.1.LTS Copyright (c) 1996-2
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("H:\EECS_388\TI_ARM_Projects\Program_Speakerbuzz2\Debug")
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                            .dwattr $C$DW$1, DW_AT_name("SysCtlPeripheralReset")
+      16                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("SysCtlPeripheralReset")
+      17                            .dwattr $C$DW$1, DW_AT_declaration
+      18                            .dwattr $C$DW$1, DW_AT_external
+      19                            .dwattr $C$DW$1, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/sysctl.h
+      20                            .dwattr $C$DW$1, DW_AT_decl_line(0x24c)
+      21                            .dwattr $C$DW$1, DW_AT_decl_column(0x0d)
+      22                    $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      23                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$13)
+      24                    
+      25                            .dwendtag $C$DW$1
+      26                    
+      27                    
+      28                    $C$DW$3 .dwtag  DW_TAG_subprogram
+      29                            .dwattr $C$DW$3, DW_AT_name("SysCtlPeripheralEnable")
+      30                            .dwattr $C$DW$3, DW_AT_TI_symbol_name("SysCtlPeripheralEnable")
+      31                            .dwattr $C$DW$3, DW_AT_declaration
+      32                            .dwattr $C$DW$3, DW_AT_external
+      33                            .dwattr $C$DW$3, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/sysctl.h
+      34                            .dwattr $C$DW$3, DW_AT_decl_line(0x24d)
+      35                            .dwattr $C$DW$3, DW_AT_decl_column(0x0d)
+      36                    $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      37                            .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$13)
+      38                    
+      39                            .dwendtag $C$DW$3
+      40                    
+      41                    
+      42                    $C$DW$5 .dwtag  DW_TAG_subprogram
+      43                            .dwattr $C$DW$5, DW_AT_name("SysCtlPeripheralDisable")
+      44                            .dwattr $C$DW$5, DW_AT_TI_symbol_name("SysCtlPeripheralDisable")
+      45                            .dwattr $C$DW$5, DW_AT_declaration
+      46                            .dwattr $C$DW$5, DW_AT_external
+      47                            .dwattr $C$DW$5, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/sysctl.h
+      48                            .dwattr $C$DW$5, DW_AT_decl_line(0x24e)
+      49                            .dwattr $C$DW$5, DW_AT_decl_column(0x0d)
+      50                    $C$DW$6 .dwtag  DW_TAG_formal_parameter
+      51                            .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$13)
+      52                    
+      53                            .dwendtag $C$DW$5
+      54                    
+      55                    
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    2
+
+      56                    $C$DW$7 .dwtag  DW_TAG_subprogram
+      57                            .dwattr $C$DW$7, DW_AT_name("SysCtlClockSet")
+      58                            .dwattr $C$DW$7, DW_AT_TI_symbol_name("SysCtlClockSet")
+      59                            .dwattr $C$DW$7, DW_AT_declaration
+      60                            .dwattr $C$DW$7, DW_AT_external
+      61                            .dwattr $C$DW$7, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/sysctl.h
+      62                            .dwattr $C$DW$7, DW_AT_decl_line(0x267)
+      63                            .dwattr $C$DW$7, DW_AT_decl_column(0x0d)
+      64                    $C$DW$8 .dwtag  DW_TAG_formal_parameter
+      65                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$13)
+      66                    
+      67                            .dwendtag $C$DW$7
+      68                    
+      69                    
+      70                    $C$DW$9 .dwtag  DW_TAG_subprogram
+      71                            .dwattr $C$DW$9, DW_AT_name("SysCtlClockGet")
+      72                            .dwattr $C$DW$9, DW_AT_TI_symbol_name("SysCtlClockGet")
+      73                            .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$13)
+      74                            .dwattr $C$DW$9, DW_AT_declaration
+      75                            .dwattr $C$DW$9, DW_AT_external
+      76                            .dwattr $C$DW$9, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/sysctl.h
+      77                            .dwattr $C$DW$9, DW_AT_decl_line(0x268)
+      78                            .dwattr $C$DW$9, DW_AT_decl_column(0x16)
+      79                            .dwendtag $C$DW$9
+      80                    
+      81                    
+      82                    $C$DW$10        .dwtag  DW_TAG_subprogram
+      83                            .dwattr $C$DW$10, DW_AT_name("SysTickEnable")
+      84                            .dwattr $C$DW$10, DW_AT_TI_symbol_name("SysTickEnable")
+      85                            .dwattr $C$DW$10, DW_AT_declaration
+      86                            .dwattr $C$DW$10, DW_AT_external
+      87                            .dwattr $C$DW$10, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/systick
+      88                            .dwattr $C$DW$10, DW_AT_decl_line(0x3b)
+      89                            .dwattr $C$DW$10, DW_AT_decl_column(0x0d)
+      90                            .dwendtag $C$DW$10
+      91                    
+      92                    
+      93                    $C$DW$11        .dwtag  DW_TAG_subprogram
+      94                            .dwattr $C$DW$11, DW_AT_name("SysTickIntEnable")
+      95                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("SysTickIntEnable")
+      96                            .dwattr $C$DW$11, DW_AT_declaration
+      97                            .dwattr $C$DW$11, DW_AT_external
+      98                            .dwattr $C$DW$11, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/systick
+      99                            .dwattr $C$DW$11, DW_AT_decl_line(0x3f)
+     100                            .dwattr $C$DW$11, DW_AT_decl_column(0x0d)
+     101                            .dwendtag $C$DW$11
+     102                    
+     103                    
+     104                    $C$DW$12        .dwtag  DW_TAG_subprogram
+     105                            .dwattr $C$DW$12, DW_AT_name("SysTickPeriodSet")
+     106                            .dwattr $C$DW$12, DW_AT_TI_symbol_name("SysTickPeriodSet")
+     107                            .dwattr $C$DW$12, DW_AT_declaration
+     108                            .dwattr $C$DW$12, DW_AT_external
+     109                            .dwattr $C$DW$12, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/systick
+     110                            .dwattr $C$DW$12, DW_AT_decl_line(0x41)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    3
+
+     111                            .dwattr $C$DW$12, DW_AT_decl_column(0x0d)
+     112                    $C$DW$13        .dwtag  DW_TAG_formal_parameter
+     113                            .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$13)
+     114                    
+     115                            .dwendtag $C$DW$12
+     116                    
+     117                    
+     118                    $C$DW$14        .dwtag  DW_TAG_subprogram
+     119                            .dwattr $C$DW$14, DW_AT_name("GPIOPinRead")
+     120                            .dwattr $C$DW$14, DW_AT_TI_symbol_name("GPIOPinRead")
+     121                            .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$12)
+     122                            .dwattr $C$DW$14, DW_AT_declaration
+     123                            .dwattr $C$DW$14, DW_AT_external
+     124                            .dwattr $C$DW$14, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/gpio.h"
+     125                            .dwattr $C$DW$14, DW_AT_decl_line(0x8c)
+     126                            .dwattr $C$DW$14, DW_AT_decl_column(0x0d)
+     127                    $C$DW$15        .dwtag  DW_TAG_formal_parameter
+     128                            .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$13)
+     129                    
+     130                    $C$DW$16        .dwtag  DW_TAG_formal_parameter
+     131                            .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$6)
+     132                    
+     133                            .dwendtag $C$DW$14
+     134                    
+     135                    
+     136                    $C$DW$17        .dwtag  DW_TAG_subprogram
+     137                            .dwattr $C$DW$17, DW_AT_name("GPIOPinTypeGPIOInput")
+     138                            .dwattr $C$DW$17, DW_AT_TI_symbol_name("GPIOPinTypeGPIOInput")
+     139                            .dwattr $C$DW$17, DW_AT_declaration
+     140                            .dwattr $C$DW$17, DW_AT_external
+     141                            .dwattr $C$DW$17, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/gpio.h"
+     142                            .dwattr $C$DW$17, DW_AT_decl_line(0x97)
+     143                            .dwattr $C$DW$17, DW_AT_decl_column(0x0d)
+     144                    $C$DW$18        .dwtag  DW_TAG_formal_parameter
+     145                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$13)
+     146                    
+     147                    $C$DW$19        .dwtag  DW_TAG_formal_parameter
+     148                            .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$6)
+     149                    
+     150                            .dwendtag $C$DW$17
+     151                    
+     152                    
+     153                    $C$DW$20        .dwtag  DW_TAG_subprogram
+     154                            .dwattr $C$DW$20, DW_AT_name("RIT128x96x4StringDraw")
+     155                            .dwattr $C$DW$20, DW_AT_TI_symbol_name("RIT128x96x4StringDraw")
+     156                            .dwattr $C$DW$20, DW_AT_declaration
+     157                            .dwattr $C$DW$20, DW_AT_external
+     158                            .dwattr $C$DW$20, DW_AT_decl_file("..\Drivers/rit128x96x4.h")
+     159                            .dwattr $C$DW$20, DW_AT_decl_line(0x23)
+     160                            .dwattr $C$DW$20, DW_AT_decl_column(0x0d)
+     161                    $C$DW$21        .dwtag  DW_TAG_formal_parameter
+     162                            .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$31)
+     163                    
+     164                    $C$DW$22        .dwtag  DW_TAG_formal_parameter
+     165                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$13)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    4
+
+     166                    
+     167                    $C$DW$23        .dwtag  DW_TAG_formal_parameter
+     168                            .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$13)
+     169                    
+     170                    $C$DW$24        .dwtag  DW_TAG_formal_parameter
+     171                            .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$6)
+     172                    
+     173                            .dwendtag $C$DW$20
+     174                    
+     175                    
+     176                    $C$DW$25        .dwtag  DW_TAG_subprogram
+     177                            .dwattr $C$DW$25, DW_AT_name("RIT128x96x4ImageDraw")
+     178                            .dwattr $C$DW$25, DW_AT_TI_symbol_name("RIT128x96x4ImageDraw")
+     179                            .dwattr $C$DW$25, DW_AT_declaration
+     180                            .dwattr $C$DW$25, DW_AT_external
+     181                            .dwattr $C$DW$25, DW_AT_decl_file("..\Drivers/rit128x96x4.h")
+     182                            .dwattr $C$DW$25, DW_AT_decl_line(0x27)
+     183                            .dwattr $C$DW$25, DW_AT_decl_column(0x0d)
+     184                    $C$DW$26        .dwtag  DW_TAG_formal_parameter
+     185                            .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$35)
+     186                    
+     187                    $C$DW$27        .dwtag  DW_TAG_formal_parameter
+     188                            .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$13)
+     189                    
+     190                    $C$DW$28        .dwtag  DW_TAG_formal_parameter
+     191                            .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$13)
+     192                    
+     193                    $C$DW$29        .dwtag  DW_TAG_formal_parameter
+     194                            .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$13)
+     195                    
+     196                    $C$DW$30        .dwtag  DW_TAG_formal_parameter
+     197                            .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$13)
+     198                    
+     199                            .dwendtag $C$DW$25
+     200                    
+     201                    
+     202                    $C$DW$31        .dwtag  DW_TAG_subprogram
+     203                            .dwattr $C$DW$31, DW_AT_name("RIT128x96x4Init")
+     204                            .dwattr $C$DW$31, DW_AT_TI_symbol_name("RIT128x96x4Init")
+     205                            .dwattr $C$DW$31, DW_AT_declaration
+     206                            .dwattr $C$DW$31, DW_AT_external
+     207                            .dwattr $C$DW$31, DW_AT_decl_file("..\Drivers/rit128x96x4.h")
+     208                            .dwattr $C$DW$31, DW_AT_decl_line(0x2c)
+     209                            .dwattr $C$DW$31, DW_AT_decl_column(0x0d)
+     210                    $C$DW$32        .dwtag  DW_TAG_formal_parameter
+     211                            .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$13)
+     212                    
+     213                            .dwendtag $C$DW$31
+     214                    
+     215                    
+     216                    $C$DW$33        .dwtag  DW_TAG_subprogram
+     217                            .dwattr $C$DW$33, DW_AT_name("Task_LEDBlink")
+     218                            .dwattr $C$DW$33, DW_AT_TI_symbol_name("Task_LEDBlink")
+     219                            .dwattr $C$DW$33, DW_AT_declaration
+     220                            .dwattr $C$DW$33, DW_AT_external
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    5
+
+     221                            .dwattr $C$DW$33, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     222                            .dwattr $C$DW$33, DW_AT_decl_line(0x49)
+     223                            .dwattr $C$DW$33, DW_AT_decl_column(0x0d)
+     224                            .dwendtag $C$DW$33
+     225                    
+     226                    
+     227                    $C$DW$34        .dwtag  DW_TAG_subprogram
+     228                            .dwattr $C$DW$34, DW_AT_name("Task_ReportSysTick")
+     229                            .dwattr $C$DW$34, DW_AT_TI_symbol_name("Task_ReportSysTick")
+     230                            .dwattr $C$DW$34, DW_AT_declaration
+     231                            .dwattr $C$DW$34, DW_AT_external
+     232                            .dwattr $C$DW$34, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     233                            .dwattr $C$DW$34, DW_AT_decl_line(0x4a)
+     234                            .dwattr $C$DW$34, DW_AT_decl_column(0x0d)
+     235                            .dwendtag $C$DW$34
+     236                    
+     237                    
+     238                    $C$DW$35        .dwtag  DW_TAG_subprogram
+     239                            .dwattr $C$DW$35, DW_AT_name("Task_Speakerbuzz")
+     240                            .dwattr $C$DW$35, DW_AT_TI_symbol_name("Task_Speakerbuzz")
+     241                            .dwattr $C$DW$35, DW_AT_declaration
+     242                            .dwattr $C$DW$35, DW_AT_external
+     243                            .dwattr $C$DW$35, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     244                            .dwattr $C$DW$35, DW_AT_decl_line(0x4b)
+     245                            .dwattr $C$DW$35, DW_AT_decl_column(0x0d)
+     246                            .dwendtag $C$DW$35
+     247                    
+     248                            .global g_ulSystemClock
+     249                            .common g_ulSystemClock,4,4
+     250                    $C$DW$36        .dwtag  DW_TAG_variable
+     251                            .dwattr $C$DW$36, DW_AT_name("g_ulSystemClock")
+     252                            .dwattr $C$DW$36, DW_AT_TI_symbol_name("g_ulSystemClock")
+     253                            .dwattr $C$DW$36, DW_AT_location[DW_OP_addr g_ulSystemClock]
+     254                            .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$60)
+     255                            .dwattr $C$DW$36, DW_AT_external
+     256                            .dwattr $C$DW$36, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     257                            .dwattr $C$DW$36, DW_AT_decl_line(0x36)
+     258                            .dwattr $C$DW$36, DW_AT_decl_column(0x0a)
+     259                    
+     260                            .global SysTickFrequency_Nbr
+     261 00000000                   .data
+     262                            .align  4
+     263                            .elfsym SysTickFrequency_Nbr,SYM_SIZE(4)
+     264 00000000           SysTickFrequency_Nbr:
+     265 00000000 00002710          .bits   10000,32                        ; SysTickFrequency_Nbr @ 0
+     266                    
+     267                    $C$DW$37        .dwtag  DW_TAG_variable
+     268                            .dwattr $C$DW$37, DW_AT_name("SysTickFrequency_Nbr")
+     269                            .dwattr $C$DW$37, DW_AT_TI_symbol_name("SysTickFrequency_Nbr")
+     270                            .dwattr $C$DW$37, DW_AT_location[DW_OP_addr SysTickFrequency_Nbr]
+     271                            .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$60)
+     272                            .dwattr $C$DW$37, DW_AT_external
+     273                            .dwattr $C$DW$37, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     274                            .dwattr $C$DW$37, DW_AT_decl_line(0x41)
+     275                            .dwattr $C$DW$37, DW_AT_decl_column(0x14)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    6
+
+     276                    
+     277                            .global SysTickCount_Nbr
+     278 00000004                   .data
+     279                            .align  4
+     280                            .elfsym SysTickCount_Nbr,SYM_SIZE(4)
+     281 00000004           SysTickCount_Nbr:
+     282 00000004 00000000          .bits   0,32                    ; SysTickCount_Nbr @ 0
+     283                    
+     284                    $C$DW$38        .dwtag  DW_TAG_variable
+     285                            .dwattr $C$DW$38, DW_AT_name("SysTickCount_Nbr")
+     286                            .dwattr $C$DW$38, DW_AT_TI_symbol_name("SysTickCount_Nbr")
+     287                            .dwattr $C$DW$38, DW_AT_location[DW_OP_addr SysTickCount_Nbr]
+     288                            .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$61)
+     289                            .dwattr $C$DW$38, DW_AT_external
+     290                            .dwattr $C$DW$38, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     291                            .dwattr $C$DW$38, DW_AT_decl_line(0x42)
+     292                            .dwattr $C$DW$38, DW_AT_decl_column(0x1b)
+     293                    
+     294                            .global OLED_Initialized
+     295 00000008                   .data
+     296                            .align  1
+     297                            .elfsym OLED_Initialized,SYM_SIZE(1)
+     298 00000008           OLED_Initialized:
+     299 00000008 00000000          .bits   0,8                     ; OLED_Initialized @ 0
+     300                    
+     301                    $C$DW$39        .dwtag  DW_TAG_variable
+     302                            .dwattr $C$DW$39, DW_AT_name("OLED_Initialized")
+     303                            .dwattr $C$DW$39, DW_AT_TI_symbol_name("OLED_Initialized")
+     304                            .dwattr $C$DW$39, DW_AT_location[DW_OP_addr OLED_Initialized]
+     305                            .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$88)
+     306                            .dwattr $C$DW$39, DW_AT_external
+     307                            .dwattr $C$DW$39, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     308                            .dwattr $C$DW$39, DW_AT_decl_line(0x62)
+     309                            .dwattr $C$DW$39, DW_AT_decl_column(0x06)
+     310                    
+     311                    ;       C:\TI_CodeComposer\ccsv6\tools\compiler\ti-cgt-arm_15.12.1.LTS\bin\armacpia.exe -@C:\\Users\\a
+     312 00000000                   .sect   ".text"
+     313                            .clink
+     314                            .thumbfunc SysTickIntHandler
+     315 00000000                   .thumb
+     316                            .global SysTickIntHandler
+     317                    
+     318                    $C$DW$40        .dwtag  DW_TAG_subprogram
+     319                            .dwattr $C$DW$40, DW_AT_name("SysTickIntHandler")
+     320                            .dwattr $C$DW$40, DW_AT_low_pc(SysTickIntHandler)
+     321                            .dwattr $C$DW$40, DW_AT_high_pc(0x00)
+     322                            .dwattr $C$DW$40, DW_AT_TI_symbol_name("SysTickIntHandler")
+     323                            .dwattr $C$DW$40, DW_AT_external
+     324                            .dwattr $C$DW$40, DW_AT_TI_begin_file("../Program_Speakerbuzz.c")
+     325                            .dwattr $C$DW$40, DW_AT_TI_begin_line(0x52)
+     326                            .dwattr $C$DW$40, DW_AT_TI_begin_column(0x0d)
+     327                            .dwattr $C$DW$40, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     328                            .dwattr $C$DW$40, DW_AT_decl_line(0x52)
+     329                            .dwattr $C$DW$40, DW_AT_decl_column(0x0d)
+     330                            .dwattr $C$DW$40, DW_AT_TI_max_frame_size(0x00)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    7
+
+     331                            .dwpsn  file "../Program_Speakerbuzz.c",line 82,column 37,is_stmt,address SysTickIntHandler,is
+     332                    
+     333                            .dwfde $C$DW$CIE, SysTickIntHandler
+     334                    
+     335                    ;*****************************************************************************
+     336                    ;* FUNCTION NAME: SysTickIntHandler                                          *
+     337                    ;*                                                                           *
+     338                    ;*   Regs Modified     : A1,A2,SR                                            *
+     339                    ;*   Regs Used         : A1,A2,LR,SR                                         *
+     340                    ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     341                    ;*****************************************************************************
+     342 00000000           SysTickIntHandler:
+     343                    ;* --------------------------------------------------------------------------*
+     344                            .dwcfi  cfa_offset, 0
+     345                            .dwpsn  file "../Program_Speakerbuzz.c",line 88,column 2,is_stmt,isa 1
+     346 00000000 494C              LDR       A2, $C$CON1           ; [DPU_3_PIPE] |88|  ; [ORIG 16-BIT INS]
+     347 00000002 6808              LDR       A1, [A2, #0]          ; [DPU_3_PIPE] |88|  ; [ORIG 16-BIT INS]
+     348 00000004 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |88|  ; [ORIG 16-BIT INS]
+     349 00000006 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |88|  ; [ORIG 16-BIT INS]
+     350                            .dwpsn  file "../Program_Speakerbuzz.c",line 90,column 1,is_stmt,isa 1
+     351                    $C$DW$41        .dwtag  DW_TAG_TI_branch
+     352                            .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     353                            .dwattr $C$DW$41, DW_AT_TI_return
+     354                    
+     355 00000008 4770              BX        LR                    ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     356                            ; BRANCH OCCURS                  ; [] 
+     357                            .dwattr $C$DW$40, DW_AT_TI_end_file("../Program_Speakerbuzz.c")
+     358                            .dwattr $C$DW$40, DW_AT_TI_end_line(0x5a)
+     359                            .dwattr $C$DW$40, DW_AT_TI_end_column(0x01)
+     360                            .dwendentry
+     361                            .dwendtag $C$DW$40
+     362                    
+     363 0000000a                   .sect   ".text"
+     364                            .clink
+     365                            .thumbfunc Initialize_OLED
+     366 0000000a                   .thumb
+     367                            .global Initialize_OLED
+     368                    
+     369                    $C$DW$42        .dwtag  DW_TAG_subprogram
+     370                            .dwattr $C$DW$42, DW_AT_name("Initialize_OLED")
+     371                            .dwattr $C$DW$42, DW_AT_low_pc(Initialize_OLED)
+     372                            .dwattr $C$DW$42, DW_AT_high_pc(0x00)
+     373                            .dwattr $C$DW$42, DW_AT_TI_symbol_name("Initialize_OLED")
+     374                            .dwattr $C$DW$42, DW_AT_external
+     375                            .dwattr $C$DW$42, DW_AT_TI_begin_file("../Program_Speakerbuzz.c")
+     376                            .dwattr $C$DW$42, DW_AT_TI_begin_line(0x64)
+     377                            .dwattr $C$DW$42, DW_AT_TI_begin_column(0x0d)
+     378                            .dwattr $C$DW$42, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     379                            .dwattr $C$DW$42, DW_AT_decl_line(0x64)
+     380                            .dwattr $C$DW$42, DW_AT_decl_column(0x0d)
+     381                            .dwattr $C$DW$42, DW_AT_TI_max_frame_size(0x50)
+     382                            .dwpsn  file "../Program_Speakerbuzz.c",line 100,column 31,is_stmt,address Initialize_OLED,isa
+     383                    
+     384                            .dwfde $C$DW$CIE, Initialize_OLED
+     385                    
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    8
+
+     386                    ;*****************************************************************************
+     387                    ;* FUNCTION NAME: Initialize_OLED                                            *
+     388                    ;*                                                                           *
+     389                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     390                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     391                    ;*   Local Frame Size  : 4 Args + 68 Auto + 4 Save = 76 byte                 *
+     392                    ;*****************************************************************************
+     393 0000000a           Initialize_OLED:
+     394                    ;* --------------------------------------------------------------------------*
+     395                            .dwcfi  cfa_offset, 0
+     396 0000000a B500              PUSH      {LR}                  ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     397                            .dwcfi  cfa_offset, 4
+     398                            .dwcfi  save_reg_to_mem, 14, -4
+     399 0000000c 0D4CF1AD          SUB       SP, SP, #76           ; [DPU_3_PIPE]  ; [KEEP 32-BIT INS]
+     400                            .dwcfi  cfa_offset, 80
+     401                    $C$DW$43        .dwtag  DW_TAG_variable
+     402                            .dwattr $C$DW$43, DW_AT_name("blank")
+     403                            .dwattr $C$DW$43, DW_AT_TI_symbol_name("blank")
+     404                            .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$42)
+     405                            .dwattr $C$DW$43, DW_AT_location[DW_OP_breg13 4]
+     406                    
+     407                    $C$DW$44        .dwtag  DW_TAG_variable
+     408                            .dwattr $C$DW$44, DW_AT_name("i")
+     409                            .dwattr $C$DW$44, DW_AT_TI_symbol_name("i")
+     410                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$11)
+     411                            .dwattr $C$DW$44, DW_AT_location[DW_OP_breg13 68]
+     412                    
+     413                            .dwpsn  file "../Program_Speakerbuzz.c",line 106,column 10,is_stmt,isa 1
+     414 00000010 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     415 00000012 9011              STR       A1, [SP, #68]         ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     416                            .dwpsn  file "../Program_Speakerbuzz.c",line 106,column 17,is_stmt,isa 1
+     417 00000014 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     418 00000016 285E              CMP       A1, #94               ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     419 00000018 D20C              BCS       ||$C$L3||             ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     420                            ; BRANCHCC OCCURS {||$C$L3||}    ; [] |106| 
+     421                    ;* --------------------------------------------------------------------------*
+     422                    ;*   BEGIN LOOP ||$C$L1||
+     423                    ;*
+     424                    ;*   Loop source line                : 106
+     425                    ;*   Loop closing brace source line  : 107
+     426                    ;*   Known Minimum Trip Count        : 1
+     427                    ;*   Known Maximum Trip Count        : 4294967295
+     428                    ;*   Known Max Trip Count Factor     : 1
+     429                    ;* --------------------------------------------------------------------------*
+     430 0000001a           ||$C$L1||:    
+     431                            .dwpsn  file "../Program_Speakerbuzz.c",line 107,column 7,is_stmt,isa 1
+     432 0000001a 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     433 0000001c 283E              CMP       A1, #62               ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     434 0000001e D203              BCS       ||$C$L2||             ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     435                            ; BRANCHCC OCCURS {||$C$L2||}    ; [] |107| 
+     436                    ;* --------------------------------------------------------------------------*
+     437                            .dwpsn  file "../Program_Speakerbuzz.c",line 107,column 18,is_stmt,isa 1
+     438 00000020 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     439 00000022 2100              MOVS      A2, #0                ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     440 00000024 4468              ADD       A1, A1, SP            ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE    9
+
+     441 00000026 7101              STRB      A2, [A1, #4]          ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     442                    ;* --------------------------------------------------------------------------*
+     443 00000028           ||$C$L2||:    
+     444                            .dwpsn  file "../Program_Speakerbuzz.c",line 106,column 25,is_stmt,isa 1
+     445 00000028 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     446 0000002a 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     447 0000002c 9011              STR       A1, [SP, #68]         ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     448                            .dwpsn  file "../Program_Speakerbuzz.c",line 106,column 17,is_stmt,isa 1
+     449 0000002e 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     450 00000030 285E              CMP       A1, #94               ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     451 00000032 D3F2              BCC       ||$C$L1||             ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     452                            ; BRANCHCC OCCURS {||$C$L1||}    ; [] |106| 
+     453                    ;* --------------------------------------------------------------------------*
+     454 00000034           ||$C$L3||:    
+     455                            .dwpsn  file "../Program_Speakerbuzz.c",line 109,column 3,is_stmt,isa 1
+     456 00000034 4840              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |109|  ; [ORIG 16-BIT INS]
+     457 00000036 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |109|  ; [ORIG 16-BIT INS]
+     458 00000038 2800              CMP       A1, #0                ; [DPU_3_PIPE] |109|  ; [ORIG 16-BIT INS]
+     459 0000003a D143              BNE       ||$C$L7||             ; [DPU_3_PIPE] |109|  ; [ORIG 16-BIT INS]
+     460                            ; BRANCHCC OCCURS {||$C$L7||}    ; [] |109| 
+     461                    ;* --------------------------------------------------------------------------*
+     462                            .dwpsn  file "../Program_Speakerbuzz.c",line 112,column 4,is_stmt,isa 1
+     463 0000003c 483F              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |112|  ; [ORIG 16-BIT INS]
+     464                    $C$DW$45        .dwtag  DW_TAG_TI_branch
+     465                            .dwattr $C$DW$45, DW_AT_low_pc(0x00)
+     466                            .dwattr $C$DW$45, DW_AT_name("RIT128x96x4Init")
+     467                            .dwattr $C$DW$45, DW_AT_TI_call
+     468                    
+     469 0000003e FFFEF7FF!         BL        RIT128x96x4Init       ; [DPU_3_PIPE] |112|  ; [KEEP 32-BIT INS]
+     470                            ; CALL OCCURS {RIT128x96x4Init }  ; [] |112| 
+     471                            .dwpsn  file "../Program_Speakerbuzz.c",line 114,column 4,is_stmt,isa 1
+     472 00000042 A02F              ADR       A1, $C$SL1            ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     473 00000044 2120              MOVS      A2, #32               ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     474 00000046 2218              MOVS      A3, #24               ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     475 00000048 230F              MOVS      A4, #15               ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     476                    $C$DW$46        .dwtag  DW_TAG_TI_branch
+     477                            .dwattr $C$DW$46, DW_AT_low_pc(0x00)
+     478                            .dwattr $C$DW$46, DW_AT_name("RIT128x96x4StringDraw")
+     479                            .dwattr $C$DW$46, DW_AT_TI_call
+     480                    
+     481 0000004a FFFEF7FF!         BL        RIT128x96x4StringDraw ; [DPU_3_PIPE] |114|  ; [KEEP 32-BIT INS]
+     482                            ; CALL OCCURS {RIT128x96x4StringDraw }  ; [] |114| 
+     483                            .dwpsn  file "../Program_Speakerbuzz.c",line 115,column 4,is_stmt,isa 1
+     484 0000004e A02F              ADR       A1, $C$SL2            ; [DPU_3_PIPE] |115|  ; [ORIG 16-BIT INS]
+     485 00000050 2110              MOVS      A2, #16               ; [DPU_3_PIPE] |115|  ; [ORIG 16-BIT INS]
+     486 00000052 2221              MOVS      A3, #33               ; [DPU_3_PIPE] |115|  ; [ORIG 16-BIT INS]
+     487 00000054 230F              MOVS      A4, #15               ; [DPU_3_PIPE] |115|  ; [ORIG 16-BIT INS]
+     488                    $C$DW$47        .dwtag  DW_TAG_TI_branch
+     489                            .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+     490                            .dwattr $C$DW$47, DW_AT_name("RIT128x96x4StringDraw")
+     491                            .dwattr $C$DW$47, DW_AT_TI_call
+     492                    
+     493 00000056 FFFEF7FF!         BL        RIT128x96x4StringDraw ; [DPU_3_PIPE] |115|  ; [KEEP 32-BIT INS]
+     494                            ; CALL OCCURS {RIT128x96x4StringDraw }  ; [] |115| 
+     495                            .dwpsn  file "../Program_Speakerbuzz.c",line 116,column 4,is_stmt,isa 1
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   10
+
+     496 0000005a A030              ADR       A1, $C$SL3            ; [DPU_3_PIPE] |116|  ; [ORIG 16-BIT INS]
+     497 0000005c 2120              MOVS      A2, #32               ; [DPU_3_PIPE] |116|  ; [ORIG 16-BIT INS]
+     498 0000005e 222A              MOVS      A3, #42               ; [DPU_3_PIPE] |116|  ; [ORIG 16-BIT INS]
+     499 00000060 230F              MOVS      A4, #15               ; [DPU_3_PIPE] |116|  ; [ORIG 16-BIT INS]
+     500                    $C$DW$48        .dwtag  DW_TAG_TI_branch
+     501                            .dwattr $C$DW$48, DW_AT_low_pc(0x00)
+     502                            .dwattr $C$DW$48, DW_AT_name("RIT128x96x4StringDraw")
+     503                            .dwattr $C$DW$48, DW_AT_TI_call
+     504                    
+     505 00000062 FFFEF7FF!         BL        RIT128x96x4StringDraw ; [DPU_3_PIPE] |116|  ; [KEEP 32-BIT INS]
+     506                            ; CALL OCCURS {RIT128x96x4StringDraw }  ; [] |116| 
+     507                            .dwpsn  file "../Program_Speakerbuzz.c",line 118,column 4,is_stmt,isa 1
+     508 00000066 4836              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |118|  ; [ORIG 16-BIT INS]
+     509                    $C$DW$49        .dwtag  DW_TAG_TI_branch
+     510                            .dwattr $C$DW$49, DW_AT_low_pc(0x00)
+     511                            .dwattr $C$DW$49, DW_AT_name("SysCtlPeripheralEnable")
+     512                            .dwattr $C$DW$49, DW_AT_TI_call
+     513                    
+     514 00000068 FFFEF7FF!         BL        SysCtlPeripheralEnable ; [DPU_3_PIPE] |118|  ; [KEEP 32-BIT INS]
+     515                            ; CALL OCCURS {SysCtlPeripheralEnable }  ; [] |118| 
+     516                            .dwpsn  file "../Program_Speakerbuzz.c",line 119,column 4,is_stmt,isa 1
+     517 0000006c 4835              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |119|  ; [ORIG 16-BIT INS]
+     518 0000006e 2180              MOVS      A2, #128              ; [DPU_3_PIPE] |119|  ; [ORIG 16-BIT INS]
+     519                    $C$DW$50        .dwtag  DW_TAG_TI_branch
+     520                            .dwattr $C$DW$50, DW_AT_low_pc(0x00)
+     521                            .dwattr $C$DW$50, DW_AT_name("GPIOPinTypeGPIOInput")
+     522                            .dwattr $C$DW$50, DW_AT_TI_call
+     523                    
+     524 00000070 FFFEF7FF!         BL        GPIOPinTypeGPIOInput  ; [DPU_3_PIPE] |119|  ; [KEEP 32-BIT INS]
+     525                            ; CALL OCCURS {GPIOPinTypeGPIOInput }  ; [] |119| 
+     526                            .dwpsn  file "../Program_Speakerbuzz.c",line 120,column 4,is_stmt,isa 1
+     527                    ;* --------------------------------------------------------------------------*
+     528                    ;*   BEGIN LOOP ||$C$L4||
+     529                    ;*
+     530                    ;*   Loop source line                : 120
+     531                    ;*   Loop closing brace source line  : 120
+     532                    ;*   Known Minimum Trip Count        : 1
+     533                    ;*   Known Maximum Trip Count        : 4294967295
+     534                    ;*   Known Max Trip Count Factor     : 1
+     535                    ;* --------------------------------------------------------------------------*
+     536 00000074           ||$C$L4||:    
+     537 00000074 4833              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     538 00000076 2180              MOVS      A2, #128              ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     539                    $C$DW$51        .dwtag  DW_TAG_TI_branch
+     540                            .dwattr $C$DW$51, DW_AT_low_pc(0x00)
+     541                            .dwattr $C$DW$51, DW_AT_name("GPIOPinRead")
+     542                            .dwattr $C$DW$51, DW_AT_TI_call
+     543                    
+     544 00000078 FFFEF7FF!         BL        GPIOPinRead           ; [DPU_3_PIPE] |120|  ; [KEEP 32-BIT INS]
+     545                            ; CALL OCCURS {GPIOPinRead }     ; [] |120| 
+     546 0000007c 2800              CMP       A1, #0                ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     547 0000007e D1F9              BNE       ||$C$L4||             ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     548                            ; BRANCHCC OCCURS {||$C$L4||}    ; [] |120| 
+     549                    ;* --------------------------------------------------------------------------*
+     550                            .dwpsn  file "../Program_Speakerbuzz.c",line 121,column 4,is_stmt,isa 1
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   11
+
+     551 00000080 482F              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |121|  ; [ORIG 16-BIT INS]
+     552                    $C$DW$52        .dwtag  DW_TAG_TI_branch
+     553                            .dwattr $C$DW$52, DW_AT_low_pc(0x00)
+     554                            .dwattr $C$DW$52, DW_AT_name("SysCtlPeripheralReset")
+     555                            .dwattr $C$DW$52, DW_AT_TI_call
+     556                    
+     557 00000082 FFFEF7FF!         BL        SysCtlPeripheralReset ; [DPU_3_PIPE] |121|  ; [KEEP 32-BIT INS]
+     558                            ; CALL OCCURS {SysCtlPeripheralReset }  ; [] |121| 
+     559                            .dwpsn  file "../Program_Speakerbuzz.c",line 122,column 4,is_stmt,isa 1
+     560 00000086 482E              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |122|  ; [ORIG 16-BIT INS]
+     561                    $C$DW$53        .dwtag  DW_TAG_TI_branch
+     562                            .dwattr $C$DW$53, DW_AT_low_pc(0x00)
+     563                            .dwattr $C$DW$53, DW_AT_name("SysCtlPeripheralDisable")
+     564                            .dwattr $C$DW$53, DW_AT_TI_call
+     565                    
+     566 00000088 FFFEF7FF!         BL        SysCtlPeripheralDisable ; [DPU_3_PIPE] |122|  ; [KEEP 32-BIT INS]
+     567                            ; CALL OCCURS {SysCtlPeripheralDisable }  ; [] |122| 
+     568                            .dwpsn  file "../Program_Speakerbuzz.c",line 125,column 8,is_stmt,isa 1
+     569 0000008c 2018              MOVS      A1, #24               ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     570 0000008e 9011              STR       A1, [SP, #68]         ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     571                            .dwpsn  file "../Program_Speakerbuzz.c",line 125,column 16,is_stmt,isa 1
+     572 00000090 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     573 00000092 2832              CMP       A1, #50               ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     574 00000094 D20D              BCS       ||$C$L6||             ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     575                            ; BRANCHCC OCCURS {||$C$L6||}    ; [] |125| 
+     576                    ;* --------------------------------------------------------------------------*
+     577                    ;*   BEGIN LOOP ||$C$L5||
+     578                    ;*
+     579                    ;*   Loop source line                : 125
+     580                    ;*   Loop closing brace source line  : 126
+     581                    ;*   Known Minimum Trip Count        : 1
+     582                    ;*   Known Maximum Trip Count        : 4294967295
+     583                    ;*   Known Max Trip Count Factor     : 1
+     584                    ;* --------------------------------------------------------------------------*
+     585 00000096           ||$C$L5||:    
+     586                            .dwpsn  file "../Program_Speakerbuzz.c",line 126,column 5,is_stmt,isa 1
+     587 00000096 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |126|  ; [ORIG 16-BIT INS]
+     588 00000098 9A11              LDR       A3, [SP, #68]         ; [DPU_3_PIPE] |126|  ; [ORIG 16-BIT INS]
+     589 0000009a 9000              STR       A1, [SP, #0]          ; [DPU_3_PIPE] |126|  ; [ORIG 16-BIT INS]
+     590 0000009c 2102              MOVS      A2, #2                ; [DPU_3_PIPE] |126|  ; [ORIG 16-BIT INS]
+     591 0000009e 237C              MOVS      A4, #124              ; [DPU_3_PIPE] |126|  ; [ORIG 16-BIT INS]
+     592 000000a0 A801              ADD       A1, SP, #4            ; [DPU_3_PIPE] |126|  ; [ORIG 16-BIT INS]
+     593                    $C$DW$54        .dwtag  DW_TAG_TI_branch
+     594                            .dwattr $C$DW$54, DW_AT_low_pc(0x00)
+     595                            .dwattr $C$DW$54, DW_AT_name("RIT128x96x4ImageDraw")
+     596                            .dwattr $C$DW$54, DW_AT_TI_call
+     597                    
+     598 000000a2 FFFEF7FF!         BL        RIT128x96x4ImageDraw  ; [DPU_3_PIPE] |126|  ; [KEEP 32-BIT INS]
+     599                            ; CALL OCCURS {RIT128x96x4ImageDraw }  ; [] |126| 
+     600                            .dwpsn  file "../Program_Speakerbuzz.c",line 125,column 24,is_stmt,isa 1
+     601 000000a6 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     602 000000a8 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     603 000000aa 9011              STR       A1, [SP, #68]         ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     604                            .dwpsn  file "../Program_Speakerbuzz.c",line 125,column 16,is_stmt,isa 1
+     605 000000ac 9811              LDR       A1, [SP, #68]         ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   12
+
+     606 000000ae 2832              CMP       A1, #50               ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     607 000000b0 D3F1              BCC       ||$C$L5||             ; [DPU_3_PIPE] |125|  ; [ORIG 16-BIT INS]
+     608                            ; BRANCHCC OCCURS {||$C$L5||}    ; [] |125| 
+     609                    ;* --------------------------------------------------------------------------*
+     610 000000b2           ||$C$L6||:    
+     611                            .dwpsn  file "../Program_Speakerbuzz.c",line 128,column 5,is_stmt,isa 1
+     612 000000b2 A01D              ADR       A1, $C$SL4            ; [DPU_3_PIPE] |128|  ; [ORIG 16-BIT INS]
+     613 000000b4 2124              MOVS      A2, #36               ; [DPU_3_PIPE] |128|  ; [ORIG 16-BIT INS]
+     614 000000b6 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |128|  ; [ORIG 16-BIT INS]
+     615 000000b8 2308              MOVS      A4, #8                ; [DPU_3_PIPE] |128|  ; [ORIG 16-BIT INS]
+     616                    $C$DW$55        .dwtag  DW_TAG_TI_branch
+     617                            .dwattr $C$DW$55, DW_AT_low_pc(0x00)
+     618                            .dwattr $C$DW$55, DW_AT_name("RIT128x96x4StringDraw")
+     619                            .dwattr $C$DW$55, DW_AT_TI_call
+     620                    
+     621 000000ba FFFEF7FF!         BL        RIT128x96x4StringDraw ; [DPU_3_PIPE] |128|  ; [KEEP 32-BIT INS]
+     622                            ; CALL OCCURS {RIT128x96x4StringDraw }  ; [] |128| 
+     623                            .dwpsn  file "../Program_Speakerbuzz.c",line 129,column 5,is_stmt,isa 1
+     624 000000be 491E              LDR       A2, $C$CON2           ; [DPU_3_PIPE] |129|  ; [ORIG 16-BIT INS]
+     625 000000c0 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |129|  ; [ORIG 16-BIT INS]
+     626 000000c2 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |129|  ; [ORIG 16-BIT INS]
+     627                            .dwpsn  file "../Program_Speakerbuzz.c",line 132,column 1,is_stmt,isa 1
+     628                    ;* --------------------------------------------------------------------------*
+     629 000000c4           ||$C$L7||:    
+     630 000000c4 B013              ADD       SP, SP, #76           ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     631                            .dwcfi  cfa_offset, 4
+     632                    $C$DW$56        .dwtag  DW_TAG_TI_branch
+     633                            .dwattr $C$DW$56, DW_AT_low_pc(0x00)
+     634                            .dwattr $C$DW$56, DW_AT_TI_return
+     635                    
+     636 000000c6 BD00              POP       {PC}                  ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     637                            .dwcfi  cfa_offset, 0
+     638                            ; BRANCH OCCURS                  ; [] 
+     639                            .dwattr $C$DW$42, DW_AT_TI_end_file("../Program_Speakerbuzz.c")
+     640                            .dwattr $C$DW$42, DW_AT_TI_end_line(0x84)
+     641                            .dwattr $C$DW$42, DW_AT_TI_end_column(0x01)
+     642                            .dwendentry
+     643                            .dwendtag $C$DW$42
+     644                    
+     645 000000c8                   .sect   ".text"
+     646                            .clink
+     647                            .thumbfunc main
+     648 000000c8                   .thumb
+     649                            .global main
+     650                    
+     651                    $C$DW$57        .dwtag  DW_TAG_subprogram
+     652                            .dwattr $C$DW$57, DW_AT_name("main")
+     653                            .dwattr $C$DW$57, DW_AT_low_pc(main)
+     654                            .dwattr $C$DW$57, DW_AT_high_pc(0x00)
+     655                            .dwattr $C$DW$57, DW_AT_TI_symbol_name("main")
+     656                            .dwattr $C$DW$57, DW_AT_external
+     657                            .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$10)
+     658                            .dwattr $C$DW$57, DW_AT_TI_begin_file("../Program_Speakerbuzz.c")
+     659                            .dwattr $C$DW$57, DW_AT_TI_begin_line(0x8e)
+     660                            .dwattr $C$DW$57, DW_AT_TI_begin_column(0x05)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   13
+
+     661                            .dwattr $C$DW$57, DW_AT_decl_file("../Program_Speakerbuzz.c")
+     662                            .dwattr $C$DW$57, DW_AT_decl_line(0x8e)
+     663                            .dwattr $C$DW$57, DW_AT_decl_column(0x05)
+     664                            .dwattr $C$DW$57, DW_AT_TI_max_frame_size(0x08)
+     665                            .dwpsn  file "../Program_Speakerbuzz.c",line 142,column 19,is_stmt,address main,isa 1
+     666                    
+     667                            .dwfde $C$DW$CIE, main
+     668                    
+     669                    ;*****************************************************************************
+     670                    ;* FUNCTION NAME: main                                                       *
+     671                    ;*                                                                           *
+     672                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     673                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     674                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     675                    ;*****************************************************************************
+     676 000000c8           main:
+     677                    ;* --------------------------------------------------------------------------*
+     678                            .dwcfi  cfa_offset, 0
+     679 000000c8 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     680                            .dwcfi  cfa_offset, 8
+     681                            .dwcfi  save_reg_to_mem, 14, -4
+     682                            .dwcfi  save_reg_to_mem, 3, -8
+     683                            .dwpsn  file "../Program_Speakerbuzz.c",line 147,column 5,is_stmt,isa 1
+     684 000000ca 481F              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |147|  ; [ORIG 16-BIT INS]
+     685                    $C$DW$58        .dwtag  DW_TAG_TI_branch
+     686                            .dwattr $C$DW$58, DW_AT_low_pc(0x00)
+     687                            .dwattr $C$DW$58, DW_AT_name("SysCtlClockSet")
+     688                            .dwattr $C$DW$58, DW_AT_TI_call
+     689                    
+     690 000000cc FFFEF7FF!         BL        SysCtlClockSet        ; [DPU_3_PIPE] |147|  ; [KEEP 32-BIT INS]
+     691                            ; CALL OCCURS {SysCtlClockSet }  ; [] |147| 
+     692                            .dwpsn  file "../Program_Speakerbuzz.c",line 153,column 2,is_stmt,isa 1
+     693                    $C$DW$59        .dwtag  DW_TAG_TI_branch
+     694                            .dwattr $C$DW$59, DW_AT_low_pc(0x00)
+     695                            .dwattr $C$DW$59, DW_AT_name("SysCtlClockGet")
+     696                            .dwattr $C$DW$59, DW_AT_TI_call
+     697                    
+     698 000000d0 FFFEF7FF!         BL        SysCtlClockGet        ; [DPU_3_PIPE] |153|  ; [KEEP 32-BIT INS]
+     699                            ; CALL OCCURS {SysCtlClockGet }  ; [] |153| 
+     700 000000d4 491D              LDR       A2, $C$CON7           ; [DPU_3_PIPE] |153|  ; [ORIG 16-BIT INS]
+     701 000000d6 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |153|  ; [ORIG 16-BIT INS]
+     702                            .dwpsn  file "../Program_Speakerbuzz.c",line 158,column 5,is_stmt,isa 1
+     703 000000d8 481D              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |158|  ; [ORIG 16-BIT INS]
+     704 000000da 491C              LDR       A2, $C$CON7           ; [DPU_3_PIPE] |158|  ; [ORIG 16-BIT INS]
+     705 000000dc 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |158|  ; [ORIG 16-BIT INS]
+     706 000000de 6809              LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |158|  ; [ORIG 16-BIT INS]
+     707 000000e0 F0F0FBB1          UDIV      A1, A2, A1            ; [DPU_3_PIPE] |158|  ; [KEEP 32-BIT INS]
+     708                    $C$DW$60        .dwtag  DW_TAG_TI_branch
+     709                            .dwattr $C$DW$60, DW_AT_low_pc(0x00)
+     710                            .dwattr $C$DW$60, DW_AT_name("SysTickPeriodSet")
+     711                            .dwattr $C$DW$60, DW_AT_TI_call
+     712                    
+     713 000000e4 FFFEF7FF!         BL        SysTickPeriodSet      ; [DPU_3_PIPE] |158|  ; [KEEP 32-BIT INS]
+     714                            ; CALL OCCURS {SysTickPeriodSet }  ; [] |158| 
+     715                            .dwpsn  file "../Program_Speakerbuzz.c",line 159,column 5,is_stmt,isa 1
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   14
+
+     716                    $C$DW$61        .dwtag  DW_TAG_TI_branch
+     717                            .dwattr $C$DW$61, DW_AT_low_pc(0x00)
+     718                            .dwattr $C$DW$61, DW_AT_name("SysTickIntEnable")
+     719                            .dwattr $C$DW$61, DW_AT_TI_call
+     720                    
+     721 000000e8 FFFEF7FF!         BL        SysTickIntEnable      ; [DPU_3_PIPE] |159|  ; [KEEP 32-BIT INS]
+     722                            ; CALL OCCURS {SysTickIntEnable }  ; [] |159| 
+     723                            .dwpsn  file "../Program_Speakerbuzz.c",line 160,column 5,is_stmt,isa 1
+     724                    $C$DW$62        .dwtag  DW_TAG_TI_branch
+     725                            .dwattr $C$DW$62, DW_AT_low_pc(0x00)
+     726                            .dwattr $C$DW$62, DW_AT_name("SysTickEnable")
+     727                            .dwattr $C$DW$62, DW_AT_TI_call
+     728                    
+     729 000000ec FFFEF7FF!         BL        SysTickEnable         ; [DPU_3_PIPE] |160|  ; [KEEP 32-BIT INS]
+     730                            ; CALL OCCURS {SysTickEnable }   ; [] |160| 
+     731                            .dwpsn  file "../Program_Speakerbuzz.c",line 166,column 13,is_stmt,isa 1
+     732                    ;* --------------------------------------------------------------------------*
+     733                    ;*   BEGIN LOOP ||$C$L8||
+     734                    ;*
+     735                    ;*   Loop source line                : 166
+     736                    ;*   Loop closing brace source line  : 170
+     737                    ;*   Known Minimum Trip Count        : 1
+     738                    ;*   Known Maximum Trip Count        : 4294967295
+     739                    ;*   Known Max Trip Count Factor     : 1
+     740                    ;* --------------------------------------------------------------------------*
+     741 000000f0           ||$C$L8||:    
+     742                            .dwpsn  file "../Program_Speakerbuzz.c",line 167,column 6,is_stmt,isa 1
+     743                    $C$DW$63        .dwtag  DW_TAG_TI_branch
+     744                            .dwattr $C$DW$63, DW_AT_low_pc(0x00)
+     745                            .dwattr $C$DW$63, DW_AT_name("Task_ReportSysTick")
+     746                            .dwattr $C$DW$63, DW_AT_TI_call
+     747                    
+     748 000000f0 FFFEF7FF!         BL        Task_ReportSysTick    ; [DPU_3_PIPE] |167|  ; [KEEP 32-BIT INS]
+     749                            ; CALL OCCURS {Task_ReportSysTick }  ; [] |167| 
+     750                            .dwpsn  file "../Program_Speakerbuzz.c",line 168,column 6,is_stmt,isa 1
+     751                    $C$DW$64        .dwtag  DW_TAG_TI_branch
+     752                            .dwattr $C$DW$64, DW_AT_low_pc(0x00)
+     753                            .dwattr $C$DW$64, DW_AT_name("Task_LEDBlink")
+     754                            .dwattr $C$DW$64, DW_AT_TI_call
+     755                    
+     756 000000f4 FFFEF7FF!         BL        Task_LEDBlink         ; [DPU_3_PIPE] |168|  ; [KEEP 32-BIT INS]
+     757                            ; CALL OCCURS {Task_LEDBlink }   ; [] |168| 
+     758                            .dwpsn  file "../Program_Speakerbuzz.c",line 169,column 6,is_stmt,isa 1
+     759                    $C$DW$65        .dwtag  DW_TAG_TI_branch
+     760                            .dwattr $C$DW$65, DW_AT_low_pc(0x00)
+     761                            .dwattr $C$DW$65, DW_AT_name("Task_Speakerbuzz")
+     762                            .dwattr $C$DW$65, DW_AT_TI_call
+     763                    
+     764 000000f8 FFFEF7FF!         BL        Task_Speakerbuzz      ; [DPU_3_PIPE] |169|  ; [KEEP 32-BIT INS]
+     765                            ; CALL OCCURS {Task_Speakerbuzz }  ; [] |169| 
+     766                            .dwpsn  file "../Program_Speakerbuzz.c",line 166,column 13,is_stmt,isa 1
+     767 000000fc E7F8              B         ||$C$L8||             ; [DPU_3_PIPE] |166|  ; [ORIG 16-BIT INS]
+     768                            ; BRANCH OCCURS {||$C$L8||}      ; [] |166| 
+     769                    ;* --------------------------------------------------------------------------*
+     770                            .dwattr $C$DW$57, DW_AT_TI_end_file("../Program_Speakerbuzz.c")
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   15
+
+     771                            .dwattr $C$DW$57, DW_AT_TI_end_line(0xac)
+     772                            .dwattr $C$DW$57, DW_AT_TI_end_column(0x01)
+     773                            .dwendentry
+     774                            .dwendtag $C$DW$57
+     775                    
+     776                    ;******************************************************************************
+     777                    ;* STRINGS                                                                    *
+     778                    ;******************************************************************************
+     779 000000fe                   .sect   ".text"
+     780                            .align  4
+     781 00000100 20        ||$C$SL1||:     .string " Press the",0
+         00000101 50       
+         00000102 72       
+         00000103 65       
+         00000104 73       
+         00000105 73       
+         00000106 20       
+         00000107 74       
+         00000108 68       
+         00000109 65       
+         0000010a 00       
+     782                            .align  4
+     783 0000010c 22        ||$C$SL2||:     .string 34,"Select",34," Button",0
+         0000010d 53       
+         0000010e 65       
+         0000010f 6C       
+         00000110 65       
+         00000111 63       
+         00000112 74       
+         00000113 22       
+         00000114 20       
+         00000115 42       
+         00000116 75       
+         00000117 74       
+         00000118 74       
+         00000119 6F       
+         0000011a 6E       
+         0000011b 00       
+     784                            .align  4
+     785 0000011c 54        ||$C$SL3||:     .string "To Continue",0
+         0000011d 6F       
+         0000011e 20       
+         0000011f 43       
+         00000120 6F       
+         00000121 6E       
+         00000122 74       
+         00000123 69       
+         00000124 6E       
+         00000125 75       
+         00000126 65       
+         00000127 00       
+     786                            .align  4
+     787 00000128 59        ||$C$SL4||:     .string "Your Name",0
+         00000129 6F       
+         0000012a 75       
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   16
+
+         0000012b 72       
+         0000012c 20       
+         0000012d 4E       
+         0000012e 61       
+         0000012f 6D       
+         00000130 65       
+         00000131 00       
+     788                    ;******************************************************************************
+     789                    ;* CONSTANT TABLE                                                             *
+     790                    ;******************************************************************************
+     791 00000132                   .sect   ".text"
+     792                            .align  4
+     793 00000132 000046C0! ||$C$CON1||:    .bits   SysTickCount_Nbr,32
+         00000136 00000000 
+     794                            .align  4
+     795 00000136 00000000! ||$C$CON2||:    .bits   OLED_Initialized,32
+         0000013a 00000000 
+     796                            .align  4
+     797 0000013a 42400000  ||$C$CON3||:    .bits   1000000,32
+         0000013e 0000000F 
+     798                            .align  4
+     799 0000013e 0040000F  ||$C$CON4||:    .bits   536870976,32
+         00000142 00002000 
+     800                            .align  4
+     801 00000142 60002000  ||$C$CON5||:    .bits   1073897472,32
+         00000146 00004002 
+     802                            .align  4
+     803 00000146 03804002  ||$C$CON6||:    .bits   29361024,32
+         0000014a 000001C0 
+     804                            .align  4
+     805 0000014a 000001C0! ||$C$CON7||:    .bits   g_ulSystemClock,32
+         0000014e 00000000 
+     806                            .align  4
+     807 0000014e 00000000! ||$C$CON8||:    .bits   SysTickFrequency_Nbr,32
+         00000152 00000000 
+     808                    ;*****************************************************************************
+     809                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     810                    ;*****************************************************************************
+     811                            .global SysCtlPeripheralReset
+     812                            .global SysCtlPeripheralEnable
+     813                            .global SysCtlPeripheralDisable
+     814                            .global SysCtlClockSet
+     815                            .global SysCtlClockGet
+     816                            .global SysTickEnable
+     817                            .global SysTickIntEnable
+     818                            .global SysTickPeriodSet
+     819                            .global GPIOPinRead
+     820                            .global GPIOPinTypeGPIOInput
+     821                            .global RIT128x96x4StringDraw
+     822                            .global RIT128x96x4ImageDraw
+     823                            .global RIT128x96x4Init
+     824                            .global Task_LEDBlink
+     825                            .global Task_ReportSysTick
+     826                            .global Task_Speakerbuzz
+     827                    
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   17
+
+     828                    ;******************************************************************************
+     829                    ;* BUILD ATTRIBUTES                                                           *
+     830                    ;******************************************************************************
+     831                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     832                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     833                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     834                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     835                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     836                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(0)
+     837                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(5)
+     838                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     839                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     840                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+     841                    
+     842                    ;******************************************************************************
+     843                    ;* TYPE INFORMATION                                                           *
+     844                    ;******************************************************************************
+     845                    
+     846                    $C$DW$T$20      .dwtag  DW_TAG_structure_type
+     847                            .dwattr $C$DW$T$20, DW_AT_byte_size(0x18)
+     848                    $C$DW$66        .dwtag  DW_TAG_member
+     849                            .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$10)
+     850                            .dwattr $C$DW$66, DW_AT_name("fd")
+     851                            .dwattr $C$DW$66, DW_AT_TI_symbol_name("fd")
+     852                            .dwattr $C$DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     853                            .dwattr $C$DW$66, DW_AT_accessibility(DW_ACCESS_public)
+     854                            .dwattr $C$DW$66, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+     855                            .dwattr $C$DW$66, DW_AT_decl_line(0x5c)
+     856                            .dwattr $C$DW$66, DW_AT_decl_column(0x0b)
+     857                    
+     858                    $C$DW$67        .dwtag  DW_TAG_member
+     859                            .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$19)
+     860                            .dwattr $C$DW$67, DW_AT_name("buf")
+     861                            .dwattr $C$DW$67, DW_AT_TI_symbol_name("buf")
+     862                            .dwattr $C$DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     863                            .dwattr $C$DW$67, DW_AT_accessibility(DW_ACCESS_public)
+     864                            .dwattr $C$DW$67, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+     865                            .dwattr $C$DW$67, DW_AT_decl_line(0x5d)
+     866                            .dwattr $C$DW$67, DW_AT_decl_column(0x16)
+     867                    
+     868                    $C$DW$68        .dwtag  DW_TAG_member
+     869                            .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$19)
+     870                            .dwattr $C$DW$68, DW_AT_name("pos")
+     871                            .dwattr $C$DW$68, DW_AT_TI_symbol_name("pos")
+     872                            .dwattr $C$DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+     873                            .dwattr $C$DW$68, DW_AT_accessibility(DW_ACCESS_public)
+     874                            .dwattr $C$DW$68, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+     875                            .dwattr $C$DW$68, DW_AT_decl_line(0x5e)
+     876                            .dwattr $C$DW$68, DW_AT_decl_column(0x16)
+     877                    
+     878                    $C$DW$69        .dwtag  DW_TAG_member
+     879                            .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$19)
+     880                            .dwattr $C$DW$69, DW_AT_name("bufend")
+     881                            .dwattr $C$DW$69, DW_AT_TI_symbol_name("bufend")
+     882                            .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   18
+
+     883                            .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
+     884                            .dwattr $C$DW$69, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+     885                            .dwattr $C$DW$69, DW_AT_decl_line(0x5f)
+     886                            .dwattr $C$DW$69, DW_AT_decl_column(0x16)
+     887                    
+     888                    $C$DW$70        .dwtag  DW_TAG_member
+     889                            .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$19)
+     890                            .dwattr $C$DW$70, DW_AT_name("buff_stop")
+     891                            .dwattr $C$DW$70, DW_AT_TI_symbol_name("buff_stop")
+     892                            .dwattr $C$DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+     893                            .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
+     894                            .dwattr $C$DW$70, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+     895                            .dwattr $C$DW$70, DW_AT_decl_line(0x60)
+     896                            .dwattr $C$DW$70, DW_AT_decl_column(0x16)
+     897                    
+     898                    $C$DW$71        .dwtag  DW_TAG_member
+     899                            .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$11)
+     900                            .dwattr $C$DW$71, DW_AT_name("flags")
+     901                            .dwattr $C$DW$71, DW_AT_TI_symbol_name("flags")
+     902                            .dwattr $C$DW$71, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+     903                            .dwattr $C$DW$71, DW_AT_accessibility(DW_ACCESS_public)
+     904                            .dwattr $C$DW$71, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+     905                            .dwattr $C$DW$71, DW_AT_decl_line(0x61)
+     906                            .dwattr $C$DW$71, DW_AT_decl_column(0x16)
+     907                    
+     908                            .dwattr $C$DW$T$20, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     909                            .dwattr $C$DW$T$20, DW_AT_decl_line(0x5b)
+     910                            .dwattr $C$DW$T$20, DW_AT_decl_column(0x10)
+     911                            .dwendtag $C$DW$T$20
+     912                    
+     913                    $C$DW$T$22      .dwtag  DW_TAG_typedef
+     914                            .dwattr $C$DW$T$22, DW_AT_name("FILE")
+     915                            .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$20)
+     916                            .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+     917                            .dwattr $C$DW$T$22, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     918                            .dwattr $C$DW$T$22, DW_AT_decl_line(0x62)
+     919                            .dwattr $C$DW$T$22, DW_AT_decl_column(0x03)
+     920                    
+     921                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     922                            .dwattr $C$DW$T$2, DW_AT_name("void")
+     923                    
+     924                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     925                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+     926                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+     927                    
+     928                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     929                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     930                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     931                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     932                    
+     933                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     934                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     935                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     936                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     937                    
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   19
+
+     938                    $C$DW$T$40      .dwtag  DW_TAG_typedef
+     939                            .dwattr $C$DW$T$40, DW_AT_name("int8_t")
+     940                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$5)
+     941                            .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+     942                            .dwattr $C$DW$T$40, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     943                            .dwattr $C$DW$T$40, DW_AT_decl_line(0x2a)
+     944                            .dwattr $C$DW$T$40, DW_AT_decl_column(0x1d)
+     945                    
+     946                    $C$DW$T$41      .dwtag  DW_TAG_typedef
+     947                            .dwattr $C$DW$T$41, DW_AT_name("int_least8_t")
+     948                            .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$40)
+     949                            .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+     950                            .dwattr $C$DW$T$41, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     951                            .dwattr $C$DW$T$41, DW_AT_decl_line(0x37)
+     952                            .dwattr $C$DW$T$41, DW_AT_decl_column(0x17)
+     953                    
+     954                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     955                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     956                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     957                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     958                    
+     959                    $C$DW$T$19      .dwtag  DW_TAG_pointer_type
+     960                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$6)
+     961                            .dwattr $C$DW$T$19, DW_AT_address_class(0x20)
+     962                    
+     963                    $C$DW$T$34      .dwtag  DW_TAG_const_type
+     964                            .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$6)
+     965                    
+     966                    $C$DW$T$35      .dwtag  DW_TAG_pointer_type
+     967                            .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$T$34)
+     968                            .dwattr $C$DW$T$35, DW_AT_address_class(0x20)
+     969                    
+     970                    
+     971                    $C$DW$T$42      .dwtag  DW_TAG_array_type
+     972                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$6)
+     973                            .dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+     974                            .dwattr $C$DW$T$42, DW_AT_byte_size(0x3e)
+     975                    $C$DW$72        .dwtag  DW_TAG_subrange_type
+     976                            .dwattr $C$DW$72, DW_AT_upper_bound(0x3d)
+     977                    
+     978                            .dwendtag $C$DW$T$42
+     979                    
+     980                    $C$DW$T$43      .dwtag  DW_TAG_typedef
+     981                            .dwattr $C$DW$T$43, DW_AT_name("tBoolean")
+     982                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$6)
+     983                            .dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+     984                            .dwattr $C$DW$T$43, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/inc/hw_types.h"
+     985                            .dwattr $C$DW$T$43, DW_AT_decl_line(0x30)
+     986                            .dwattr $C$DW$T$43, DW_AT_decl_column(0x17)
+     987                    
+     988                    $C$DW$T$44      .dwtag  DW_TAG_typedef
+     989                            .dwattr $C$DW$T$44, DW_AT_name("uint8_t")
+     990                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$6)
+     991                            .dwattr $C$DW$T$44, DW_AT_language(DW_LANG_C)
+     992                            .dwattr $C$DW$T$44, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   20
+
+     993                            .dwattr $C$DW$T$44, DW_AT_decl_line(0x2b)
+     994                            .dwattr $C$DW$T$44, DW_AT_decl_column(0x1c)
+     995                    
+     996                    $C$DW$T$45      .dwtag  DW_TAG_typedef
+     997                            .dwattr $C$DW$T$45, DW_AT_name("uint_least8_t")
+     998                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$44)
+     999                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+    1000                            .dwattr $C$DW$T$45, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1001                            .dwattr $C$DW$T$45, DW_AT_decl_line(0x38)
+    1002                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x16)
+    1003                    
+    1004                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1005                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1006                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1007                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1008                    
+    1009                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1010                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1011                            .dwattr $C$DW$T$8, DW_AT_name("short")
+    1012                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+    1013                    
+    1014                    $C$DW$T$46      .dwtag  DW_TAG_typedef
+    1015                            .dwattr $C$DW$T$46, DW_AT_name("int16_t")
+    1016                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$8)
+    1017                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+    1018                            .dwattr $C$DW$T$46, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1019                            .dwattr $C$DW$T$46, DW_AT_decl_line(0x2c)
+    1020                            .dwattr $C$DW$T$46, DW_AT_decl_column(0x1d)
+    1021                    
+    1022                    $C$DW$T$47      .dwtag  DW_TAG_typedef
+    1023                            .dwattr $C$DW$T$47, DW_AT_name("int_least16_t")
+    1024                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$46)
+    1025                            .dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
+    1026                            .dwattr $C$DW$T$47, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1027                            .dwattr $C$DW$T$47, DW_AT_decl_line(0x3a)
+    1028                            .dwattr $C$DW$T$47, DW_AT_decl_column(0x17)
+    1029                    
+    1030                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1031                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1032                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1033                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+    1034                    
+    1035                    $C$DW$T$48      .dwtag  DW_TAG_typedef
+    1036                            .dwattr $C$DW$T$48, DW_AT_name("uint16_t")
+    1037                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$9)
+    1038                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+    1039                            .dwattr $C$DW$T$48, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1040                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x2d)
+    1041                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x1c)
+    1042                    
+    1043                    $C$DW$T$49      .dwtag  DW_TAG_typedef
+    1044                            .dwattr $C$DW$T$49, DW_AT_name("uint_least16_t")
+    1045                            .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$48)
+    1046                            .dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
+    1047                            .dwattr $C$DW$T$49, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   21
+
+    1048                            .dwattr $C$DW$T$49, DW_AT_decl_line(0x3b)
+    1049                            .dwattr $C$DW$T$49, DW_AT_decl_column(0x16)
+    1050                    
+    1051                    $C$DW$T$50      .dwtag  DW_TAG_typedef
+    1052                            .dwattr $C$DW$T$50, DW_AT_name("wchar_t")
+    1053                            .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$9)
+    1054                            .dwattr $C$DW$T$50, DW_AT_language(DW_LANG_C)
+    1055                            .dwattr $C$DW$T$50, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1056                            .dwattr $C$DW$T$50, DW_AT_decl_line(0x41)
+    1057                            .dwattr $C$DW$T$50, DW_AT_decl_column(0x1a)
+    1058                    
+    1059                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1060                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1061                            .dwattr $C$DW$T$10, DW_AT_name("int")
+    1062                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+    1063                    
+    1064                    $C$DW$T$52      .dwtag  DW_TAG_typedef
+    1065                            .dwattr $C$DW$T$52, DW_AT_name("int32_t")
+    1066                            .dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$10)
+    1067                            .dwattr $C$DW$T$52, DW_AT_language(DW_LANG_C)
+    1068                            .dwattr $C$DW$T$52, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1069                            .dwattr $C$DW$T$52, DW_AT_decl_line(0x2e)
+    1070                            .dwattr $C$DW$T$52, DW_AT_decl_column(0x1d)
+    1071                    
+    1072                    $C$DW$T$53      .dwtag  DW_TAG_typedef
+    1073                            .dwattr $C$DW$T$53, DW_AT_name("int_fast16_t")
+    1074                            .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$52)
+    1075                            .dwattr $C$DW$T$53, DW_AT_language(DW_LANG_C)
+    1076                            .dwattr $C$DW$T$53, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1077                            .dwattr $C$DW$T$53, DW_AT_decl_line(0x47)
+    1078                            .dwattr $C$DW$T$53, DW_AT_decl_column(0x17)
+    1079                    
+    1080                    $C$DW$T$54      .dwtag  DW_TAG_typedef
+    1081                            .dwattr $C$DW$T$54, DW_AT_name("int_fast32_t")
+    1082                            .dwattr $C$DW$T$54, DW_AT_type(*$C$DW$T$52)
+    1083                            .dwattr $C$DW$T$54, DW_AT_language(DW_LANG_C)
+    1084                            .dwattr $C$DW$T$54, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1085                            .dwattr $C$DW$T$54, DW_AT_decl_line(0x4a)
+    1086                            .dwattr $C$DW$T$54, DW_AT_decl_column(0x17)
+    1087                    
+    1088                    $C$DW$T$55      .dwtag  DW_TAG_typedef
+    1089                            .dwattr $C$DW$T$55, DW_AT_name("int_fast8_t")
+    1090                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$52)
+    1091                            .dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
+    1092                            .dwattr $C$DW$T$55, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1093                            .dwattr $C$DW$T$55, DW_AT_decl_line(0x45)
+    1094                            .dwattr $C$DW$T$55, DW_AT_decl_column(0x17)
+    1095                    
+    1096                    $C$DW$T$56      .dwtag  DW_TAG_typedef
+    1097                            .dwattr $C$DW$T$56, DW_AT_name("int_least32_t")
+    1098                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$52)
+    1099                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+    1100                            .dwattr $C$DW$T$56, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1101                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x3c)
+    1102                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x17)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   22
+
+    1103                    
+    1104                    $C$DW$T$57      .dwtag  DW_TAG_typedef
+    1105                            .dwattr $C$DW$T$57, DW_AT_name("intptr_t")
+    1106                            .dwattr $C$DW$T$57, DW_AT_type(*$C$DW$T$10)
+    1107                            .dwattr $C$DW$T$57, DW_AT_language(DW_LANG_C)
+    1108                            .dwattr $C$DW$T$57, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1109                            .dwattr $C$DW$T$57, DW_AT_decl_line(0x52)
+    1110                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x1a)
+    1111                    
+    1112                    $C$DW$T$58      .dwtag  DW_TAG_typedef
+    1113                            .dwattr $C$DW$T$58, DW_AT_name("ptrdiff_t")
+    1114                            .dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$10)
+    1115                            .dwattr $C$DW$T$58, DW_AT_language(DW_LANG_C)
+    1116                            .dwattr $C$DW$T$58, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1117                            .dwattr $C$DW$T$58, DW_AT_decl_line(0x36)
+    1118                            .dwattr $C$DW$T$58, DW_AT_decl_column(0x1c)
+    1119                    
+    1120                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1121                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1122                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1123                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+    1124                    
+    1125                    $C$DW$T$59      .dwtag  DW_TAG_typedef
+    1126                            .dwattr $C$DW$T$59, DW_AT_name("size_t")
+    1127                            .dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$11)
+    1128                            .dwattr $C$DW$T$59, DW_AT_language(DW_LANG_C)
+    1129                            .dwattr $C$DW$T$59, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1130                            .dwattr $C$DW$T$59, DW_AT_decl_line(0x3a)
+    1131                            .dwattr $C$DW$T$59, DW_AT_decl_column(0x19)
+    1132                    
+    1133                    $C$DW$T$60      .dwtag  DW_TAG_typedef
+    1134                            .dwattr $C$DW$T$60, DW_AT_name("uint32_t")
+    1135                            .dwattr $C$DW$T$60, DW_AT_type(*$C$DW$T$11)
+    1136                            .dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
+    1137                            .dwattr $C$DW$T$60, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1138                            .dwattr $C$DW$T$60, DW_AT_decl_line(0x2f)
+    1139                            .dwattr $C$DW$T$60, DW_AT_decl_column(0x1c)
+    1140                    
+    1141                    $C$DW$T$61      .dwtag  DW_TAG_volatile_type
+    1142                            .dwattr $C$DW$T$61, DW_AT_type(*$C$DW$T$60)
+    1143                    
+    1144                    $C$DW$T$62      .dwtag  DW_TAG_typedef
+    1145                            .dwattr $C$DW$T$62, DW_AT_name("uint_fast16_t")
+    1146                            .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$60)
+    1147                            .dwattr $C$DW$T$62, DW_AT_language(DW_LANG_C)
+    1148                            .dwattr $C$DW$T$62, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1149                            .dwattr $C$DW$T$62, DW_AT_decl_line(0x48)
+    1150                            .dwattr $C$DW$T$62, DW_AT_decl_column(0x16)
+    1151                    
+    1152                    $C$DW$T$63      .dwtag  DW_TAG_typedef
+    1153                            .dwattr $C$DW$T$63, DW_AT_name("uint_fast32_t")
+    1154                            .dwattr $C$DW$T$63, DW_AT_type(*$C$DW$T$60)
+    1155                            .dwattr $C$DW$T$63, DW_AT_language(DW_LANG_C)
+    1156                            .dwattr $C$DW$T$63, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1157                            .dwattr $C$DW$T$63, DW_AT_decl_line(0x4b)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   23
+
+    1158                            .dwattr $C$DW$T$63, DW_AT_decl_column(0x16)
+    1159                    
+    1160                    $C$DW$T$64      .dwtag  DW_TAG_typedef
+    1161                            .dwattr $C$DW$T$64, DW_AT_name("uint_fast8_t")
+    1162                            .dwattr $C$DW$T$64, DW_AT_type(*$C$DW$T$60)
+    1163                            .dwattr $C$DW$T$64, DW_AT_language(DW_LANG_C)
+    1164                            .dwattr $C$DW$T$64, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1165                            .dwattr $C$DW$T$64, DW_AT_decl_line(0x46)
+    1166                            .dwattr $C$DW$T$64, DW_AT_decl_column(0x16)
+    1167                    
+    1168                    $C$DW$T$65      .dwtag  DW_TAG_typedef
+    1169                            .dwattr $C$DW$T$65, DW_AT_name("uint_least32_t")
+    1170                            .dwattr $C$DW$T$65, DW_AT_type(*$C$DW$T$60)
+    1171                            .dwattr $C$DW$T$65, DW_AT_language(DW_LANG_C)
+    1172                            .dwattr $C$DW$T$65, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1173                            .dwattr $C$DW$T$65, DW_AT_decl_line(0x3d)
+    1174                            .dwattr $C$DW$T$65, DW_AT_decl_column(0x16)
+    1175                    
+    1176                    $C$DW$T$66      .dwtag  DW_TAG_typedef
+    1177                            .dwattr $C$DW$T$66, DW_AT_name("uintptr_t")
+    1178                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$11)
+    1179                            .dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
+    1180                            .dwattr $C$DW$T$66, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1181                            .dwattr $C$DW$T$66, DW_AT_decl_line(0x53)
+    1182                            .dwattr $C$DW$T$66, DW_AT_decl_column(0x1a)
+    1183                    
+    1184                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1185                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1186                            .dwattr $C$DW$T$12, DW_AT_name("long")
+    1187                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1188                    
+    1189                    $C$DW$T$69      .dwtag  DW_TAG_typedef
+    1190                            .dwattr $C$DW$T$69, DW_AT_name("fpos_t")
+    1191                            .dwattr $C$DW$T$69, DW_AT_type(*$C$DW$T$12)
+    1192                            .dwattr $C$DW$T$69, DW_AT_language(DW_LANG_C)
+    1193                            .dwattr $C$DW$T$69, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1194                            .dwattr $C$DW$T$69, DW_AT_decl_line(0x6e)
+    1195                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x0e)
+    1196                    
+    1197                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1198                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1199                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1200                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1201                    
+    1202                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1203                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1204                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1205                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1206                    
+    1207                    $C$DW$T$72      .dwtag  DW_TAG_typedef
+    1208                            .dwattr $C$DW$T$72, DW_AT_name("int64_t")
+    1209                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$14)
+    1210                            .dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
+    1211                            .dwattr $C$DW$T$72, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1212                            .dwattr $C$DW$T$72, DW_AT_decl_line(0x32)
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   24
+
+    1213                            .dwattr $C$DW$T$72, DW_AT_decl_column(0x21)
+    1214                    
+    1215                    $C$DW$T$73      .dwtag  DW_TAG_typedef
+    1216                            .dwattr $C$DW$T$73, DW_AT_name("int_fast64_t")
+    1217                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$72)
+    1218                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+    1219                            .dwattr $C$DW$T$73, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1220                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x4e)
+    1221                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x17)
+    1222                    
+    1223                    $C$DW$T$74      .dwtag  DW_TAG_typedef
+    1224                            .dwattr $C$DW$T$74, DW_AT_name("int_least64_t")
+    1225                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$72)
+    1226                            .dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
+    1227                            .dwattr $C$DW$T$74, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1228                            .dwattr $C$DW$T$74, DW_AT_decl_line(0x40)
+    1229                            .dwattr $C$DW$T$74, DW_AT_decl_column(0x17)
+    1230                    
+    1231                    $C$DW$T$75      .dwtag  DW_TAG_typedef
+    1232                            .dwattr $C$DW$T$75, DW_AT_name("intmax_t")
+    1233                            .dwattr $C$DW$T$75, DW_AT_type(*$C$DW$T$14)
+    1234                            .dwattr $C$DW$T$75, DW_AT_language(DW_LANG_C)
+    1235                            .dwattr $C$DW$T$75, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1236                            .dwattr $C$DW$T$75, DW_AT_decl_line(0x56)
+    1237                            .dwattr $C$DW$T$75, DW_AT_decl_column(0x20)
+    1238                    
+    1239                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1240                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1241                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1242                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1243                    
+    1244                    $C$DW$T$76      .dwtag  DW_TAG_typedef
+    1245                            .dwattr $C$DW$T$76, DW_AT_name("uint64_t")
+    1246                            .dwattr $C$DW$T$76, DW_AT_type(*$C$DW$T$15)
+    1247                            .dwattr $C$DW$T$76, DW_AT_language(DW_LANG_C)
+    1248                            .dwattr $C$DW$T$76, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1249                            .dwattr $C$DW$T$76, DW_AT_decl_line(0x33)
+    1250                            .dwattr $C$DW$T$76, DW_AT_decl_column(0x20)
+    1251                    
+    1252                    $C$DW$T$77      .dwtag  DW_TAG_typedef
+    1253                            .dwattr $C$DW$T$77, DW_AT_name("uint_fast64_t")
+    1254                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$76)
+    1255                            .dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
+    1256                            .dwattr $C$DW$T$77, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1257                            .dwattr $C$DW$T$77, DW_AT_decl_line(0x4f)
+    1258                            .dwattr $C$DW$T$77, DW_AT_decl_column(0x16)
+    1259                    
+    1260                    $C$DW$T$78      .dwtag  DW_TAG_typedef
+    1261                            .dwattr $C$DW$T$78, DW_AT_name("uint_least64_t")
+    1262                            .dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$76)
+    1263                            .dwattr $C$DW$T$78, DW_AT_language(DW_LANG_C)
+    1264                            .dwattr $C$DW$T$78, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1265                            .dwattr $C$DW$T$78, DW_AT_decl_line(0x41)
+    1266                            .dwattr $C$DW$T$78, DW_AT_decl_column(0x16)
+    1267                    
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   25
+
+    1268                    $C$DW$T$79      .dwtag  DW_TAG_typedef
+    1269                            .dwattr $C$DW$T$79, DW_AT_name("uintmax_t")
+    1270                            .dwattr $C$DW$T$79, DW_AT_type(*$C$DW$T$15)
+    1271                            .dwattr $C$DW$T$79, DW_AT_language(DW_LANG_C)
+    1272                            .dwattr $C$DW$T$79, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1273                            .dwattr $C$DW$T$79, DW_AT_decl_line(0x57)
+    1274                            .dwattr $C$DW$T$79, DW_AT_decl_column(0x20)
+    1275                    
+    1276                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1277                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1278                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1279                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1280                    
+    1281                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1282                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1283                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1284                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1285                    
+    1286                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1287                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1288                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1289                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1290                    
+    1291                    $C$DW$T$30      .dwtag  DW_TAG_const_type
+    1292                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$6)
+    1293                    
+    1294                    $C$DW$T$31      .dwtag  DW_TAG_pointer_type
+    1295                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$30)
+    1296                            .dwattr $C$DW$T$31, DW_AT_address_class(0x20)
+    1297                    
+    1298                    $C$DW$T$88      .dwtag  DW_TAG_base_type
+    1299                            .dwattr $C$DW$T$88, DW_AT_encoding(DW_ATE_unsigned_char)
+    1300                            .dwattr $C$DW$T$88, DW_AT_name("unsigned char")
+    1301                            .dwattr $C$DW$T$88, DW_AT_byte_size(0x01)
+    1302                    
+    1303                    
+    1304                    $C$DW$T$21      .dwtag  DW_TAG_structure_type
+    1305                            .dwattr $C$DW$T$21, DW_AT_name("__va_list")
+    1306                            .dwattr $C$DW$T$21, DW_AT_byte_size(0x04)
+    1307                    $C$DW$73        .dwtag  DW_TAG_member
+    1308                            .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$3)
+    1309                            .dwattr $C$DW$73, DW_AT_name("__ap")
+    1310                            .dwattr $C$DW$73, DW_AT_TI_symbol_name("__ap")
+    1311                            .dwattr $C$DW$73, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1312                            .dwattr $C$DW$73, DW_AT_accessibility(DW_ACCESS_public)
+    1313                            .dwattr $C$DW$73, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+    1314                            .dwattr $C$DW$73, DW_AT_decl_line(0x38)
+    1315                            .dwattr $C$DW$73, DW_AT_decl_column(0x0c)
+    1316                    
+    1317                            .dwattr $C$DW$T$21, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1318                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x37)
+    1319                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x10)
+    1320                            .dwendtag $C$DW$T$21
+    1321                    
+    1322                    $C$DW$T$89      .dwtag  DW_TAG_typedef
+TI ARM Assembler PC v15.12.1 Tue Sep 13 14:24:38 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Program_Speakerbuzz.asm                                              PAGE   26
+
+    1323                            .dwattr $C$DW$T$89, DW_AT_name("va_list")
+    1324                            .dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$21)
+    1325                            .dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
+    1326                            .dwattr $C$DW$T$89, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1327                            .dwattr $C$DW$T$89, DW_AT_decl_line(0x39)
+    1328                            .dwattr $C$DW$T$89, DW_AT_decl_column(0x03)
+    1329                    
+    1330                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1331                    
+    1332                    ;***************************************************************
+    1333                    ;* DWARF CIE ENTRIES                                           *
+    1334                    ;***************************************************************
+    1335                    
+    1336                    $C$DW$CIE       .dwcie 14
+    1337                            .dwcfi  cfa_register, 13
+    1338                            .dwcfi  cfa_offset, 0
+    1339                            .dwcfi  undefined, 0
+    1340                            .dwcfi  undefined, 1
+    1341                            .dwcfi  undefined, 2
+    1342                            .dwcfi  undefined, 3
+    1343                            .dwcfi  same_value, 4
+    1344                            .dwcfi  same_value, 5
+    1345                            .dwcfi  same_value, 6
+    1346                            .dwcfi  same_value, 7
+    1347                            .dwcfi  same_value, 8
+    1348                            .dwcfi  same_value, 9
+    1349                            .dwcfi  same_value, 10
+    1350                            .dwcfi  same_value, 11
+    1351                            .dwcfi  undefined, 12
+    1352                            .dwcfi  undefined, 13
+    1353                            .dwcfi  undefined, 14
+    1354                            .dwcfi  undefined, 14
+    1355                            .dwcfi  undefined, 7
+    1356                            .dwendentry
+    1357                            .dwendtag $C$DW$CU
+    1358                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 87 (80%)
+Number of Thumb2 ins encoded as Thumb2 = 21 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 1
+
+
+No Assembly Errors, No Assembly Warnings

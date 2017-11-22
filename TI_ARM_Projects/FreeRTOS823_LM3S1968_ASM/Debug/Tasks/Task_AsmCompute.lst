@@ -1,0 +1,1936 @@
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                       PC v15.12.1.LTS *
+       3                    ;* Date/Time created: Tue Dec 06 13:17:54 2016                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Tasks/Task_AsmCompute.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v15.12.1.LTS Copyright (c) 1996-2
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Debug")
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                            .dwattr $C$DW$1, DW_AT_name("UARTprintf")
+      16                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("UARTprintf")
+      17                            .dwattr $C$DW$1, DW_AT_declaration
+      18                            .dwattr $C$DW$1, DW_AT_external
+      19                            .dwattr $C$DW$1, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Drivers
+      20                            .dwattr $C$DW$1, DW_AT_decl_line(0x3f)
+      21                            .dwattr $C$DW$1, DW_AT_decl_column(0x0d)
+      22                    $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      23                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$40)
+      24                    
+      25                    $C$DW$3 .dwtag  DW_TAG_unspecified_parameters
+      26                    
+      27                            .dwendtag $C$DW$1
+      28                    
+      29                    
+      30                    $C$DW$4 .dwtag  DW_TAG_subprogram
+      31                            .dwattr $C$DW$4, DW_AT_name("vTaskDelay")
+      32                            .dwattr $C$DW$4, DW_AT_TI_symbol_name("vTaskDelay")
+      33                            .dwattr $C$DW$4, DW_AT_declaration
+      34                            .dwattr $C$DW$4, DW_AT_external
+      35                            .dwattr $C$DW$4, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source/
+      36                            .dwattr $C$DW$4, DW_AT_decl_line(0x22b)
+      37                            .dwattr $C$DW$4, DW_AT_decl_column(0x06)
+      38                    $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      39                            .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$62)
+      40                    
+      41                            .dwendtag $C$DW$4
+      42                    
+      43                    
+      44                    $C$DW$6 .dwtag  DW_TAG_subprogram
+      45                            .dwattr $C$DW$6, DW_AT_name("AsmCompute")
+      46                            .dwattr $C$DW$6, DW_AT_TI_symbol_name("AsmCompute")
+      47                            .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$10)
+      48                            .dwattr $C$DW$6, DW_AT_declaration
+      49                            .dwattr $C$DW$6, DW_AT_external
+      50                            .dwattr $C$DW$6, DW_AT_decl_file("../Tasks/Task_AsmCompute.c")
+      51                            .dwattr $C$DW$6, DW_AT_decl_line(0x1b)
+      52                            .dwattr $C$DW$6, DW_AT_decl_column(0x0c)
+      53                    $C$DW$7 .dwtag  DW_TAG_formal_parameter
+      54                            .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$10)
+      55                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    2
+
+      56                    $C$DW$8 .dwtag  DW_TAG_formal_parameter
+      57                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$10)
+      58                    
+      59                    $C$DW$9 .dwtag  DW_TAG_formal_parameter
+      60                            .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$10)
+      61                    
+      62                    $C$DW$10        .dwtag  DW_TAG_formal_parameter
+      63                            .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$10)
+      64                    
+      65                            .dwendtag $C$DW$6
+      66                    
+      67                    ;       C:\TI_CodeComposer\ccsv6\tools\compiler\ti-cgt-arm_15.12.1.LTS\bin\armacpia.exe -@C:\\Users\\a
+      68 00000000                   .sect   ".text"
+      69                            .clink
+      70                            .thumbfunc Task_AsmCompute
+      71 00000000                   .thumb
+      72                            .global Task_AsmCompute
+      73                    
+      74                    $C$DW$11        .dwtag  DW_TAG_subprogram
+      75                            .dwattr $C$DW$11, DW_AT_name("Task_AsmCompute")
+      76                            .dwattr $C$DW$11, DW_AT_low_pc(Task_AsmCompute)
+      77                            .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+      78                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("Task_AsmCompute")
+      79                            .dwattr $C$DW$11, DW_AT_external
+      80                            .dwattr $C$DW$11, DW_AT_TI_begin_file("../Tasks/Task_AsmCompute.c")
+      81                            .dwattr $C$DW$11, DW_AT_TI_begin_line(0x23)
+      82                            .dwattr $C$DW$11, DW_AT_TI_begin_column(0x0d)
+      83                            .dwattr $C$DW$11, DW_AT_decl_file("../Tasks/Task_AsmCompute.c")
+      84                            .dwattr $C$DW$11, DW_AT_decl_line(0x23)
+      85                            .dwattr $C$DW$11, DW_AT_decl_column(0x0d)
+      86                            .dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x30)
+      87                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 35,column 49,is_stmt,address Task_AsmCompute,is
+      88                    
+      89                            .dwfde $C$DW$CIE, Task_AsmCompute
+      90                    $C$DW$12        .dwtag  DW_TAG_formal_parameter
+      91                            .dwattr $C$DW$12, DW_AT_name("pvParameters")
+      92                            .dwattr $C$DW$12, DW_AT_TI_symbol_name("pvParameters")
+      93                            .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$3)
+      94                            .dwattr $C$DW$12, DW_AT_location[DW_OP_reg0]
+      95                    
+      96                    
+      97                    ;*****************************************************************************
+      98                    ;* FUNCTION NAME: Task_AsmCompute                                            *
+      99                    ;*                                                                           *
+     100                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     101                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     102                    ;*   Local Frame Size  : 0 Args + 44 Auto + 4 Save = 48 byte                 *
+     103                    ;*****************************************************************************
+     104 00000000           Task_AsmCompute:
+     105                    ;* --------------------------------------------------------------------------*
+     106                            .dwcfi  cfa_offset, 0
+     107 00000000 B500              PUSH      {LR}                  ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     108                            .dwcfi  cfa_offset, 4
+     109                            .dwcfi  save_reg_to_mem, 14, -4
+     110 00000002 0D2CF1AD          SUB       SP, SP, #44           ; [DPU_3_PIPE]  ; [KEEP 32-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    3
+
+     111                            .dwcfi  cfa_offset, 48
+     112                    $C$DW$13        .dwtag  DW_TAG_variable
+     113                            .dwattr $C$DW$13, DW_AT_name("pvParameters")
+     114                            .dwattr $C$DW$13, DW_AT_TI_symbol_name("pvParameters")
+     115                            .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$3)
+     116                            .dwattr $C$DW$13, DW_AT_location[DW_OP_breg13 0]
+     117                    
+     118                    $C$DW$14        .dwtag  DW_TAG_variable
+     119                            .dwattr $C$DW$14, DW_AT_name("A")
+     120                            .dwattr $C$DW$14, DW_AT_TI_symbol_name("A")
+     121                            .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$12)
+     122                            .dwattr $C$DW$14, DW_AT_location[DW_OP_breg13 4]
+     123                    
+     124                    $C$DW$15        .dwtag  DW_TAG_variable
+     125                            .dwattr $C$DW$15, DW_AT_name("B")
+     126                            .dwattr $C$DW$15, DW_AT_TI_symbol_name("B")
+     127                            .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$12)
+     128                            .dwattr $C$DW$15, DW_AT_location[DW_OP_breg13 8]
+     129                    
+     130                    $C$DW$16        .dwtag  DW_TAG_variable
+     131                            .dwattr $C$DW$16, DW_AT_name("C")
+     132                            .dwattr $C$DW$16, DW_AT_TI_symbol_name("C")
+     133                            .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$12)
+     134                            .dwattr $C$DW$16, DW_AT_location[DW_OP_breg13 12]
+     135                    
+     136                    $C$DW$17        .dwtag  DW_TAG_variable
+     137                            .dwattr $C$DW$17, DW_AT_name("D")
+     138                            .dwattr $C$DW$17, DW_AT_TI_symbol_name("D")
+     139                            .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$12)
+     140                            .dwattr $C$DW$17, DW_AT_location[DW_OP_breg13 16]
+     141                    
+     142                    $C$DW$18        .dwtag  DW_TAG_variable
+     143                            .dwattr $C$DW$18, DW_AT_name("CValue")
+     144                            .dwattr $C$DW$18, DW_AT_TI_symbol_name("CValue")
+     145                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$12)
+     146                            .dwattr $C$DW$18, DW_AT_location[DW_OP_breg13 20]
+     147                    
+     148                    $C$DW$19        .dwtag  DW_TAG_variable
+     149                            .dwattr $C$DW$19, DW_AT_name("AsmValue")
+     150                            .dwattr $C$DW$19, DW_AT_TI_symbol_name("AsmValue")
+     151                            .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$12)
+     152                            .dwattr $C$DW$19, DW_AT_location[DW_OP_breg13 24]
+     153                    
+     154                    $C$DW$20        .dwtag  DW_TAG_variable
+     155                            .dwattr $C$DW$20, DW_AT_name("Delay_2000mS")
+     156                            .dwattr $C$DW$20, DW_AT_TI_symbol_name("Delay_2000mS")
+     157                            .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$13)
+     158                            .dwattr $C$DW$20, DW_AT_location[DW_OP_breg13 28]
+     159                    
+     160 00000006 9000              STR       A1, [SP, #0]          ; [DPU_3_PIPE] |35|  ; [ORIG 16-BIT INS]
+     161                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 40,column 2,is_stmt,isa 1
+     162 00000008 6020F644          MOV       A1, #20000            ; [DPU_3_PIPE] |40|  ; [KEEP 32-BIT INS]
+     163 0000000c 9007              STR       A1, [SP, #28]         ; [DPU_3_PIPE] |40|  ; [ORIG 16-BIT INS]
+     164                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 41,column 2,is_stmt,isa 1
+     165 0000000e 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |41|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    4
+
+     166 00000010 9006              STR       A1, [SP, #24]         ; [DPU_3_PIPE] |41|  ; [ORIG 16-BIT INS]
+     167                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 43,column 9,is_stmt,isa 1
+     168                    ;* --------------------------------------------------------------------------*
+     169                    ;*   BEGIN LOOP ||$C$L1||
+     170                    ;*
+     171                    ;*   Loop source line                : 43
+     172                    ;*   Loop closing brace source line  : 85
+     173                    ;*   Known Minimum Trip Count        : 1
+     174                    ;*   Known Maximum Trip Count        : 4294967295
+     175                    ;*   Known Max Trip Count Factor     : 1
+     176                    ;* --------------------------------------------------------------------------*
+     177 00000012           ||$C$L1||:    
+     178                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 45,column 8,is_stmt,isa 1
+     179 00000012 0001F06F          MVN       A1, #1                ; [DPU_3_PIPE] |45|  ; [KEEP 32-BIT INS]
+     180 00000016 9004              STR       A1, [SP, #16]         ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     181                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 45,column 16,is_stmt,isa 1
+     182 00000018 9804              LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     183 0000001a 2803              CMP       A1, #3                ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     184 0000001c DA65              BGE       ||$C$L15||            ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     185                            ; BRANCHCC OCCURS {||$C$L15||}   ; [] |45| 
+     186                    ;* --------------------------------------------------------------------------*
+     187                    ;*   BEGIN LOOP ||$C$L2||
+     188                    ;*
+     189                    ;*   Loop source line                : 45
+     190                    ;*   Loop closing brace source line  : 81
+     191                    ;*   Known Minimum Trip Count        : 1
+     192                    ;*   Known Maximum Trip Count        : 4294967295
+     193                    ;*   Known Max Trip Count Factor     : 1
+     194                    ;* --------------------------------------------------------------------------*
+     195 0000001e           ||$C$L2||:    
+     196                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 46,column 9,is_stmt,isa 1
+     197 0000001e 0001F06F          MVN       A1, #1                ; [DPU_3_PIPE] |46|  ; [KEEP 32-BIT INS]
+     198 00000022 9003              STR       A1, [SP, #12]         ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     199                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 46,column 17,is_stmt,isa 1
+     200 00000024 9803              LDR       A1, [SP, #12]         ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     201 00000026 2803              CMP       A1, #3                ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     202 00000028 DA59              BGE       ||$C$L14||            ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     203                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |46| 
+     204                    ;* --------------------------------------------------------------------------*
+     205                    ;*   BEGIN LOOP ||$C$L3||
+     206                    ;*
+     207                    ;*   Loop source line                : 46
+     208                    ;*   Loop closing brace source line  : 79
+     209                    ;*   Known Minimum Trip Count        : 1
+     210                    ;*   Known Maximum Trip Count        : 4294967295
+     211                    ;*   Known Max Trip Count Factor     : 1
+     212                    ;* --------------------------------------------------------------------------*
+     213 0000002a           ||$C$L3||:    
+     214                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 47,column 10,is_stmt,isa 1
+     215 0000002a 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     216 0000002c 9002              STR       A1, [SP, #8]          ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     217                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 47,column 17,is_stmt,isa 1
+     218 0000002e 9802              LDR       A1, [SP, #8]          ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     219 00000030 2804              CMP       A1, #4                ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     220 00000032 DA4E              BGE       ||$C$L13||            ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    5
+
+     221                            ; BRANCHCC OCCURS {||$C$L13||}   ; [] |47| 
+     222                    ;* --------------------------------------------------------------------------*
+     223                    ;*   BEGIN LOOP ||$C$L4||
+     224                    ;*
+     225                    ;*   Loop source line                : 47
+     226                    ;*   Loop closing brace source line  : 78
+     227                    ;*   Known Minimum Trip Count        : 1
+     228                    ;*   Known Maximum Trip Count        : 4294967295
+     229                    ;*   Known Max Trip Count Factor     : 1
+     230                    ;* --------------------------------------------------------------------------*
+     231 00000034           ||$C$L4||:    
+     232                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 48,column 11,is_stmt,isa 1
+     233 00000034 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     234 00000036 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     235                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 48,column 18,is_stmt,isa 1
+     236 00000038 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     237 0000003a 2804              CMP       A1, #4                ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     238 0000003c DA43              BGE       ||$C$L12||            ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     239                            ; BRANCHCC OCCURS {||$C$L12||}   ; [] |48| 
+     240                    ;* --------------------------------------------------------------------------*
+     241                    ;*   BEGIN LOOP ||$C$L5||
+     242                    ;*
+     243                    ;*   Loop source line                : 48
+     244                    ;*   Loop closing brace source line  : 77
+     245                    ;*   Known Minimum Trip Count        : 1
+     246                    ;*   Known Maximum Trip Count        : 4294967295
+     247                    ;*   Known Max Trip Count Factor     : 1
+     248                    ;* --------------------------------------------------------------------------*
+     249                    ||$C$L5||:    
+     250                    
+     251                    $C$DW$21        .dwtag  DW_TAG_lexical_block
+     252                            .dwattr $C$DW$21, DW_AT_low_pc(0x00)
+     253                            .dwattr $C$DW$21, DW_AT_high_pc(0x00)
+     254                    $C$DW$22        .dwtag  DW_TAG_variable
+     255                            .dwattr $C$DW$22, DW_AT_name("X")
+     256                            .dwattr $C$DW$22, DW_AT_TI_symbol_name("X")
+     257                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$10)
+     258                            .dwattr $C$DW$22, DW_AT_location[DW_OP_breg13 32]
+     259                    
+     260                    $C$DW$23        .dwtag  DW_TAG_variable
+     261                            .dwattr $C$DW$23, DW_AT_name("Y")
+     262                            .dwattr $C$DW$23, DW_AT_TI_symbol_name("Y")
+     263                            .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$10)
+     264                            .dwattr $C$DW$23, DW_AT_location[DW_OP_breg13 36]
+     265                    
+     266                    $C$DW$24        .dwtag  DW_TAG_variable
+     267                            .dwattr $C$DW$24, DW_AT_name("i")
+     268                            .dwattr $C$DW$24, DW_AT_TI_symbol_name("i")
+     269                            .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$10)
+     270                            .dwattr $C$DW$24, DW_AT_location[DW_OP_breg13 40]
+     271                    
+     272                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 52,column 13,is_stmt,isa 1
+     273 0000003e 9903              LDR       A2, [SP, #12]         ; [DPU_3_PIPE] |52|  ; [ORIG 16-BIT INS]
+     274 00000040 9804              LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |52|  ; [ORIG 16-BIT INS]
+     275 00000042 9A01              LDR       A3, [SP, #4]          ; [DPU_3_PIPE] |52|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    6
+
+     276 00000044 9B02              LDR       A4, [SP, #8]          ; [DPU_3_PIPE] |52|  ; [ORIG 16-BIT INS]
+     277 00000046 4348              MULS      A1, A1, A2            ; [DPU_3_PIPE] |52|  ; [ORIG 16-BIT INS]
+     278 00000048 0002FB03          MLA       A1, A4, A3, A1        ; [DPU_3_PIPE] |52|  ; [KEEP 32-BIT INS]
+     279 0000004c 9008              STR       A1, [SP, #32]         ; [DPU_3_PIPE] |52|  ; [ORIG 16-BIT INS]
+     280                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 53,column 13,is_stmt,isa 1
+     281 0000004e 9802              LDR       A1, [SP, #8]          ; [DPU_3_PIPE] |53|  ; [ORIG 16-BIT INS]
+     282 00000050 9009              STR       A1, [SP, #36]         ; [DPU_3_PIPE] |53|  ; [ORIG 16-BIT INS]
+     283                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 54,column 13,is_stmt,isa 1
+     284 00000052 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |54|  ; [ORIG 16-BIT INS]
+     285 00000054 900A              STR       A1, [SP, #40]         ; [DPU_3_PIPE] |54|  ; [ORIG 16-BIT INS]
+     286                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 55,column 12,is_stmt,isa 1
+     287 00000056 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     288 00000058 900A              STR       A1, [SP, #40]         ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     289 0000005a E006              B         ||$C$L7||             ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     290                            ; BRANCH OCCURS {||$C$L7||}      ; [] |55| 
+     291                    ;* --------------------------------------------------------------------------*
+     292 0000005c           ||$C$L6||:    
+     293                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 56,column 8,is_stmt,isa 1
+     294 0000005c 9909              LDR       A2, [SP, #36]         ; [DPU_3_PIPE] |56|  ; [ORIG 16-BIT INS]
+     295 0000005e 9802              LDR       A1, [SP, #8]          ; [DPU_3_PIPE] |56|  ; [ORIG 16-BIT INS]
+     296 00000060 4348              MULS      A1, A1, A2            ; [DPU_3_PIPE] |56|  ; [ORIG 16-BIT INS]
+     297 00000062 9009              STR       A1, [SP, #36]         ; [DPU_3_PIPE] |56|  ; [ORIG 16-BIT INS]
+     298                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 55,column 30,is_stmt,isa 1
+     299 00000064 980A              LDR       A1, [SP, #40]         ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     300 00000066 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     301 00000068 900A              STR       A1, [SP, #40]         ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     302                    ;* --------------------------------------------------------------------------*
+     303                    ;*   BEGIN LOOP ||$C$L7||
+     304                    ;* --------------------------------------------------------------------------*
+     305 0000006a           ||$C$L7||:    
+     306                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 55,column 19,is_stmt,isa 1
+     307 0000006a 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     308 0000006c 990A              LDR       A2, [SP, #40]         ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     309 0000006e 1E40              SUBS      A1, A1, #1            ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     310 00000070 4288              CMP       A1, A2                ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     311 00000072 DCF3              BGT       ||$C$L6||             ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     312                            ; BRANCHCC OCCURS {||$C$L6||}    ; [] |55| 
+     313                    ;* --------------------------------------------------------------------------*
+     314                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 58,column 7,is_stmt,isa 1
+     315 00000074 9909              LDR       A2, [SP, #36]         ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     316 00000076 9804              LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     317 00000078 1840              ADDS      A1, A1, A2            ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     318 0000007a 9009              STR       A1, [SP, #36]         ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     319                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 60,column 7,is_stmt,isa 1
+     320 0000007c 9808              LDR       A1, [SP, #32]         ; [DPU_3_PIPE] |60|  ; [ORIG 16-BIT INS]
+     321 0000007e B910              CBNZ      A1, ||$C$L8||         ; []  ; [ORIG 16-BIT INS]
+     322                            ; BRANCHCC OCCURS {||$C$L8||}    ; [] |60| 
+     323                    ;* --------------------------------------------------------------------------*
+     324                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 61,column 8,is_stmt,isa 1
+     325 00000080 9809              LDR       A1, [SP, #36]         ; [DPU_3_PIPE] |61|  ; [ORIG 16-BIT INS]
+     326 00000082 9005              STR       A1, [SP, #20]         ; [DPU_3_PIPE] |61|  ; [ORIG 16-BIT INS]
+     327                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 62,column 7,is_stmt,isa 1
+     328 00000084 E001              B         ||$C$L9||             ; [DPU_3_PIPE] |62|  ; [ORIG 16-BIT INS]
+     329                            ; BRANCH OCCURS {||$C$L9||}      ; [] |62| 
+     330                    ;* --------------------------------------------------------------------------*
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    7
+
+     331 00000086           ||$C$L8||:    
+     332                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 63,column 8,is_stmt,isa 1
+     333 00000086 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |63|  ; [ORIG 16-BIT INS]
+     334 00000088 9005              STR       A1, [SP, #20]         ; [DPU_3_PIPE] |63|  ; [ORIG 16-BIT INS]
+     335                    ;* --------------------------------------------------------------------------*
+     336 0000008a           ||$C$L9||:    
+     337                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 67,column 7,is_stmt,isa 1
+     338 0000008a 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     339 0000008c 9902              LDR       A2, [SP, #8]          ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     340 0000008e 9A03              LDR       A3, [SP, #12]         ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     341 00000090 9B04              LDR       A4, [SP, #16]         ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     342                    $C$DW$25        .dwtag  DW_TAG_TI_branch
+     343                            .dwattr $C$DW$25, DW_AT_low_pc(0x00)
+     344                            .dwattr $C$DW$25, DW_AT_name("AsmCompute")
+     345                            .dwattr $C$DW$25, DW_AT_TI_call
+     346                    
+     347 00000092 FFFEF7FF!         BL        AsmCompute            ; [DPU_3_PIPE] |67|  ; [KEEP 32-BIT INS]
+     348                            ; CALL OCCURS {AsmCompute }      ; [] |67| 
+     349 00000096 9006              STR       A1, [SP, #24]         ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     350                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 71,column 7,is_stmt,isa 1
+     351 00000098 9905              LDR       A2, [SP, #20]         ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     352 0000009a 9806              LDR       A1, [SP, #24]         ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     353 0000009c 4288              CMP       A1, A2                ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     354 0000009e D005              BEQ       ||$C$L10||            ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     355                            ; BRANCHCC OCCURS {||$C$L10||}   ; [] |71| 
+     356                    ;* --------------------------------------------------------------------------*
+     357                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 72,column 8,is_stmt,isa 1
+     358 000000a0 9905              LDR       A2, [SP, #20]         ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+     359 000000a2 9A06              LDR       A3, [SP, #24]         ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+     360 000000a4 A015              ADR       A1, $C$SL1            ; [DPU_3_PIPE] |72|  ; [ORIG 16-BIT INS]
+     361                    $C$DW$26        .dwtag  DW_TAG_TI_branch
+     362                            .dwattr $C$DW$26, DW_AT_low_pc(0x00)
+     363                            .dwattr $C$DW$26, DW_AT_name("UARTprintf")
+     364                            .dwattr $C$DW$26, DW_AT_TI_call
+     365                    
+     366 000000a6 FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |72|  ; [KEEP 32-BIT INS]
+     367                            ; CALL OCCURS {UARTprintf }      ; [] |72| 
+     368                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 74,column 7,is_stmt,isa 1
+     369 000000aa E006              B         ||$C$L11||            ; [DPU_3_PIPE] |74|  ; [ORIG 16-BIT INS]
+     370                            ; BRANCH OCCURS {||$C$L11||}     ; [] |74| 
+     371                    ;* --------------------------------------------------------------------------*
+     372 000000ac           ||$C$L10||:    
+     373                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 74,column 14,is_stmt,isa 1
+     374 000000ac 9805              LDR       A1, [SP, #20]         ; [DPU_3_PIPE] |74|  ; [ORIG 16-BIT INS]
+     375 000000ae B120              CBZ       A1, ||$C$L11||        ; []  ; [ORIG 16-BIT INS]
+     376                            ; BRANCHCC OCCURS {||$C$L11||}   ; [] |74| 
+     377                    ;* --------------------------------------------------------------------------*
+     378                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 75,column 8,is_stmt,isa 1
+     379 000000b0 9905              LDR       A2, [SP, #20]         ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     380 000000b2 9A06              LDR       A3, [SP, #24]         ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     381 000000b4 A019              ADR       A1, $C$SL2            ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     382                    $C$DW$27        .dwtag  DW_TAG_TI_branch
+     383                            .dwattr $C$DW$27, DW_AT_low_pc(0x00)
+     384                            .dwattr $C$DW$27, DW_AT_name("UARTprintf")
+     385                            .dwattr $C$DW$27, DW_AT_TI_call
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    8
+
+     386                    
+     387 000000b6 FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |75|  ; [KEEP 32-BIT INS]
+     388                            ; CALL OCCURS {UARTprintf }      ; [] |75| 
+     389                    ;* --------------------------------------------------------------------------*
+     390                    ||$C$L11||:    
+     391                            .dwendtag $C$DW$21
+     392                    
+     393                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 48,column 25,is_stmt,isa 1
+     394 000000ba 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     395 000000bc 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     396 000000be 9001              STR       A1, [SP, #4]          ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     397                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 48,column 18,is_stmt,isa 1
+     398 000000c0 9801              LDR       A1, [SP, #4]          ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     399 000000c2 2804              CMP       A1, #4                ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     400 000000c4 DBBB              BLT       ||$C$L5||             ; [DPU_3_PIPE] |48|  ; [ORIG 16-BIT INS]
+     401                            ; BRANCHCC OCCURS {||$C$L5||}    ; [] |48| 
+     402                    ;* --------------------------------------------------------------------------*
+     403 000000c6           ||$C$L12||:    
+     404                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 47,column 24,is_stmt,isa 1
+     405 000000c6 9802              LDR       A1, [SP, #8]          ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     406 000000c8 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     407 000000ca 9002              STR       A1, [SP, #8]          ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     408                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 47,column 17,is_stmt,isa 1
+     409 000000cc 9802              LDR       A1, [SP, #8]          ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     410 000000ce 2804              CMP       A1, #4                ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     411 000000d0 DBB0              BLT       ||$C$L4||             ; [DPU_3_PIPE] |47|  ; [ORIG 16-BIT INS]
+     412                            ; BRANCHCC OCCURS {||$C$L4||}    ; [] |47| 
+     413                    ;* --------------------------------------------------------------------------*
+     414 000000d2           ||$C$L13||:    
+     415                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 46,column 24,is_stmt,isa 1
+     416 000000d2 9803              LDR       A1, [SP, #12]         ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     417 000000d4 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     418 000000d6 9003              STR       A1, [SP, #12]         ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     419                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 46,column 17,is_stmt,isa 1
+     420 000000d8 9803              LDR       A1, [SP, #12]         ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     421 000000da 2803              CMP       A1, #3                ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     422 000000dc DBA5              BLT       ||$C$L3||             ; [DPU_3_PIPE] |46|  ; [ORIG 16-BIT INS]
+     423                            ; BRANCHCC OCCURS {||$C$L3||}    ; [] |46| 
+     424                    ;* --------------------------------------------------------------------------*
+     425 000000de           ||$C$L14||:    
+     426                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 45,column 23,is_stmt,isa 1
+     427 000000de 9804              LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     428 000000e0 1C40              ADDS      A1, A1, #1            ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     429 000000e2 9004              STR       A1, [SP, #16]         ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     430                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 45,column 16,is_stmt,isa 1
+     431 000000e4 9804              LDR       A1, [SP, #16]         ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     432 000000e6 2803              CMP       A1, #3                ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     433 000000e8 DB99              BLT       ||$C$L2||             ; [DPU_3_PIPE] |45|  ; [ORIG 16-BIT INS]
+     434                            ; BRANCHCC OCCURS {||$C$L2||}    ; [] |45| 
+     435                    ;* --------------------------------------------------------------------------*
+     436 000000ea           ||$C$L15||:    
+     437                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 83,column 3,is_stmt,isa 1
+     438 000000ea 9905              LDR       A2, [SP, #20]         ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     439 000000ec 9A06              LDR       A3, [SP, #24]         ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     440 000000ee A012              ADR       A1, $C$SL3            ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE    9
+
+     441                    $C$DW$28        .dwtag  DW_TAG_TI_branch
+     442                            .dwattr $C$DW$28, DW_AT_low_pc(0x00)
+     443                            .dwattr $C$DW$28, DW_AT_name("UARTprintf")
+     444                            .dwattr $C$DW$28, DW_AT_TI_call
+     445                    
+     446 000000f0 FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |83|  ; [KEEP 32-BIT INS]
+     447                            ; CALL OCCURS {UARTprintf }      ; [] |83| 
+     448                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 84,column 3,is_stmt,isa 1
+     449 000000f4 9807              LDR       A1, [SP, #28]         ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     450                    $C$DW$29        .dwtag  DW_TAG_TI_branch
+     451                            .dwattr $C$DW$29, DW_AT_low_pc(0x00)
+     452                            .dwattr $C$DW$29, DW_AT_name("vTaskDelay")
+     453                            .dwattr $C$DW$29, DW_AT_TI_call
+     454                    
+     455 000000f6 FFFEF7FF!         BL        vTaskDelay            ; [DPU_3_PIPE] |84|  ; [KEEP 32-BIT INS]
+     456                            ; CALL OCCURS {vTaskDelay }      ; [] |84| 
+     457                            .dwpsn  file "../Tasks/Task_AsmCompute.c",line 43,column 9,is_stmt,isa 1
+     458 000000fa E78A              B         ||$C$L1||             ; [DPU_3_PIPE] |43|  ; [ORIG 16-BIT INS]
+     459                            ; BRANCH OCCURS {||$C$L1||}      ; [] |43| 
+     460                    ;* --------------------------------------------------------------------------*
+     461                            .dwattr $C$DW$11, DW_AT_TI_end_file("../Tasks/Task_AsmCompute.c")
+     462                            .dwattr $C$DW$11, DW_AT_TI_end_line(0x56)
+     463                            .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     464                            .dwendentry
+     465                            .dwendtag $C$DW$11
+     466                    
+     467                    ;******************************************************************************
+     468                    ;* STRINGS                                                                    *
+     469                    ;******************************************************************************
+     470 000000fc                   .sect   ".text"
+     471                            .align  4
+     472 000000fc 42        ||$C$SL1||:     .string "BOO! CValue: %d; AsmValue: %d",10,0
+         000000fd 4F       
+         000000fe 4F       
+         000000ff 21       
+         00000100 20       
+         00000101 43       
+         00000102 56       
+         00000103 61       
+         00000104 6C       
+         00000105 75       
+         00000106 65       
+         00000107 3A       
+         00000108 20       
+         00000109 25       
+         0000010a 64       
+         0000010b 3B       
+         0000010c 20       
+         0000010d 41       
+         0000010e 73       
+         0000010f 6D       
+         00000110 56       
+         00000111 61       
+         00000112 6C       
+         00000113 75       
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   10
+
+         00000114 65       
+         00000115 3A       
+         00000116 20       
+         00000117 25       
+         00000118 64       
+         00000119 0A       
+         0000011a 00       
+     473                            .align  4
+     474 0000011c 43        ||$C$SL2||:     .string "CValue: %d; AsmValue: %d",10,0
+         0000011d 56       
+         0000011e 61       
+         0000011f 6C       
+         00000120 75       
+         00000121 65       
+         00000122 3A       
+         00000123 20       
+         00000124 25       
+         00000125 64       
+         00000126 3B       
+         00000127 20       
+         00000128 41       
+         00000129 73       
+         0000012a 6D       
+         0000012b 56       
+         0000012c 61       
+         0000012d 6C       
+         0000012e 75       
+         0000012f 65       
+         00000130 3A       
+         00000131 20       
+         00000132 25       
+         00000133 64       
+         00000134 0A       
+         00000135 00       
+     475                            .align  4
+     476 00000138 4C        ||$C$SL3||:     .string "Last CValue, AsmValue: %d, %d",10,0
+         00000139 61       
+         0000013a 73       
+         0000013b 74       
+         0000013c 20       
+         0000013d 43       
+         0000013e 56       
+         0000013f 61       
+         00000140 6C       
+         00000141 75       
+         00000142 65       
+         00000143 2C       
+         00000144 20       
+         00000145 41       
+         00000146 73       
+         00000147 6D       
+         00000148 56       
+         00000149 61       
+         0000014a 6C       
+         0000014b 75       
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   11
+
+         0000014c 65       
+         0000014d 3A       
+         0000014e 20       
+         0000014f 25       
+         00000150 64       
+         00000151 2C       
+         00000152 20       
+         00000153 25       
+         00000154 64       
+         00000155 0A       
+         00000156 00       
+     477                    ;*****************************************************************************
+     478                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     479                    ;*****************************************************************************
+     480                            .global UARTprintf
+     481                            .global vTaskDelay
+     482                            .global AsmCompute
+     483                    
+     484                    ;******************************************************************************
+     485                    ;* BUILD ATTRIBUTES                                                           *
+     486                    ;******************************************************************************
+     487                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     488                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     489                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     490                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     491                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     492                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(1)
+     493                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(5)
+     494                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     495                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     496                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+     497                    
+     498                    ;******************************************************************************
+     499                    ;* TYPE INFORMATION                                                           *
+     500                    ;******************************************************************************
+     501                    
+     502                    $C$DW$T$49      .dwtag  DW_TAG_enumeration_type
+     503                            .dwattr $C$DW$T$49, DW_AT_byte_size(0x01)
+     504                    $C$DW$30        .dwtag  DW_TAG_enumerator
+     505                            .dwattr $C$DW$30, DW_AT_name("eRunning")
+     506                            .dwattr $C$DW$30, DW_AT_const_value(0x00)
+     507                            .dwattr $C$DW$30, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     508                            .dwattr $C$DW$30, DW_AT_decl_line(0x72)
+     509                            .dwattr $C$DW$30, DW_AT_decl_column(0x02)
+     510                    
+     511                    $C$DW$31        .dwtag  DW_TAG_enumerator
+     512                            .dwattr $C$DW$31, DW_AT_name("eReady")
+     513                            .dwattr $C$DW$31, DW_AT_const_value(0x01)
+     514                            .dwattr $C$DW$31, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     515                            .dwattr $C$DW$31, DW_AT_decl_line(0x73)
+     516                            .dwattr $C$DW$31, DW_AT_decl_column(0x02)
+     517                    
+     518                    $C$DW$32        .dwtag  DW_TAG_enumerator
+     519                            .dwattr $C$DW$32, DW_AT_name("eBlocked")
+     520                            .dwattr $C$DW$32, DW_AT_const_value(0x02)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   12
+
+     521                            .dwattr $C$DW$32, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     522                            .dwattr $C$DW$32, DW_AT_decl_line(0x74)
+     523                            .dwattr $C$DW$32, DW_AT_decl_column(0x02)
+     524                    
+     525                    $C$DW$33        .dwtag  DW_TAG_enumerator
+     526                            .dwattr $C$DW$33, DW_AT_name("eSuspended")
+     527                            .dwattr $C$DW$33, DW_AT_const_value(0x03)
+     528                            .dwattr $C$DW$33, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     529                            .dwattr $C$DW$33, DW_AT_decl_line(0x75)
+     530                            .dwattr $C$DW$33, DW_AT_decl_column(0x02)
+     531                    
+     532                    $C$DW$34        .dwtag  DW_TAG_enumerator
+     533                            .dwattr $C$DW$34, DW_AT_name("eDeleted")
+     534                            .dwattr $C$DW$34, DW_AT_const_value(0x04)
+     535                            .dwattr $C$DW$34, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     536                            .dwattr $C$DW$34, DW_AT_decl_line(0x76)
+     537                            .dwattr $C$DW$34, DW_AT_decl_column(0x02)
+     538                    
+     539                            .dwattr $C$DW$T$49, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     540                            .dwattr $C$DW$T$49, DW_AT_decl_line(0x71)
+     541                            .dwattr $C$DW$T$49, DW_AT_decl_column(0x01)
+     542                            .dwendtag $C$DW$T$49
+     543                    
+     544                    $C$DW$T$50      .dwtag  DW_TAG_typedef
+     545                            .dwattr $C$DW$T$50, DW_AT_name("eTaskState")
+     546                            .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$49)
+     547                            .dwattr $C$DW$T$50, DW_AT_language(DW_LANG_C)
+     548                            .dwattr $C$DW$T$50, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     549                            .dwattr $C$DW$T$50, DW_AT_decl_line(0x77)
+     550                            .dwattr $C$DW$T$50, DW_AT_decl_column(0x03)
+     551                    
+     552                    
+     553                    $C$DW$T$55      .dwtag  DW_TAG_enumeration_type
+     554                            .dwattr $C$DW$T$55, DW_AT_byte_size(0x01)
+     555                    $C$DW$35        .dwtag  DW_TAG_enumerator
+     556                            .dwattr $C$DW$35, DW_AT_name("eNoAction")
+     557                            .dwattr $C$DW$35, DW_AT_const_value(0x00)
+     558                            .dwattr $C$DW$35, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     559                            .dwattr $C$DW$35, DW_AT_decl_line(0x7c)
+     560                            .dwattr $C$DW$35, DW_AT_decl_column(0x02)
+     561                    
+     562                    $C$DW$36        .dwtag  DW_TAG_enumerator
+     563                            .dwattr $C$DW$36, DW_AT_name("eSetBits")
+     564                            .dwattr $C$DW$36, DW_AT_const_value(0x01)
+     565                            .dwattr $C$DW$36, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     566                            .dwattr $C$DW$36, DW_AT_decl_line(0x7d)
+     567                            .dwattr $C$DW$36, DW_AT_decl_column(0x02)
+     568                    
+     569                    $C$DW$37        .dwtag  DW_TAG_enumerator
+     570                            .dwattr $C$DW$37, DW_AT_name("eIncrement")
+     571                            .dwattr $C$DW$37, DW_AT_const_value(0x02)
+     572                            .dwattr $C$DW$37, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     573                            .dwattr $C$DW$37, DW_AT_decl_line(0x7e)
+     574                            .dwattr $C$DW$37, DW_AT_decl_column(0x02)
+     575                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   13
+
+     576                    $C$DW$38        .dwtag  DW_TAG_enumerator
+     577                            .dwattr $C$DW$38, DW_AT_name("eSetValueWithOverwrite")
+     578                            .dwattr $C$DW$38, DW_AT_const_value(0x03)
+     579                            .dwattr $C$DW$38, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     580                            .dwattr $C$DW$38, DW_AT_decl_line(0x7f)
+     581                            .dwattr $C$DW$38, DW_AT_decl_column(0x02)
+     582                    
+     583                    $C$DW$39        .dwtag  DW_TAG_enumerator
+     584                            .dwattr $C$DW$39, DW_AT_name("eSetValueWithoutOverwrite")
+     585                            .dwattr $C$DW$39, DW_AT_const_value(0x04)
+     586                            .dwattr $C$DW$39, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     587                            .dwattr $C$DW$39, DW_AT_decl_line(0x80)
+     588                            .dwattr $C$DW$39, DW_AT_decl_column(0x02)
+     589                    
+     590                            .dwattr $C$DW$T$55, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     591                            .dwattr $C$DW$T$55, DW_AT_decl_line(0x7b)
+     592                            .dwattr $C$DW$T$55, DW_AT_decl_column(0x01)
+     593                            .dwendtag $C$DW$T$55
+     594                    
+     595                    $C$DW$T$56      .dwtag  DW_TAG_typedef
+     596                            .dwattr $C$DW$T$56, DW_AT_name("eNotifyAction")
+     597                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$55)
+     598                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+     599                            .dwattr $C$DW$T$56, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     600                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x81)
+     601                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x03)
+     602                    
+     603                    
+     604                    $C$DW$T$57      .dwtag  DW_TAG_enumeration_type
+     605                            .dwattr $C$DW$T$57, DW_AT_byte_size(0x01)
+     606                    $C$DW$40        .dwtag  DW_TAG_enumerator
+     607                            .dwattr $C$DW$40, DW_AT_name("eAbortSleep")
+     608                            .dwattr $C$DW$40, DW_AT_const_value(0x00)
+     609                            .dwattr $C$DW$40, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     610                            .dwattr $C$DW$40, DW_AT_decl_line(0xb5)
+     611                            .dwattr $C$DW$40, DW_AT_decl_column(0x02)
+     612                    
+     613                    $C$DW$41        .dwtag  DW_TAG_enumerator
+     614                            .dwattr $C$DW$41, DW_AT_name("eStandardSleep")
+     615                            .dwattr $C$DW$41, DW_AT_const_value(0x01)
+     616                            .dwattr $C$DW$41, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     617                            .dwattr $C$DW$41, DW_AT_decl_line(0xb6)
+     618                            .dwattr $C$DW$41, DW_AT_decl_column(0x02)
+     619                    
+     620                    $C$DW$42        .dwtag  DW_TAG_enumerator
+     621                            .dwattr $C$DW$42, DW_AT_name("eNoTasksWaitingTimeout")
+     622                            .dwattr $C$DW$42, DW_AT_const_value(0x02)
+     623                            .dwattr $C$DW$42, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+     624                            .dwattr $C$DW$42, DW_AT_decl_line(0xb7)
+     625                            .dwattr $C$DW$42, DW_AT_decl_column(0x02)
+     626                    
+     627                            .dwattr $C$DW$T$57, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     628                            .dwattr $C$DW$T$57, DW_AT_decl_line(0xb4)
+     629                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x01)
+     630                            .dwendtag $C$DW$T$57
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   14
+
+     631                    
+     632                    $C$DW$T$58      .dwtag  DW_TAG_typedef
+     633                            .dwattr $C$DW$T$58, DW_AT_name("eSleepModeStatus")
+     634                            .dwattr $C$DW$T$58, DW_AT_type(*$C$DW$T$57)
+     635                            .dwattr $C$DW$T$58, DW_AT_language(DW_LANG_C)
+     636                            .dwattr $C$DW$T$58, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     637                            .dwattr $C$DW$T$58, DW_AT_decl_line(0xb8)
+     638                            .dwattr $C$DW$T$58, DW_AT_decl_column(0x03)
+     639                    
+     640                    
+     641                    $C$DW$T$22      .dwtag  DW_TAG_structure_type
+     642                            .dwattr $C$DW$T$22, DW_AT_name("HeapRegion")
+     643                            .dwattr $C$DW$T$22, DW_AT_byte_size(0x08)
+     644                    $C$DW$43        .dwtag  DW_TAG_member
+     645                            .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$20)
+     646                            .dwattr $C$DW$43, DW_AT_name("pucStartAddress")
+     647                            .dwattr $C$DW$43, DW_AT_TI_symbol_name("pucStartAddress")
+     648                            .dwattr $C$DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     649                            .dwattr $C$DW$43, DW_AT_accessibility(DW_ACCESS_public)
+     650                            .dwattr $C$DW$43, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+     651                            .dwattr $C$DW$43, DW_AT_decl_line(0x96)
+     652                            .dwattr $C$DW$43, DW_AT_decl_column(0x0b)
+     653                    
+     654                    $C$DW$44        .dwtag  DW_TAG_member
+     655                            .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$21)
+     656                            .dwattr $C$DW$44, DW_AT_name("xSizeInBytes")
+     657                            .dwattr $C$DW$44, DW_AT_TI_symbol_name("xSizeInBytes")
+     658                            .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+     659                            .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
+     660                            .dwattr $C$DW$44, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+     661                            .dwattr $C$DW$44, DW_AT_decl_line(0x97)
+     662                            .dwattr $C$DW$44, DW_AT_decl_column(0x09)
+     663                    
+     664                            .dwattr $C$DW$T$22, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+     665                            .dwattr $C$DW$T$22, DW_AT_decl_line(0x94)
+     666                            .dwattr $C$DW$T$22, DW_AT_decl_column(0x10)
+     667                            .dwendtag $C$DW$T$22
+     668                    
+     669                    $C$DW$T$59      .dwtag  DW_TAG_typedef
+     670                            .dwattr $C$DW$T$59, DW_AT_name("HeapRegion_t")
+     671                            .dwattr $C$DW$T$59, DW_AT_type(*$C$DW$T$22)
+     672                            .dwattr $C$DW$T$59, DW_AT_language(DW_LANG_C)
+     673                            .dwattr $C$DW$T$59, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+     674                            .dwattr $C$DW$T$59, DW_AT_decl_line(0x98)
+     675                            .dwattr $C$DW$T$59, DW_AT_decl_column(0x03)
+     676                    
+     677                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     678                            .dwattr $C$DW$T$2, DW_AT_name("void")
+     679                    
+     680                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     681                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+     682                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+     683                    
+     684                    $C$DW$T$48      .dwtag  DW_TAG_typedef
+     685                            .dwattr $C$DW$T$48, DW_AT_name("TaskHandle_t")
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   15
+
+     686                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$3)
+     687                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+     688                            .dwattr $C$DW$T$48, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     689                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x67)
+     690                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x10)
+     691                    
+     692                    
+     693                    $C$DW$T$35      .dwtag  DW_TAG_subroutine_type
+     694                            .dwattr $C$DW$T$35, DW_AT_language(DW_LANG_C)
+     695                    $C$DW$45        .dwtag  DW_TAG_formal_parameter
+     696                            .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$3)
+     697                    
+     698                            .dwendtag $C$DW$T$35
+     699                    
+     700                    $C$DW$T$36      .dwtag  DW_TAG_pointer_type
+     701                            .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+     702                            .dwattr $C$DW$T$36, DW_AT_address_class(0x20)
+     703                    
+     704                    $C$DW$T$37      .dwtag  DW_TAG_typedef
+     705                            .dwattr $C$DW$T$37, DW_AT_name("TaskFunction_t")
+     706                            .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$36)
+     707                            .dwattr $C$DW$T$37, DW_AT_language(DW_LANG_C)
+     708                            .dwattr $C$DW$T$37, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+     709                            .dwattr $C$DW$T$37, DW_AT_decl_line(0x4d)
+     710                            .dwattr $C$DW$T$37, DW_AT_decl_column(0x10)
+     711                    
+     712                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     713                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     714                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     715                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     716                    
+     717                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     718                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     719                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     720                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     721                    
+     722                    $C$DW$T$65      .dwtag  DW_TAG_typedef
+     723                            .dwattr $C$DW$T$65, DW_AT_name("int8_t")
+     724                            .dwattr $C$DW$T$65, DW_AT_type(*$C$DW$T$5)
+     725                            .dwattr $C$DW$T$65, DW_AT_language(DW_LANG_C)
+     726                            .dwattr $C$DW$T$65, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     727                            .dwattr $C$DW$T$65, DW_AT_decl_line(0x2a)
+     728                            .dwattr $C$DW$T$65, DW_AT_decl_column(0x1d)
+     729                    
+     730                    $C$DW$T$66      .dwtag  DW_TAG_typedef
+     731                            .dwattr $C$DW$T$66, DW_AT_name("int_least8_t")
+     732                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$65)
+     733                            .dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
+     734                            .dwattr $C$DW$T$66, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     735                            .dwattr $C$DW$T$66, DW_AT_decl_line(0x37)
+     736                            .dwattr $C$DW$T$66, DW_AT_decl_column(0x17)
+     737                    
+     738                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     739                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     740                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   16
+
+     741                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     742                    
+     743                    $C$DW$T$67      .dwtag  DW_TAG_typedef
+     744                            .dwattr $C$DW$T$67, DW_AT_name("tBoolean")
+     745                            .dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$6)
+     746                            .dwattr $C$DW$T$67, DW_AT_language(DW_LANG_C)
+     747                            .dwattr $C$DW$T$67, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/inc/hw_types.h"
+     748                            .dwattr $C$DW$T$67, DW_AT_decl_line(0x30)
+     749                            .dwattr $C$DW$T$67, DW_AT_decl_column(0x17)
+     750                    
+     751                    $C$DW$T$19      .dwtag  DW_TAG_typedef
+     752                            .dwattr $C$DW$T$19, DW_AT_name("uint8_t")
+     753                            .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$6)
+     754                            .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+     755                            .dwattr $C$DW$T$19, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     756                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x2b)
+     757                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x1c)
+     758                    
+     759                    $C$DW$T$20      .dwtag  DW_TAG_pointer_type
+     760                            .dwattr $C$DW$T$20, DW_AT_type(*$C$DW$T$19)
+     761                            .dwattr $C$DW$T$20, DW_AT_address_class(0x20)
+     762                    
+     763                    $C$DW$T$68      .dwtag  DW_TAG_typedef
+     764                            .dwattr $C$DW$T$68, DW_AT_name("portCHAR")
+     765                            .dwattr $C$DW$T$68, DW_AT_type(*$C$DW$T$19)
+     766                            .dwattr $C$DW$T$68, DW_AT_language(DW_LANG_C)
+     767                            .dwattr $C$DW$T$68, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     768                            .dwattr $C$DW$T$68, DW_AT_decl_line(0x66)
+     769                            .dwattr $C$DW$T$68, DW_AT_decl_column(0x12)
+     770                    
+     771                    $C$DW$T$69      .dwtag  DW_TAG_typedef
+     772                            .dwattr $C$DW$T$69, DW_AT_name("uint_least8_t")
+     773                            .dwattr $C$DW$T$69, DW_AT_type(*$C$DW$T$19)
+     774                            .dwattr $C$DW$T$69, DW_AT_language(DW_LANG_C)
+     775                            .dwattr $C$DW$T$69, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     776                            .dwattr $C$DW$T$69, DW_AT_decl_line(0x38)
+     777                            .dwattr $C$DW$T$69, DW_AT_decl_column(0x16)
+     778                    
+     779                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+     780                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     781                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     782                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     783                    
+     784                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+     785                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     786                            .dwattr $C$DW$T$8, DW_AT_name("short")
+     787                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     788                    
+     789                    $C$DW$T$70      .dwtag  DW_TAG_typedef
+     790                            .dwattr $C$DW$T$70, DW_AT_name("int16_t")
+     791                            .dwattr $C$DW$T$70, DW_AT_type(*$C$DW$T$8)
+     792                            .dwattr $C$DW$T$70, DW_AT_language(DW_LANG_C)
+     793                            .dwattr $C$DW$T$70, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     794                            .dwattr $C$DW$T$70, DW_AT_decl_line(0x2c)
+     795                            .dwattr $C$DW$T$70, DW_AT_decl_column(0x1d)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   17
+
+     796                    
+     797                    $C$DW$T$71      .dwtag  DW_TAG_typedef
+     798                            .dwattr $C$DW$T$71, DW_AT_name("int_least16_t")
+     799                            .dwattr $C$DW$T$71, DW_AT_type(*$C$DW$T$70)
+     800                            .dwattr $C$DW$T$71, DW_AT_language(DW_LANG_C)
+     801                            .dwattr $C$DW$T$71, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     802                            .dwattr $C$DW$T$71, DW_AT_decl_line(0x3a)
+     803                            .dwattr $C$DW$T$71, DW_AT_decl_column(0x17)
+     804                    
+     805                    $C$DW$T$72      .dwtag  DW_TAG_typedef
+     806                            .dwattr $C$DW$T$72, DW_AT_name("portSHORT")
+     807                            .dwattr $C$DW$T$72, DW_AT_type(*$C$DW$T$70)
+     808                            .dwattr $C$DW$T$72, DW_AT_language(DW_LANG_C)
+     809                            .dwattr $C$DW$T$72, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     810                            .dwattr $C$DW$T$72, DW_AT_decl_line(0x6a)
+     811                            .dwattr $C$DW$T$72, DW_AT_decl_column(0x12)
+     812                    
+     813                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+     814                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     815                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     816                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     817                    
+     818                    $C$DW$T$42      .dwtag  DW_TAG_typedef
+     819                            .dwattr $C$DW$T$42, DW_AT_name("uint16_t")
+     820                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$9)
+     821                            .dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+     822                            .dwattr $C$DW$T$42, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     823                            .dwattr $C$DW$T$42, DW_AT_decl_line(0x2d)
+     824                            .dwattr $C$DW$T$42, DW_AT_decl_column(0x1c)
+     825                    
+     826                    $C$DW$T$73      .dwtag  DW_TAG_typedef
+     827                            .dwattr $C$DW$T$73, DW_AT_name("uint_least16_t")
+     828                            .dwattr $C$DW$T$73, DW_AT_type(*$C$DW$T$42)
+     829                            .dwattr $C$DW$T$73, DW_AT_language(DW_LANG_C)
+     830                            .dwattr $C$DW$T$73, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     831                            .dwattr $C$DW$T$73, DW_AT_decl_line(0x3b)
+     832                            .dwattr $C$DW$T$73, DW_AT_decl_column(0x16)
+     833                    
+     834                    $C$DW$T$74      .dwtag  DW_TAG_typedef
+     835                            .dwattr $C$DW$T$74, DW_AT_name("wchar_t")
+     836                            .dwattr $C$DW$T$74, DW_AT_type(*$C$DW$T$9)
+     837                            .dwattr $C$DW$T$74, DW_AT_language(DW_LANG_C)
+     838                            .dwattr $C$DW$T$74, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     839                            .dwattr $C$DW$T$74, DW_AT_decl_line(0x41)
+     840                            .dwattr $C$DW$T$74, DW_AT_decl_column(0x1a)
+     841                    
+     842                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+     843                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     844                            .dwattr $C$DW$T$10, DW_AT_name("int")
+     845                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+     846                    
+     847                    $C$DW$T$52      .dwtag  DW_TAG_typedef
+     848                            .dwattr $C$DW$T$52, DW_AT_name("int32_t")
+     849                            .dwattr $C$DW$T$52, DW_AT_type(*$C$DW$T$10)
+     850                            .dwattr $C$DW$T$52, DW_AT_language(DW_LANG_C)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   18
+
+     851                            .dwattr $C$DW$T$52, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     852                            .dwattr $C$DW$T$52, DW_AT_decl_line(0x2e)
+     853                            .dwattr $C$DW$T$52, DW_AT_decl_column(0x1d)
+     854                    
+     855                    $C$DW$T$53      .dwtag  DW_TAG_typedef
+     856                            .dwattr $C$DW$T$53, DW_AT_name("BaseType_t")
+     857                            .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$52)
+     858                            .dwattr $C$DW$T$53, DW_AT_language(DW_LANG_C)
+     859                            .dwattr $C$DW$T$53, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     860                            .dwattr $C$DW$T$53, DW_AT_decl_line(0x6f)
+     861                            .dwattr $C$DW$T$53, DW_AT_decl_column(0x12)
+     862                    
+     863                    
+     864                    $C$DW$T$77      .dwtag  DW_TAG_subroutine_type
+     865                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$53)
+     866                            .dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
+     867                    $C$DW$46        .dwtag  DW_TAG_formal_parameter
+     868                            .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$3)
+     869                    
+     870                            .dwendtag $C$DW$T$77
+     871                    
+     872                    $C$DW$T$78      .dwtag  DW_TAG_pointer_type
+     873                            .dwattr $C$DW$T$78, DW_AT_type(*$C$DW$T$77)
+     874                            .dwattr $C$DW$T$78, DW_AT_address_class(0x20)
+     875                    
+     876                    $C$DW$T$79      .dwtag  DW_TAG_typedef
+     877                            .dwattr $C$DW$T$79, DW_AT_name("TaskHookFunction_t")
+     878                            .dwattr $C$DW$T$79, DW_AT_type(*$C$DW$T$78)
+     879                            .dwattr $C$DW$T$79, DW_AT_language(DW_LANG_C)
+     880                            .dwattr $C$DW$T$79, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     881                            .dwattr $C$DW$T$79, DW_AT_decl_line(0x6d)
+     882                            .dwattr $C$DW$T$79, DW_AT_decl_column(0x16)
+     883                    
+     884                    $C$DW$T$80      .dwtag  DW_TAG_typedef
+     885                            .dwattr $C$DW$T$80, DW_AT_name("int_fast16_t")
+     886                            .dwattr $C$DW$T$80, DW_AT_type(*$C$DW$T$52)
+     887                            .dwattr $C$DW$T$80, DW_AT_language(DW_LANG_C)
+     888                            .dwattr $C$DW$T$80, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     889                            .dwattr $C$DW$T$80, DW_AT_decl_line(0x47)
+     890                            .dwattr $C$DW$T$80, DW_AT_decl_column(0x17)
+     891                    
+     892                    $C$DW$T$81      .dwtag  DW_TAG_typedef
+     893                            .dwattr $C$DW$T$81, DW_AT_name("int_fast32_t")
+     894                            .dwattr $C$DW$T$81, DW_AT_type(*$C$DW$T$52)
+     895                            .dwattr $C$DW$T$81, DW_AT_language(DW_LANG_C)
+     896                            .dwattr $C$DW$T$81, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     897                            .dwattr $C$DW$T$81, DW_AT_decl_line(0x4a)
+     898                            .dwattr $C$DW$T$81, DW_AT_decl_column(0x17)
+     899                    
+     900                    $C$DW$T$82      .dwtag  DW_TAG_typedef
+     901                            .dwattr $C$DW$T$82, DW_AT_name("int_fast8_t")
+     902                            .dwattr $C$DW$T$82, DW_AT_type(*$C$DW$T$52)
+     903                            .dwattr $C$DW$T$82, DW_AT_language(DW_LANG_C)
+     904                            .dwattr $C$DW$T$82, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     905                            .dwattr $C$DW$T$82, DW_AT_decl_line(0x45)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   19
+
+     906                            .dwattr $C$DW$T$82, DW_AT_decl_column(0x17)
+     907                    
+     908                    $C$DW$T$83      .dwtag  DW_TAG_typedef
+     909                            .dwattr $C$DW$T$83, DW_AT_name("int_least32_t")
+     910                            .dwattr $C$DW$T$83, DW_AT_type(*$C$DW$T$52)
+     911                            .dwattr $C$DW$T$83, DW_AT_language(DW_LANG_C)
+     912                            .dwattr $C$DW$T$83, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     913                            .dwattr $C$DW$T$83, DW_AT_decl_line(0x3c)
+     914                            .dwattr $C$DW$T$83, DW_AT_decl_column(0x17)
+     915                    
+     916                    $C$DW$T$84      .dwtag  DW_TAG_typedef
+     917                            .dwattr $C$DW$T$84, DW_AT_name("portBASE_TYPE")
+     918                            .dwattr $C$DW$T$84, DW_AT_type(*$C$DW$T$52)
+     919                            .dwattr $C$DW$T$84, DW_AT_language(DW_LANG_C)
+     920                            .dwattr $C$DW$T$84, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     921                            .dwattr $C$DW$T$84, DW_AT_decl_line(0x6c)
+     922                            .dwattr $C$DW$T$84, DW_AT_decl_column(0x12)
+     923                    
+     924                    $C$DW$T$85      .dwtag  DW_TAG_typedef
+     925                            .dwattr $C$DW$T$85, DW_AT_name("portLONG")
+     926                            .dwattr $C$DW$T$85, DW_AT_type(*$C$DW$T$52)
+     927                            .dwattr $C$DW$T$85, DW_AT_language(DW_LANG_C)
+     928                            .dwattr $C$DW$T$85, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     929                            .dwattr $C$DW$T$85, DW_AT_decl_line(0x69)
+     930                            .dwattr $C$DW$T$85, DW_AT_decl_column(0x12)
+     931                    
+     932                    $C$DW$T$86      .dwtag  DW_TAG_typedef
+     933                            .dwattr $C$DW$T$86, DW_AT_name("intptr_t")
+     934                            .dwattr $C$DW$T$86, DW_AT_type(*$C$DW$T$10)
+     935                            .dwattr $C$DW$T$86, DW_AT_language(DW_LANG_C)
+     936                            .dwattr $C$DW$T$86, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     937                            .dwattr $C$DW$T$86, DW_AT_decl_line(0x52)
+     938                            .dwattr $C$DW$T$86, DW_AT_decl_column(0x1a)
+     939                    
+     940                    $C$DW$T$87      .dwtag  DW_TAG_typedef
+     941                            .dwattr $C$DW$T$87, DW_AT_name("ptrdiff_t")
+     942                            .dwattr $C$DW$T$87, DW_AT_type(*$C$DW$T$10)
+     943                            .dwattr $C$DW$T$87, DW_AT_language(DW_LANG_C)
+     944                            .dwattr $C$DW$T$87, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     945                            .dwattr $C$DW$T$87, DW_AT_decl_line(0x36)
+     946                            .dwattr $C$DW$T$87, DW_AT_decl_column(0x1c)
+     947                    
+     948                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+     949                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     950                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     951                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+     952                    
+     953                    $C$DW$T$21      .dwtag  DW_TAG_typedef
+     954                            .dwattr $C$DW$T$21, DW_AT_name("size_t")
+     955                            .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$11)
+     956                            .dwattr $C$DW$T$21, DW_AT_language(DW_LANG_C)
+     957                            .dwattr $C$DW$T$21, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     958                            .dwattr $C$DW$T$21, DW_AT_decl_line(0x3a)
+     959                            .dwattr $C$DW$T$21, DW_AT_decl_column(0x19)
+     960                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   20
+
+     961                    $C$DW$T$24      .dwtag  DW_TAG_typedef
+     962                            .dwattr $C$DW$T$24, DW_AT_name("uint32_t")
+     963                            .dwattr $C$DW$T$24, DW_AT_type(*$C$DW$T$11)
+     964                            .dwattr $C$DW$T$24, DW_AT_language(DW_LANG_C)
+     965                            .dwattr $C$DW$T$24, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     966                            .dwattr $C$DW$T$24, DW_AT_decl_line(0x2f)
+     967                            .dwattr $C$DW$T$24, DW_AT_decl_column(0x1c)
+     968                    
+     969                    $C$DW$T$43      .dwtag  DW_TAG_typedef
+     970                            .dwattr $C$DW$T$43, DW_AT_name("StackType_t")
+     971                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$24)
+     972                            .dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+     973                            .dwattr $C$DW$T$43, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     974                            .dwattr $C$DW$T$43, DW_AT_decl_line(0x6e)
+     975                            .dwattr $C$DW$T$43, DW_AT_decl_column(0x12)
+     976                    
+     977                    $C$DW$T$44      .dwtag  DW_TAG_pointer_type
+     978                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$43)
+     979                            .dwattr $C$DW$T$44, DW_AT_address_class(0x20)
+     980                    
+     981                    $C$DW$T$30      .dwtag  DW_TAG_typedef
+     982                            .dwattr $C$DW$T$30, DW_AT_name("TickType_t")
+     983                            .dwattr $C$DW$T$30, DW_AT_type(*$C$DW$T$24)
+     984                            .dwattr $C$DW$T$30, DW_AT_language(DW_LANG_C)
+     985                            .dwattr $C$DW$T$30, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     986                            .dwattr $C$DW$T$30, DW_AT_decl_line(0x76)
+     987                            .dwattr $C$DW$T$30, DW_AT_decl_column(0x13)
+     988                    
+     989                    $C$DW$T$62      .dwtag  DW_TAG_const_type
+     990                            .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$30)
+     991                    
+     992                    $C$DW$T$25      .dwtag  DW_TAG_typedef
+     993                            .dwattr $C$DW$T$25, DW_AT_name("UBaseType_t")
+     994                            .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$24)
+     995                            .dwattr $C$DW$T$25, DW_AT_language(DW_LANG_C)
+     996                            .dwattr $C$DW$T$25, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+     997                            .dwattr $C$DW$T$25, DW_AT_decl_line(0x70)
+     998                            .dwattr $C$DW$T$25, DW_AT_decl_column(0x12)
+     999                    
+    1000                    $C$DW$T$88      .dwtag  DW_TAG_typedef
+    1001                            .dwattr $C$DW$T$88, DW_AT_name("portSTACK_TYPE")
+    1002                            .dwattr $C$DW$T$88, DW_AT_type(*$C$DW$T$24)
+    1003                            .dwattr $C$DW$T$88, DW_AT_language(DW_LANG_C)
+    1004                            .dwattr $C$DW$T$88, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1005                            .dwattr $C$DW$T$88, DW_AT_decl_line(0x6b)
+    1006                            .dwattr $C$DW$T$88, DW_AT_decl_column(0x12)
+    1007                    
+    1008                    $C$DW$T$89      .dwtag  DW_TAG_typedef
+    1009                            .dwattr $C$DW$T$89, DW_AT_name("uint_fast16_t")
+    1010                            .dwattr $C$DW$T$89, DW_AT_type(*$C$DW$T$24)
+    1011                            .dwattr $C$DW$T$89, DW_AT_language(DW_LANG_C)
+    1012                            .dwattr $C$DW$T$89, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1013                            .dwattr $C$DW$T$89, DW_AT_decl_line(0x48)
+    1014                            .dwattr $C$DW$T$89, DW_AT_decl_column(0x16)
+    1015                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   21
+
+    1016                    $C$DW$T$90      .dwtag  DW_TAG_typedef
+    1017                            .dwattr $C$DW$T$90, DW_AT_name("uint_fast32_t")
+    1018                            .dwattr $C$DW$T$90, DW_AT_type(*$C$DW$T$24)
+    1019                            .dwattr $C$DW$T$90, DW_AT_language(DW_LANG_C)
+    1020                            .dwattr $C$DW$T$90, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1021                            .dwattr $C$DW$T$90, DW_AT_decl_line(0x4b)
+    1022                            .dwattr $C$DW$T$90, DW_AT_decl_column(0x16)
+    1023                    
+    1024                    $C$DW$T$91      .dwtag  DW_TAG_typedef
+    1025                            .dwattr $C$DW$T$91, DW_AT_name("uint_fast8_t")
+    1026                            .dwattr $C$DW$T$91, DW_AT_type(*$C$DW$T$24)
+    1027                            .dwattr $C$DW$T$91, DW_AT_language(DW_LANG_C)
+    1028                            .dwattr $C$DW$T$91, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1029                            .dwattr $C$DW$T$91, DW_AT_decl_line(0x46)
+    1030                            .dwattr $C$DW$T$91, DW_AT_decl_column(0x16)
+    1031                    
+    1032                    $C$DW$T$92      .dwtag  DW_TAG_typedef
+    1033                            .dwattr $C$DW$T$92, DW_AT_name("uint_least32_t")
+    1034                            .dwattr $C$DW$T$92, DW_AT_type(*$C$DW$T$24)
+    1035                            .dwattr $C$DW$T$92, DW_AT_language(DW_LANG_C)
+    1036                            .dwattr $C$DW$T$92, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1037                            .dwattr $C$DW$T$92, DW_AT_decl_line(0x3d)
+    1038                            .dwattr $C$DW$T$92, DW_AT_decl_column(0x16)
+    1039                    
+    1040                    $C$DW$T$93      .dwtag  DW_TAG_typedef
+    1041                            .dwattr $C$DW$T$93, DW_AT_name("uintptr_t")
+    1042                            .dwattr $C$DW$T$93, DW_AT_type(*$C$DW$T$11)
+    1043                            .dwattr $C$DW$T$93, DW_AT_language(DW_LANG_C)
+    1044                            .dwattr $C$DW$T$93, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1045                            .dwattr $C$DW$T$93, DW_AT_decl_line(0x53)
+    1046                            .dwattr $C$DW$T$93, DW_AT_decl_column(0x1a)
+    1047                    
+    1048                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1049                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1050                            .dwattr $C$DW$T$12, DW_AT_name("long")
+    1051                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1052                    
+    1053                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1054                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1055                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1056                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1057                    
+    1058                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1059                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1060                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1061                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1062                    
+    1063                    $C$DW$T$94      .dwtag  DW_TAG_typedef
+    1064                            .dwattr $C$DW$T$94, DW_AT_name("int64_t")
+    1065                            .dwattr $C$DW$T$94, DW_AT_type(*$C$DW$T$14)
+    1066                            .dwattr $C$DW$T$94, DW_AT_language(DW_LANG_C)
+    1067                            .dwattr $C$DW$T$94, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1068                            .dwattr $C$DW$T$94, DW_AT_decl_line(0x32)
+    1069                            .dwattr $C$DW$T$94, DW_AT_decl_column(0x21)
+    1070                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   22
+
+    1071                    $C$DW$T$95      .dwtag  DW_TAG_typedef
+    1072                            .dwattr $C$DW$T$95, DW_AT_name("int_fast64_t")
+    1073                            .dwattr $C$DW$T$95, DW_AT_type(*$C$DW$T$94)
+    1074                            .dwattr $C$DW$T$95, DW_AT_language(DW_LANG_C)
+    1075                            .dwattr $C$DW$T$95, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1076                            .dwattr $C$DW$T$95, DW_AT_decl_line(0x4e)
+    1077                            .dwattr $C$DW$T$95, DW_AT_decl_column(0x17)
+    1078                    
+    1079                    $C$DW$T$96      .dwtag  DW_TAG_typedef
+    1080                            .dwattr $C$DW$T$96, DW_AT_name("int_least64_t")
+    1081                            .dwattr $C$DW$T$96, DW_AT_type(*$C$DW$T$94)
+    1082                            .dwattr $C$DW$T$96, DW_AT_language(DW_LANG_C)
+    1083                            .dwattr $C$DW$T$96, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1084                            .dwattr $C$DW$T$96, DW_AT_decl_line(0x40)
+    1085                            .dwattr $C$DW$T$96, DW_AT_decl_column(0x17)
+    1086                    
+    1087                    $C$DW$T$97      .dwtag  DW_TAG_typedef
+    1088                            .dwattr $C$DW$T$97, DW_AT_name("portDOUBLE")
+    1089                            .dwattr $C$DW$T$97, DW_AT_type(*$C$DW$T$94)
+    1090                            .dwattr $C$DW$T$97, DW_AT_language(DW_LANG_C)
+    1091                            .dwattr $C$DW$T$97, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1092                            .dwattr $C$DW$T$97, DW_AT_decl_line(0x68)
+    1093                            .dwattr $C$DW$T$97, DW_AT_decl_column(0x12)
+    1094                    
+    1095                    $C$DW$T$98      .dwtag  DW_TAG_typedef
+    1096                            .dwattr $C$DW$T$98, DW_AT_name("intmax_t")
+    1097                            .dwattr $C$DW$T$98, DW_AT_type(*$C$DW$T$14)
+    1098                            .dwattr $C$DW$T$98, DW_AT_language(DW_LANG_C)
+    1099                            .dwattr $C$DW$T$98, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1100                            .dwattr $C$DW$T$98, DW_AT_decl_line(0x56)
+    1101                            .dwattr $C$DW$T$98, DW_AT_decl_column(0x20)
+    1102                    
+    1103                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1104                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1105                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1106                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1107                    
+    1108                    $C$DW$T$99      .dwtag  DW_TAG_typedef
+    1109                            .dwattr $C$DW$T$99, DW_AT_name("uint64_t")
+    1110                            .dwattr $C$DW$T$99, DW_AT_type(*$C$DW$T$15)
+    1111                            .dwattr $C$DW$T$99, DW_AT_language(DW_LANG_C)
+    1112                            .dwattr $C$DW$T$99, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1113                            .dwattr $C$DW$T$99, DW_AT_decl_line(0x33)
+    1114                            .dwattr $C$DW$T$99, DW_AT_decl_column(0x20)
+    1115                    
+    1116                    $C$DW$T$100     .dwtag  DW_TAG_typedef
+    1117                            .dwattr $C$DW$T$100, DW_AT_name("uint_fast64_t")
+    1118                            .dwattr $C$DW$T$100, DW_AT_type(*$C$DW$T$99)
+    1119                            .dwattr $C$DW$T$100, DW_AT_language(DW_LANG_C)
+    1120                            .dwattr $C$DW$T$100, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12
+    1121                            .dwattr $C$DW$T$100, DW_AT_decl_line(0x4f)
+    1122                            .dwattr $C$DW$T$100, DW_AT_decl_column(0x16)
+    1123                    
+    1124                    $C$DW$T$101     .dwtag  DW_TAG_typedef
+    1125                            .dwattr $C$DW$T$101, DW_AT_name("uint_least64_t")
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   23
+
+    1126                            .dwattr $C$DW$T$101, DW_AT_type(*$C$DW$T$99)
+    1127                            .dwattr $C$DW$T$101, DW_AT_language(DW_LANG_C)
+    1128                            .dwattr $C$DW$T$101, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12
+    1129                            .dwattr $C$DW$T$101, DW_AT_decl_line(0x41)
+    1130                            .dwattr $C$DW$T$101, DW_AT_decl_column(0x16)
+    1131                    
+    1132                    $C$DW$T$102     .dwtag  DW_TAG_typedef
+    1133                            .dwattr $C$DW$T$102, DW_AT_name("uintmax_t")
+    1134                            .dwattr $C$DW$T$102, DW_AT_type(*$C$DW$T$15)
+    1135                            .dwattr $C$DW$T$102, DW_AT_language(DW_LANG_C)
+    1136                            .dwattr $C$DW$T$102, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12
+    1137                            .dwattr $C$DW$T$102, DW_AT_decl_line(0x57)
+    1138                            .dwattr $C$DW$T$102, DW_AT_decl_column(0x20)
+    1139                    
+    1140                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1141                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1142                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1143                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1144                    
+    1145                    $C$DW$T$103     .dwtag  DW_TAG_typedef
+    1146                            .dwattr $C$DW$T$103, DW_AT_name("portFLOAT")
+    1147                            .dwattr $C$DW$T$103, DW_AT_type(*$C$DW$T$16)
+    1148                            .dwattr $C$DW$T$103, DW_AT_language(DW_LANG_C)
+    1149                            .dwattr $C$DW$T$103, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sou
+    1150                            .dwattr $C$DW$T$103, DW_AT_decl_line(0x67)
+    1151                            .dwattr $C$DW$T$103, DW_AT_decl_column(0x10)
+    1152                    
+    1153                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1154                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1155                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1156                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1157                    
+    1158                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1159                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1160                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1161                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1162                    
+    1163                    $C$DW$T$39      .dwtag  DW_TAG_const_type
+    1164                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$6)
+    1165                    
+    1166                    $C$DW$T$40      .dwtag  DW_TAG_pointer_type
+    1167                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
+    1168                            .dwattr $C$DW$T$40, DW_AT_address_class(0x20)
+    1169                    
+    1170                    $C$DW$T$41      .dwtag  DW_TAG_const_type
+    1171                            .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$40)
+    1172                    
+    1173                    
+    1174                    $C$DW$T$23      .dwtag  DW_TAG_structure_type
+    1175                            .dwattr $C$DW$T$23, DW_AT_name("__va_list")
+    1176                            .dwattr $C$DW$T$23, DW_AT_byte_size(0x04)
+    1177                    $C$DW$47        .dwtag  DW_TAG_member
+    1178                            .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$3)
+    1179                            .dwattr $C$DW$47, DW_AT_name("__ap")
+    1180                            .dwattr $C$DW$47, DW_AT_TI_symbol_name("__ap")
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   24
+
+    1181                            .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1182                            .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
+    1183                            .dwattr $C$DW$47, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+    1184                            .dwattr $C$DW$47, DW_AT_decl_line(0x38)
+    1185                            .dwattr $C$DW$47, DW_AT_decl_column(0x0c)
+    1186                    
+    1187                            .dwattr $C$DW$T$23, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1188                            .dwattr $C$DW$T$23, DW_AT_decl_line(0x37)
+    1189                            .dwattr $C$DW$T$23, DW_AT_decl_column(0x10)
+    1190                            .dwendtag $C$DW$T$23
+    1191                    
+    1192                    $C$DW$T$108     .dwtag  DW_TAG_typedef
+    1193                            .dwattr $C$DW$T$108, DW_AT_name("va_list")
+    1194                            .dwattr $C$DW$T$108, DW_AT_type(*$C$DW$T$23)
+    1195                            .dwattr $C$DW$T$108, DW_AT_language(DW_LANG_C)
+    1196                            .dwattr $C$DW$T$108, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12
+    1197                            .dwattr $C$DW$T$108, DW_AT_decl_line(0x39)
+    1198                            .dwattr $C$DW$T$108, DW_AT_decl_column(0x03)
+    1199                    
+    1200                    
+    1201                    $C$DW$T$29      .dwtag  DW_TAG_structure_type
+    1202                            .dwattr $C$DW$T$29, DW_AT_name("xLIST")
+    1203                            .dwattr $C$DW$T$29, DW_AT_byte_size(0x14)
+    1204                    $C$DW$48        .dwtag  DW_TAG_member
+    1205                            .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$25)
+    1206                            .dwattr $C$DW$48, DW_AT_name("uxNumberOfItems")
+    1207                            .dwattr $C$DW$48, DW_AT_TI_symbol_name("uxNumberOfItems")
+    1208                            .dwattr $C$DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1209                            .dwattr $C$DW$48, DW_AT_accessibility(DW_ACCESS_public)
+    1210                            .dwattr $C$DW$48, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1211                            .dwattr $C$DW$48, DW_AT_decl_line(0xd0)
+    1212                            .dwattr $C$DW$48, DW_AT_decl_column(0x22)
+    1213                    
+    1214                    $C$DW$49        .dwtag  DW_TAG_member
+    1215                            .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$27)
+    1216                            .dwattr $C$DW$49, DW_AT_name("pxIndex")
+    1217                            .dwattr $C$DW$49, DW_AT_TI_symbol_name("pxIndex")
+    1218                            .dwattr $C$DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1219                            .dwattr $C$DW$49, DW_AT_accessibility(DW_ACCESS_public)
+    1220                            .dwattr $C$DW$49, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1221                            .dwattr $C$DW$49, DW_AT_decl_line(0xd1)
+    1222                            .dwattr $C$DW$49, DW_AT_decl_column(0x23)
+    1223                    
+    1224                    $C$DW$50        .dwtag  DW_TAG_member
+    1225                            .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$28)
+    1226                            .dwattr $C$DW$50, DW_AT_name("xListEnd")
+    1227                            .dwattr $C$DW$50, DW_AT_TI_symbol_name("xListEnd")
+    1228                            .dwattr $C$DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1229                            .dwattr $C$DW$50, DW_AT_accessibility(DW_ACCESS_public)
+    1230                            .dwattr $C$DW$50, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1231                            .dwattr $C$DW$50, DW_AT_decl_line(0xd2)
+    1232                            .dwattr $C$DW$50, DW_AT_decl_column(0x11)
+    1233                    
+    1234                            .dwattr $C$DW$T$29, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+    1235                            .dwattr $C$DW$T$29, DW_AT_decl_line(0xcd)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   25
+
+    1236                            .dwattr $C$DW$T$29, DW_AT_decl_column(0x10)
+    1237                            .dwendtag $C$DW$T$29
+    1238                    
+    1239                    $C$DW$T$109     .dwtag  DW_TAG_typedef
+    1240                            .dwattr $C$DW$T$109, DW_AT_name("List_t")
+    1241                            .dwattr $C$DW$T$109, DW_AT_type(*$C$DW$T$29)
+    1242                            .dwattr $C$DW$T$109, DW_AT_language(DW_LANG_C)
+    1243                            .dwattr $C$DW$T$109, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sou
+    1244                            .dwattr $C$DW$T$109, DW_AT_decl_line(0xd4)
+    1245                            .dwattr $C$DW$T$109, DW_AT_decl_column(0x03)
+    1246                    
+    1247                    
+    1248                    $C$DW$T$32      .dwtag  DW_TAG_structure_type
+    1249                            .dwattr $C$DW$T$32, DW_AT_name("xLIST_ITEM")
+    1250                            .dwattr $C$DW$T$32, DW_AT_byte_size(0x14)
+    1251                    $C$DW$51        .dwtag  DW_TAG_member
+    1252                            .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$30)
+    1253                            .dwattr $C$DW$51, DW_AT_name("xItemValue")
+    1254                            .dwattr $C$DW$51, DW_AT_TI_symbol_name("xItemValue")
+    1255                            .dwattr $C$DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1256                            .dwattr $C$DW$51, DW_AT_accessibility(DW_ACCESS_public)
+    1257                            .dwattr $C$DW$51, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1258                            .dwattr $C$DW$51, DW_AT_decl_line(0xb8)
+    1259                            .dwattr $C$DW$51, DW_AT_decl_column(0x21)
+    1260                    
+    1261                    $C$DW$52        .dwtag  DW_TAG_member
+    1262                            .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$31)
+    1263                            .dwattr $C$DW$52, DW_AT_name("pxNext")
+    1264                            .dwattr $C$DW$52, DW_AT_TI_symbol_name("pxNext")
+    1265                            .dwattr $C$DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1266                            .dwattr $C$DW$52, DW_AT_accessibility(DW_ACCESS_public)
+    1267                            .dwattr $C$DW$52, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1268                            .dwattr $C$DW$52, DW_AT_decl_line(0xb9)
+    1269                            .dwattr $C$DW$52, DW_AT_decl_column(0x2a)
+    1270                    
+    1271                    $C$DW$53        .dwtag  DW_TAG_member
+    1272                            .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$31)
+    1273                            .dwattr $C$DW$53, DW_AT_name("pxPrevious")
+    1274                            .dwattr $C$DW$53, DW_AT_TI_symbol_name("pxPrevious")
+    1275                            .dwattr $C$DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1276                            .dwattr $C$DW$53, DW_AT_accessibility(DW_ACCESS_public)
+    1277                            .dwattr $C$DW$53, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1278                            .dwattr $C$DW$53, DW_AT_decl_line(0xba)
+    1279                            .dwattr $C$DW$53, DW_AT_decl_column(0x2a)
+    1280                    
+    1281                    $C$DW$54        .dwtag  DW_TAG_member
+    1282                            .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$3)
+    1283                            .dwattr $C$DW$54, DW_AT_name("pvOwner")
+    1284                            .dwattr $C$DW$54, DW_AT_TI_symbol_name("pvOwner")
+    1285                            .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1286                            .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
+    1287                            .dwattr $C$DW$54, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1288                            .dwattr $C$DW$54, DW_AT_decl_line(0xbb)
+    1289                            .dwattr $C$DW$54, DW_AT_decl_column(0x09)
+    1290                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   26
+
+    1291                    $C$DW$55        .dwtag  DW_TAG_member
+    1292                            .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$3)
+    1293                            .dwattr $C$DW$55, DW_AT_name("pvContainer")
+    1294                            .dwattr $C$DW$55, DW_AT_TI_symbol_name("pvContainer")
+    1295                            .dwattr $C$DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1296                            .dwattr $C$DW$55, DW_AT_accessibility(DW_ACCESS_public)
+    1297                            .dwattr $C$DW$55, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1298                            .dwattr $C$DW$55, DW_AT_decl_line(0xbc)
+    1299                            .dwattr $C$DW$55, DW_AT_decl_column(0x1d)
+    1300                    
+    1301                            .dwattr $C$DW$T$32, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+    1302                            .dwattr $C$DW$T$32, DW_AT_decl_line(0xb5)
+    1303                            .dwattr $C$DW$T$32, DW_AT_decl_column(0x08)
+    1304                            .dwendtag $C$DW$T$32
+    1305                    
+    1306                    $C$DW$T$26      .dwtag  DW_TAG_typedef
+    1307                            .dwattr $C$DW$T$26, DW_AT_name("ListItem_t")
+    1308                            .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$32)
+    1309                            .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+    1310                            .dwattr $C$DW$T$26, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+    1311                            .dwattr $C$DW$T$26, DW_AT_decl_line(0xbf)
+    1312                            .dwattr $C$DW$T$26, DW_AT_decl_column(0x1b)
+    1313                    
+    1314                    $C$DW$T$27      .dwtag  DW_TAG_pointer_type
+    1315                            .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$26)
+    1316                            .dwattr $C$DW$T$27, DW_AT_address_class(0x20)
+    1317                    
+    1318                    $C$DW$T$31      .dwtag  DW_TAG_pointer_type
+    1319                            .dwattr $C$DW$T$31, DW_AT_type(*$C$DW$T$32)
+    1320                            .dwattr $C$DW$T$31, DW_AT_address_class(0x20)
+    1321                    
+    1322                    
+    1323                    $C$DW$T$33      .dwtag  DW_TAG_structure_type
+    1324                            .dwattr $C$DW$T$33, DW_AT_name("xMEMORY_REGION")
+    1325                            .dwattr $C$DW$T$33, DW_AT_byte_size(0x0c)
+    1326                    $C$DW$56        .dwtag  DW_TAG_member
+    1327                            .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$3)
+    1328                            .dwattr $C$DW$56, DW_AT_name("pvBaseAddress")
+    1329                            .dwattr $C$DW$56, DW_AT_TI_symbol_name("pvBaseAddress")
+    1330                            .dwattr $C$DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1331                            .dwattr $C$DW$56, DW_AT_accessibility(DW_ACCESS_public)
+    1332                            .dwattr $C$DW$56, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1333                            .dwattr $C$DW$56, DW_AT_decl_line(0x91)
+    1334                            .dwattr $C$DW$56, DW_AT_decl_column(0x08)
+    1335                    
+    1336                    $C$DW$57        .dwtag  DW_TAG_member
+    1337                            .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$24)
+    1338                            .dwattr $C$DW$57, DW_AT_name("ulLengthInBytes")
+    1339                            .dwattr $C$DW$57, DW_AT_TI_symbol_name("ulLengthInBytes")
+    1340                            .dwattr $C$DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1341                            .dwattr $C$DW$57, DW_AT_accessibility(DW_ACCESS_public)
+    1342                            .dwattr $C$DW$57, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1343                            .dwattr $C$DW$57, DW_AT_decl_line(0x92)
+    1344                            .dwattr $C$DW$57, DW_AT_decl_column(0x0b)
+    1345                    
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   27
+
+    1346                    $C$DW$58        .dwtag  DW_TAG_member
+    1347                            .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$24)
+    1348                            .dwattr $C$DW$58, DW_AT_name("ulParameters")
+    1349                            .dwattr $C$DW$58, DW_AT_TI_symbol_name("ulParameters")
+    1350                            .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1351                            .dwattr $C$DW$58, DW_AT_accessibility(DW_ACCESS_public)
+    1352                            .dwattr $C$DW$58, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1353                            .dwattr $C$DW$58, DW_AT_decl_line(0x93)
+    1354                            .dwattr $C$DW$58, DW_AT_decl_column(0x0b)
+    1355                    
+    1356                            .dwattr $C$DW$T$33, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1357                            .dwattr $C$DW$T$33, DW_AT_decl_line(0x8f)
+    1358                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x10)
+    1359                            .dwendtag $C$DW$T$33
+    1360                    
+    1361                    $C$DW$T$45      .dwtag  DW_TAG_typedef
+    1362                            .dwattr $C$DW$T$45, DW_AT_name("MemoryRegion_t")
+    1363                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$33)
+    1364                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+    1365                            .dwattr $C$DW$T$45, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1366                            .dwattr $C$DW$T$45, DW_AT_decl_line(0x94)
+    1367                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x03)
+    1368                    
+    1369                    
+    1370                    $C$DW$T$46      .dwtag  DW_TAG_array_type
+    1371                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$45)
+    1372                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+    1373                            .dwattr $C$DW$T$46, DW_AT_byte_size(0x0c)
+    1374                    $C$DW$59        .dwtag  DW_TAG_subrange_type
+    1375                            .dwattr $C$DW$59, DW_AT_upper_bound(0x00)
+    1376                    
+    1377                            .dwendtag $C$DW$T$46
+    1378                    
+    1379                    
+    1380                    $C$DW$T$34      .dwtag  DW_TAG_structure_type
+    1381                            .dwattr $C$DW$T$34, DW_AT_name("xMINI_LIST_ITEM")
+    1382                            .dwattr $C$DW$T$34, DW_AT_byte_size(0x0c)
+    1383                    $C$DW$60        .dwtag  DW_TAG_member
+    1384                            .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$30)
+    1385                            .dwattr $C$DW$60, DW_AT_name("xItemValue")
+    1386                            .dwattr $C$DW$60, DW_AT_TI_symbol_name("xItemValue")
+    1387                            .dwattr $C$DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1388                            .dwattr $C$DW$60, DW_AT_accessibility(DW_ACCESS_public)
+    1389                            .dwattr $C$DW$60, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1390                            .dwattr $C$DW$60, DW_AT_decl_line(0xc4)
+    1391                            .dwattr $C$DW$60, DW_AT_decl_column(0x21)
+    1392                    
+    1393                    $C$DW$61        .dwtag  DW_TAG_member
+    1394                            .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$31)
+    1395                            .dwattr $C$DW$61, DW_AT_name("pxNext")
+    1396                            .dwattr $C$DW$61, DW_AT_TI_symbol_name("pxNext")
+    1397                            .dwattr $C$DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1398                            .dwattr $C$DW$61, DW_AT_accessibility(DW_ACCESS_public)
+    1399                            .dwattr $C$DW$61, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1400                            .dwattr $C$DW$61, DW_AT_decl_line(0xc5)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   28
+
+    1401                            .dwattr $C$DW$61, DW_AT_decl_column(0x2a)
+    1402                    
+    1403                    $C$DW$62        .dwtag  DW_TAG_member
+    1404                            .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$31)
+    1405                            .dwattr $C$DW$62, DW_AT_name("pxPrevious")
+    1406                            .dwattr $C$DW$62, DW_AT_TI_symbol_name("pxPrevious")
+    1407                            .dwattr $C$DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1408                            .dwattr $C$DW$62, DW_AT_accessibility(DW_ACCESS_public)
+    1409                            .dwattr $C$DW$62, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Source
+    1410                            .dwattr $C$DW$62, DW_AT_decl_line(0xc6)
+    1411                            .dwattr $C$DW$62, DW_AT_decl_column(0x2a)
+    1412                    
+    1413                            .dwattr $C$DW$T$34, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+    1414                            .dwattr $C$DW$T$34, DW_AT_decl_line(0xc1)
+    1415                            .dwattr $C$DW$T$34, DW_AT_decl_column(0x08)
+    1416                            .dwendtag $C$DW$T$34
+    1417                    
+    1418                    $C$DW$T$28      .dwtag  DW_TAG_typedef
+    1419                            .dwattr $C$DW$T$28, DW_AT_name("MiniListItem_t")
+    1420                            .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$34)
+    1421                            .dwattr $C$DW$T$28, DW_AT_language(DW_LANG_C)
+    1422                            .dwattr $C$DW$T$28, DW_AT_decl_file("H:\EECS_388\TI_ARM_Projects\FreeRTOS823_LM3S1968_ASM\Sour
+    1423                            .dwattr $C$DW$T$28, DW_AT_decl_line(0xc8)
+    1424                            .dwattr $C$DW$T$28, DW_AT_decl_column(0x20)
+    1425                    
+    1426                    
+    1427                    $C$DW$T$47      .dwtag  DW_TAG_structure_type
+    1428                            .dwattr $C$DW$T$47, DW_AT_name("xTASK_PARAMETERS")
+    1429                            .dwattr $C$DW$T$47, DW_AT_byte_size(0x24)
+    1430                    $C$DW$63        .dwtag  DW_TAG_member
+    1431                            .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$37)
+    1432                            .dwattr $C$DW$63, DW_AT_name("pvTaskCode")
+    1433                            .dwattr $C$DW$63, DW_AT_TI_symbol_name("pvTaskCode")
+    1434                            .dwattr $C$DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1435                            .dwattr $C$DW$63, DW_AT_accessibility(DW_ACCESS_public)
+    1436                            .dwattr $C$DW$63, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1437                            .dwattr $C$DW$63, DW_AT_decl_line(0x9b)
+    1438                            .dwattr $C$DW$63, DW_AT_decl_column(0x11)
+    1439                    
+    1440                    $C$DW$64        .dwtag  DW_TAG_member
+    1441                            .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$41)
+    1442                            .dwattr $C$DW$64, DW_AT_name("pcName")
+    1443                            .dwattr $C$DW$64, DW_AT_TI_symbol_name("pcName")
+    1444                            .dwattr $C$DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1445                            .dwattr $C$DW$64, DW_AT_accessibility(DW_ACCESS_public)
+    1446                            .dwattr $C$DW$64, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1447                            .dwattr $C$DW$64, DW_AT_decl_line(0x9c)
+    1448                            .dwattr $C$DW$64, DW_AT_decl_column(0x15)
+    1449                    
+    1450                    $C$DW$65        .dwtag  DW_TAG_member
+    1451                            .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$42)
+    1452                            .dwattr $C$DW$65, DW_AT_name("usStackDepth")
+    1453                            .dwattr $C$DW$65, DW_AT_TI_symbol_name("usStackDepth")
+    1454                            .dwattr $C$DW$65, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1455                            .dwattr $C$DW$65, DW_AT_accessibility(DW_ACCESS_public)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   29
+
+    1456                            .dwattr $C$DW$65, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1457                            .dwattr $C$DW$65, DW_AT_decl_line(0x9d)
+    1458                            .dwattr $C$DW$65, DW_AT_decl_column(0x0b)
+    1459                    
+    1460                    $C$DW$66        .dwtag  DW_TAG_member
+    1461                            .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$3)
+    1462                            .dwattr $C$DW$66, DW_AT_name("pvParameters")
+    1463                            .dwattr $C$DW$66, DW_AT_TI_symbol_name("pvParameters")
+    1464                            .dwattr $C$DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1465                            .dwattr $C$DW$66, DW_AT_accessibility(DW_ACCESS_public)
+    1466                            .dwattr $C$DW$66, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1467                            .dwattr $C$DW$66, DW_AT_decl_line(0x9e)
+    1468                            .dwattr $C$DW$66, DW_AT_decl_column(0x08)
+    1469                    
+    1470                    $C$DW$67        .dwtag  DW_TAG_member
+    1471                            .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$25)
+    1472                            .dwattr $C$DW$67, DW_AT_name("uxPriority")
+    1473                            .dwattr $C$DW$67, DW_AT_TI_symbol_name("uxPriority")
+    1474                            .dwattr $C$DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1475                            .dwattr $C$DW$67, DW_AT_accessibility(DW_ACCESS_public)
+    1476                            .dwattr $C$DW$67, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1477                            .dwattr $C$DW$67, DW_AT_decl_line(0x9f)
+    1478                            .dwattr $C$DW$67, DW_AT_decl_column(0x0e)
+    1479                    
+    1480                    $C$DW$68        .dwtag  DW_TAG_member
+    1481                            .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$44)
+    1482                            .dwattr $C$DW$68, DW_AT_name("puxStackBuffer")
+    1483                            .dwattr $C$DW$68, DW_AT_TI_symbol_name("puxStackBuffer")
+    1484                            .dwattr $C$DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1485                            .dwattr $C$DW$68, DW_AT_accessibility(DW_ACCESS_public)
+    1486                            .dwattr $C$DW$68, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1487                            .dwattr $C$DW$68, DW_AT_decl_line(0xa0)
+    1488                            .dwattr $C$DW$68, DW_AT_decl_column(0x0f)
+    1489                    
+    1490                    $C$DW$69        .dwtag  DW_TAG_member
+    1491                            .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$46)
+    1492                            .dwattr $C$DW$69, DW_AT_name("xRegions")
+    1493                            .dwattr $C$DW$69, DW_AT_TI_symbol_name("xRegions")
+    1494                            .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1495                            .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
+    1496                            .dwattr $C$DW$69, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1497                            .dwattr $C$DW$69, DW_AT_decl_line(0xa1)
+    1498                            .dwattr $C$DW$69, DW_AT_decl_column(0x11)
+    1499                    
+    1500                            .dwattr $C$DW$T$47, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1501                            .dwattr $C$DW$T$47, DW_AT_decl_line(0x99)
+    1502                            .dwattr $C$DW$T$47, DW_AT_decl_column(0x10)
+    1503                            .dwendtag $C$DW$T$47
+    1504                    
+    1505                    $C$DW$T$110     .dwtag  DW_TAG_typedef
+    1506                            .dwattr $C$DW$T$110, DW_AT_name("TaskParameters_t")
+    1507                            .dwattr $C$DW$T$110, DW_AT_type(*$C$DW$T$47)
+    1508                            .dwattr $C$DW$T$110, DW_AT_language(DW_LANG_C)
+    1509                            .dwattr $C$DW$T$110, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sou
+    1510                            .dwattr $C$DW$T$110, DW_AT_decl_line(0xa2)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   30
+
+    1511                            .dwattr $C$DW$T$110, DW_AT_decl_column(0x03)
+    1512                    
+    1513                    
+    1514                    $C$DW$T$51      .dwtag  DW_TAG_structure_type
+    1515                            .dwattr $C$DW$T$51, DW_AT_name("xTASK_STATUS")
+    1516                            .dwattr $C$DW$T$51, DW_AT_byte_size(0x20)
+    1517                    $C$DW$70        .dwtag  DW_TAG_member
+    1518                            .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$48)
+    1519                            .dwattr $C$DW$70, DW_AT_name("xHandle")
+    1520                            .dwattr $C$DW$70, DW_AT_TI_symbol_name("xHandle")
+    1521                            .dwattr $C$DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1522                            .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
+    1523                            .dwattr $C$DW$70, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1524                            .dwattr $C$DW$70, DW_AT_decl_line(0xa8)
+    1525                            .dwattr $C$DW$70, DW_AT_decl_column(0x0f)
+    1526                    
+    1527                    $C$DW$71        .dwtag  DW_TAG_member
+    1528                            .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$40)
+    1529                            .dwattr $C$DW$71, DW_AT_name("pcTaskName")
+    1530                            .dwattr $C$DW$71, DW_AT_TI_symbol_name("pcTaskName")
+    1531                            .dwattr $C$DW$71, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1532                            .dwattr $C$DW$71, DW_AT_accessibility(DW_ACCESS_public)
+    1533                            .dwattr $C$DW$71, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1534                            .dwattr $C$DW$71, DW_AT_decl_line(0xa9)
+    1535                            .dwattr $C$DW$71, DW_AT_decl_column(0x0e)
+    1536                    
+    1537                    $C$DW$72        .dwtag  DW_TAG_member
+    1538                            .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$25)
+    1539                            .dwattr $C$DW$72, DW_AT_name("xTaskNumber")
+    1540                            .dwattr $C$DW$72, DW_AT_TI_symbol_name("xTaskNumber")
+    1541                            .dwattr $C$DW$72, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1542                            .dwattr $C$DW$72, DW_AT_accessibility(DW_ACCESS_public)
+    1543                            .dwattr $C$DW$72, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1544                            .dwattr $C$DW$72, DW_AT_decl_line(0xaa)
+    1545                            .dwattr $C$DW$72, DW_AT_decl_column(0x0e)
+    1546                    
+    1547                    $C$DW$73        .dwtag  DW_TAG_member
+    1548                            .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$50)
+    1549                            .dwattr $C$DW$73, DW_AT_name("eCurrentState")
+    1550                            .dwattr $C$DW$73, DW_AT_TI_symbol_name("eCurrentState")
+    1551                            .dwattr $C$DW$73, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1552                            .dwattr $C$DW$73, DW_AT_accessibility(DW_ACCESS_public)
+    1553                            .dwattr $C$DW$73, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1554                            .dwattr $C$DW$73, DW_AT_decl_line(0xab)
+    1555                            .dwattr $C$DW$73, DW_AT_decl_column(0x0d)
+    1556                    
+    1557                    $C$DW$74        .dwtag  DW_TAG_member
+    1558                            .dwattr $C$DW$74, DW_AT_type(*$C$DW$T$25)
+    1559                            .dwattr $C$DW$74, DW_AT_name("uxCurrentPriority")
+    1560                            .dwattr $C$DW$74, DW_AT_TI_symbol_name("uxCurrentPriority")
+    1561                            .dwattr $C$DW$74, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1562                            .dwattr $C$DW$74, DW_AT_accessibility(DW_ACCESS_public)
+    1563                            .dwattr $C$DW$74, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1564                            .dwattr $C$DW$74, DW_AT_decl_line(0xac)
+    1565                            .dwattr $C$DW$74, DW_AT_decl_column(0x0e)
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   31
+
+    1566                    
+    1567                    $C$DW$75        .dwtag  DW_TAG_member
+    1568                            .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$25)
+    1569                            .dwattr $C$DW$75, DW_AT_name("uxBasePriority")
+    1570                            .dwattr $C$DW$75, DW_AT_TI_symbol_name("uxBasePriority")
+    1571                            .dwattr $C$DW$75, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1572                            .dwattr $C$DW$75, DW_AT_accessibility(DW_ACCESS_public)
+    1573                            .dwattr $C$DW$75, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1574                            .dwattr $C$DW$75, DW_AT_decl_line(0xad)
+    1575                            .dwattr $C$DW$75, DW_AT_decl_column(0x0e)
+    1576                    
+    1577                    $C$DW$76        .dwtag  DW_TAG_member
+    1578                            .dwattr $C$DW$76, DW_AT_type(*$C$DW$T$24)
+    1579                            .dwattr $C$DW$76, DW_AT_name("ulRunTimeCounter")
+    1580                            .dwattr $C$DW$76, DW_AT_TI_symbol_name("ulRunTimeCounter")
+    1581                            .dwattr $C$DW$76, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1582                            .dwattr $C$DW$76, DW_AT_accessibility(DW_ACCESS_public)
+    1583                            .dwattr $C$DW$76, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1584                            .dwattr $C$DW$76, DW_AT_decl_line(0xae)
+    1585                            .dwattr $C$DW$76, DW_AT_decl_column(0x0b)
+    1586                    
+    1587                    $C$DW$77        .dwtag  DW_TAG_member
+    1588                            .dwattr $C$DW$77, DW_AT_type(*$C$DW$T$42)
+    1589                            .dwattr $C$DW$77, DW_AT_name("usStackHighWaterMark")
+    1590                            .dwattr $C$DW$77, DW_AT_TI_symbol_name("usStackHighWaterMark")
+    1591                            .dwattr $C$DW$77, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+    1592                            .dwattr $C$DW$77, DW_AT_accessibility(DW_ACCESS_public)
+    1593                            .dwattr $C$DW$77, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1594                            .dwattr $C$DW$77, DW_AT_decl_line(0xaf)
+    1595                            .dwattr $C$DW$77, DW_AT_decl_column(0x0b)
+    1596                    
+    1597                            .dwattr $C$DW$T$51, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1598                            .dwattr $C$DW$T$51, DW_AT_decl_line(0xa6)
+    1599                            .dwattr $C$DW$T$51, DW_AT_decl_column(0x10)
+    1600                            .dwendtag $C$DW$T$51
+    1601                    
+    1602                    $C$DW$T$111     .dwtag  DW_TAG_typedef
+    1603                            .dwattr $C$DW$T$111, DW_AT_name("TaskStatus_t")
+    1604                            .dwattr $C$DW$T$111, DW_AT_type(*$C$DW$T$51)
+    1605                            .dwattr $C$DW$T$111, DW_AT_language(DW_LANG_C)
+    1606                            .dwattr $C$DW$T$111, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sou
+    1607                            .dwattr $C$DW$T$111, DW_AT_decl_line(0xb0)
+    1608                            .dwattr $C$DW$T$111, DW_AT_decl_column(0x03)
+    1609                    
+    1610                    
+    1611                    $C$DW$T$54      .dwtag  DW_TAG_structure_type
+    1612                            .dwattr $C$DW$T$54, DW_AT_name("xTIME_OUT")
+    1613                            .dwattr $C$DW$T$54, DW_AT_byte_size(0x08)
+    1614                    $C$DW$78        .dwtag  DW_TAG_member
+    1615                            .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$53)
+    1616                            .dwattr $C$DW$78, DW_AT_name("xOverflowCount")
+    1617                            .dwattr $C$DW$78, DW_AT_TI_symbol_name("xOverflowCount")
+    1618                            .dwattr $C$DW$78, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1619                            .dwattr $C$DW$78, DW_AT_accessibility(DW_ACCESS_public)
+    1620                            .dwattr $C$DW$78, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   32
+
+    1621                            .dwattr $C$DW$78, DW_AT_decl_line(0x88)
+    1622                            .dwattr $C$DW$78, DW_AT_decl_column(0x0d)
+    1623                    
+    1624                    $C$DW$79        .dwtag  DW_TAG_member
+    1625                            .dwattr $C$DW$79, DW_AT_type(*$C$DW$T$30)
+    1626                            .dwattr $C$DW$79, DW_AT_name("xTimeOnEntering")
+    1627                            .dwattr $C$DW$79, DW_AT_TI_symbol_name("xTimeOnEntering")
+    1628                            .dwattr $C$DW$79, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+    1629                            .dwattr $C$DW$79, DW_AT_accessibility(DW_ACCESS_public)
+    1630                            .dwattr $C$DW$79, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Source
+    1631                            .dwattr $C$DW$79, DW_AT_decl_line(0x89)
+    1632                            .dwattr $C$DW$79, DW_AT_decl_column(0x0d)
+    1633                    
+    1634                            .dwattr $C$DW$T$54, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sour
+    1635                            .dwattr $C$DW$T$54, DW_AT_decl_line(0x86)
+    1636                            .dwattr $C$DW$T$54, DW_AT_decl_column(0x10)
+    1637                            .dwendtag $C$DW$T$54
+    1638                    
+    1639                    $C$DW$T$112     .dwtag  DW_TAG_typedef
+    1640                            .dwattr $C$DW$T$112, DW_AT_name("TimeOut_t")
+    1641                            .dwattr $C$DW$T$112, DW_AT_type(*$C$DW$T$54)
+    1642                            .dwattr $C$DW$T$112, DW_AT_language(DW_LANG_C)
+    1643                            .dwattr $C$DW$T$112, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/FreeRTOS823_LM3S1968_ASM/Sou
+    1644                            .dwattr $C$DW$T$112, DW_AT_decl_line(0x8a)
+    1645                            .dwattr $C$DW$T$112, DW_AT_decl_column(0x03)
+    1646                    
+    1647                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1648                    
+    1649                    ;***************************************************************
+    1650                    ;* DWARF CIE ENTRIES                                           *
+    1651                    ;***************************************************************
+    1652                    
+    1653                    $C$DW$CIE       .dwcie 14
+    1654                            .dwcfi  cfa_register, 13
+    1655                            .dwcfi  cfa_offset, 0
+    1656                            .dwcfi  undefined, 0
+    1657                            .dwcfi  undefined, 1
+    1658                            .dwcfi  undefined, 2
+    1659                            .dwcfi  undefined, 3
+    1660                            .dwcfi  same_value, 4
+    1661                            .dwcfi  same_value, 5
+    1662                            .dwcfi  same_value, 6
+    1663                            .dwcfi  same_value, 7
+    1664                            .dwcfi  same_value, 8
+    1665                            .dwcfi  same_value, 9
+    1666                            .dwcfi  same_value, 10
+    1667                            .dwcfi  same_value, 11
+    1668                            .dwcfi  undefined, 12
+    1669                            .dwcfi  undefined, 13
+    1670                            .dwcfi  undefined, 14
+    1671                            .dwcfi  undefined, 14
+    1672                            .dwcfi  undefined, 7
+    1673                            .dwendentry
+    1674                            .dwendtag $C$DW$CU
+    1675                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 110 (91%)
+Number of Thumb2 ins encoded as Thumb2 = 10 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 2
+
+TI ARM Assembler PC v15.12.1 Tue Dec 06 13:17:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_AsmCompute.asm                                                  PAGE   33
+
+
+No Assembly Errors, No Assembly Warnings

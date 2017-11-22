@@ -1,0 +1,1385 @@
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    1
+
+       1                    ;******************************************************************************
+       2                    ;* TI ARM C/C++ Codegen                                       PC v15.12.1.LTS *
+       3                    ;* Date/Time created: Tue Sep 27 14:52:54 2016                                *
+       4                    ;******************************************************************************
+       5                            .compiler_opts --abi=eabi --arm_vmrs_si_workaround=off --code_state=16 --diag_wrap=off --disab
+       6 00000000                   .thumb
+       7                    
+       8                    $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                            .dwattr $C$DW$CU, DW_AT_name("../Tasks/Task_ButtonPress.c")
+      10                            .dwattr $C$DW$CU, DW_AT_producer("TI TI ARM C/C++ Codegen PC v15.12.1.LTS Copyright (c) 1996-2
+      11                            .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                            .dwattr $C$DW$CU, DW_AT_comp_dir("H:\EECS_388\TI_ARM_Projects\Program_ButtonPush\Debug")
+      13                    
+      14                    $C$DW$1 .dwtag  DW_TAG_subprogram
+      15                            .dwattr $C$DW$1, DW_AT_name("SysCtlPeripheralEnable")
+      16                            .dwattr $C$DW$1, DW_AT_TI_symbol_name("SysCtlPeripheralEnable")
+      17                            .dwattr $C$DW$1, DW_AT_declaration
+      18                            .dwattr $C$DW$1, DW_AT_external
+      19                            .dwattr $C$DW$1, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/sysctl.h
+      20                            .dwattr $C$DW$1, DW_AT_decl_line(0x24d)
+      21                            .dwattr $C$DW$1, DW_AT_decl_column(0x0d)
+      22                    $C$DW$2 .dwtag  DW_TAG_formal_parameter
+      23                            .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$13)
+      24                    
+      25                            .dwendtag $C$DW$1
+      26                    
+      27                    
+      28                    $C$DW$3 .dwtag  DW_TAG_subprogram
+      29                            .dwattr $C$DW$3, DW_AT_name("GPIOPadConfigSet")
+      30                            .dwattr $C$DW$3, DW_AT_TI_symbol_name("GPIOPadConfigSet")
+      31                            .dwattr $C$DW$3, DW_AT_declaration
+      32                            .dwattr $C$DW$3, DW_AT_external
+      33                            .dwattr $C$DW$3, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/gpio.h")
+      34                            .dwattr $C$DW$3, DW_AT_decl_line(0x7f)
+      35                            .dwattr $C$DW$3, DW_AT_decl_column(0x0d)
+      36                    $C$DW$4 .dwtag  DW_TAG_formal_parameter
+      37                            .dwattr $C$DW$4, DW_AT_type(*$C$DW$T$13)
+      38                    
+      39                    $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      40                            .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$6)
+      41                    
+      42                    $C$DW$6 .dwtag  DW_TAG_formal_parameter
+      43                            .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$13)
+      44                    
+      45                    $C$DW$7 .dwtag  DW_TAG_formal_parameter
+      46                            .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$13)
+      47                    
+      48                            .dwendtag $C$DW$3
+      49                    
+      50                    
+      51                    $C$DW$8 .dwtag  DW_TAG_subprogram
+      52                            .dwattr $C$DW$8, DW_AT_name("GPIOPinRead")
+      53                            .dwattr $C$DW$8, DW_AT_TI_symbol_name("GPIOPinRead")
+      54                            .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$12)
+      55                            .dwattr $C$DW$8, DW_AT_declaration
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    2
+
+      56                            .dwattr $C$DW$8, DW_AT_external
+      57                            .dwattr $C$DW$8, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/gpio.h")
+      58                            .dwattr $C$DW$8, DW_AT_decl_line(0x8c)
+      59                            .dwattr $C$DW$8, DW_AT_decl_column(0x0d)
+      60                    $C$DW$9 .dwtag  DW_TAG_formal_parameter
+      61                            .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$13)
+      62                    
+      63                    $C$DW$10        .dwtag  DW_TAG_formal_parameter
+      64                            .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$6)
+      65                    
+      66                            .dwendtag $C$DW$8
+      67                    
+      68                    
+      69                    $C$DW$11        .dwtag  DW_TAG_subprogram
+      70                            .dwattr $C$DW$11, DW_AT_name("GPIOPinTypeGPIOInput")
+      71                            .dwattr $C$DW$11, DW_AT_TI_symbol_name("GPIOPinTypeGPIOInput")
+      72                            .dwattr $C$DW$11, DW_AT_declaration
+      73                            .dwattr $C$DW$11, DW_AT_external
+      74                            .dwattr $C$DW$11, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/driverlib/gpio.h"
+      75                            .dwattr $C$DW$11, DW_AT_decl_line(0x97)
+      76                            .dwattr $C$DW$11, DW_AT_decl_column(0x0d)
+      77                    $C$DW$12        .dwtag  DW_TAG_formal_parameter
+      78                            .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$13)
+      79                    
+      80                    $C$DW$13        .dwtag  DW_TAG_formal_parameter
+      81                            .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$6)
+      82                    
+      83                            .dwendtag $C$DW$11
+      84                    
+      85                    
+      86                    $C$DW$14        .dwtag  DW_TAG_subprogram
+      87                            .dwattr $C$DW$14, DW_AT_name("UARTStdio_Initialization")
+      88                            .dwattr $C$DW$14, DW_AT_TI_symbol_name("UARTStdio_Initialization")
+      89                            .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$50)
+      90                            .dwattr $C$DW$14, DW_AT_declaration
+      91                            .dwattr $C$DW$14, DW_AT_external
+      92                            .dwattr $C$DW$14, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/Program_ButtonPush/Drivers/UART
+      93                            .dwattr $C$DW$14, DW_AT_decl_line(0x1d)
+      94                            .dwattr $C$DW$14, DW_AT_decl_column(0x19)
+      95                            .dwendtag $C$DW$14
+      96                    
+      97                    
+      98                    $C$DW$15        .dwtag  DW_TAG_subprogram
+      99                            .dwattr $C$DW$15, DW_AT_name("UARTprintf")
+     100                            .dwattr $C$DW$15, DW_AT_TI_symbol_name("UARTprintf")
+     101                            .dwattr $C$DW$15, DW_AT_declaration
+     102                            .dwattr $C$DW$15, DW_AT_external
+     103                            .dwattr $C$DW$15, DW_AT_decl_file("H:/EECS_388/TI_ARM_Projects/Program_ButtonPush/Drivers/uart
+     104                            .dwattr $C$DW$15, DW_AT_decl_line(0x3f)
+     105                            .dwattr $C$DW$15, DW_AT_decl_column(0x0d)
+     106                    $C$DW$16        .dwtag  DW_TAG_formal_parameter
+     107                            .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$28)
+     108                    
+     109                    $C$DW$17        .dwtag  DW_TAG_unspecified_parameters
+     110                    
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    3
+
+     111                            .dwendtag $C$DW$15
+     112                    
+     113                            .global currentState
+     114 00000000                   .data
+     115                            .align  1
+     116                            .elfsym currentState,SYM_SIZE(1)
+     117 00000000           currentState:
+     118 00000000 00000000          .bits   0,8                     ; currentState @ 0
+     119                    
+     120                    $C$DW$18        .dwtag  DW_TAG_variable
+     121                            .dwattr $C$DW$18, DW_AT_name("currentState")
+     122                            .dwattr $C$DW$18, DW_AT_TI_symbol_name("currentState")
+     123                            .dwattr $C$DW$18, DW_AT_location[DW_OP_addr currentState]
+     124                            .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$78)
+     125                            .dwattr $C$DW$18, DW_AT_external
+     126                            .dwattr $C$DW$18, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     127                            .dwattr $C$DW$18, DW_AT_decl_line(0x1c)
+     128                            .dwattr $C$DW$18, DW_AT_decl_column(0x0c)
+     129                    
+     130                    $C$DW$19        .dwtag  DW_TAG_variable
+     131                            .dwattr $C$DW$19, DW_AT_name("SysTickFrequency_Nbr")
+     132                            .dwattr $C$DW$19, DW_AT_TI_symbol_name("SysTickFrequency_Nbr")
+     133                            .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$50)
+     134                            .dwattr $C$DW$19, DW_AT_declaration
+     135                            .dwattr $C$DW$19, DW_AT_external
+     136                            .dwattr $C$DW$19, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     137                            .dwattr $C$DW$19, DW_AT_decl_line(0x1f)
+     138                            .dwattr $C$DW$19, DW_AT_decl_column(0x12)
+     139                    
+     140                    $C$DW$20        .dwtag  DW_TAG_variable
+     141                            .dwattr $C$DW$20, DW_AT_name("SysTickCount_Nbr")
+     142                            .dwattr $C$DW$20, DW_AT_TI_symbol_name("SysTickCount_Nbr")
+     143                            .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$50)
+     144                            .dwattr $C$DW$20, DW_AT_declaration
+     145                            .dwattr $C$DW$20, DW_AT_external
+     146                            .dwattr $C$DW$20, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     147                            .dwattr $C$DW$20, DW_AT_decl_line(0x20)
+     148                            .dwattr $C$DW$20, DW_AT_decl_column(0x12)
+     149                    
+     150                    $C$DW$21        .dwtag  DW_TAG_variable
+     151                            .dwattr $C$DW$21, DW_AT_name("buttonSound")
+     152                            .dwattr $C$DW$21, DW_AT_TI_symbol_name("buttonSound")
+     153                            .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$76)
+     154                            .dwattr $C$DW$21, DW_AT_declaration
+     155                            .dwattr $C$DW$21, DW_AT_external
+     156                            .dwattr $C$DW$21, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     157                            .dwattr $C$DW$21, DW_AT_decl_line(0x21)
+     158                            .dwattr $C$DW$21, DW_AT_decl_column(0x0d)
+     159                    
+     160 00000001                   .data
+     161                            .align  4
+     162                            .elfsym bufferPeriod_Delta,SYM_SIZE(4)
+     163 00000004           bufferPeriod_Delta:
+     164 00000004 00000000          .bits   0,32                    ; bufferPeriod_Delta @ 0
+     165                    
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    4
+
+     166                    $C$DW$22        .dwtag  DW_TAG_variable
+     167                            .dwattr $C$DW$22, DW_AT_name("bufferPeriod_Delta")
+     168                            .dwattr $C$DW$22, DW_AT_TI_symbol_name("bufferPeriod_Delta")
+     169                            .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$50)
+     170                            .dwattr $C$DW$22, DW_AT_location[DW_OP_addr bufferPeriod_Delta]
+     171                            .dwattr $C$DW$22, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     172                            .dwattr $C$DW$22, DW_AT_decl_line(0x25)
+     173                            .dwattr $C$DW$22, DW_AT_decl_column(0x11)
+     174                    
+     175 00000008                   .data
+     176                            .align  4
+     177                            .elfsym bufferOver,SYM_SIZE(4)
+     178 00000008           bufferOver:
+     179 00000008 00000000          .bits   0,32                    ; bufferOver @ 0
+     180                    
+     181                    $C$DW$23        .dwtag  DW_TAG_variable
+     182                            .dwattr $C$DW$23, DW_AT_name("bufferOver")
+     183                            .dwattr $C$DW$23, DW_AT_TI_symbol_name("bufferOver")
+     184                            .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$50)
+     185                            .dwattr $C$DW$23, DW_AT_location[DW_OP_addr bufferOver]
+     186                            .dwattr $C$DW$23, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     187                            .dwattr $C$DW$23, DW_AT_decl_line(0x26)
+     188                            .dwattr $C$DW$23, DW_AT_decl_column(0x11)
+     189                    
+     190 0000000c                   .data
+     191                            .align  4
+     192                            .elfsym nextButtonCheck,SYM_SIZE(4)
+     193 0000000c           nextButtonCheck:
+     194 0000000c 00000000          .bits   0,32                    ; nextButtonCheck @ 0
+     195                    
+     196                    $C$DW$24        .dwtag  DW_TAG_variable
+     197                            .dwattr $C$DW$24, DW_AT_name("nextButtonCheck")
+     198                            .dwattr $C$DW$24, DW_AT_TI_symbol_name("nextButtonCheck")
+     199                            .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$50)
+     200                            .dwattr $C$DW$24, DW_AT_location[DW_OP_addr nextButtonCheck]
+     201                            .dwattr $C$DW$24, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     202                            .dwattr $C$DW$24, DW_AT_decl_line(0x27)
+     203                            .dwattr $C$DW$24, DW_AT_decl_column(0x11)
+     204                    
+     205 00000010                   .data
+     206                            .align  1
+     207                            .elfsym Task_ButtonPress_Initialized,SYM_SIZE(1)
+     208 00000010           Task_ButtonPress_Initialized:
+     209 00000010 00000000          .bits   0,8                     ; Task_ButtonPress_Initialized @ 0
+     210                    
+     211                    $C$DW$25        .dwtag  DW_TAG_variable
+     212                            .dwattr $C$DW$25, DW_AT_name("Task_ButtonPress_Initialized")
+     213                            .dwattr $C$DW$25, DW_AT_TI_symbol_name("Task_ButtonPress_Initialized")
+     214                            .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$76)
+     215                            .dwattr $C$DW$25, DW_AT_location[DW_OP_addr Task_ButtonPress_Initialized]
+     216                            .dwattr $C$DW$25, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     217                            .dwattr $C$DW$25, DW_AT_decl_line(0x28)
+     218                            .dwattr $C$DW$25, DW_AT_decl_column(0x0e)
+     219                    
+     220 00000000                   .bss    Button_Data,4,4
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    5
+
+     221                    $C$DW$26        .dwtag  DW_TAG_variable
+     222                            .dwattr $C$DW$26, DW_AT_name("Button_Data")
+     223                            .dwattr $C$DW$26, DW_AT_TI_symbol_name("Button_Data")
+     224                            .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$50)
+     225                            .dwattr $C$DW$26, DW_AT_location[DW_OP_addr Button_Data]
+     226                            .dwattr $C$DW$26, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     227                            .dwattr $C$DW$26, DW_AT_decl_line(0x29)
+     228                            .dwattr $C$DW$26, DW_AT_decl_column(0x11)
+     229                    
+     230 00000004                   .bss    prev,4,4
+     231                    $C$DW$27        .dwtag  DW_TAG_variable
+     232                            .dwattr $C$DW$27, DW_AT_name("prev")
+     233                            .dwattr $C$DW$27, DW_AT_TI_symbol_name("prev")
+     234                            .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$50)
+     235                            .dwattr $C$DW$27, DW_AT_location[DW_OP_addr prev]
+     236                            .dwattr $C$DW$27, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     237                            .dwattr $C$DW$27, DW_AT_decl_line(0x2a)
+     238                            .dwattr $C$DW$27, DW_AT_decl_column(0x11)
+     239                    
+     240                    ;       C:\TI_CodeComposer\ccsv6\tools\compiler\ti-cgt-arm_15.12.1.LTS\bin\armacpia.exe -@C:\\Users\\a
+     241 00000000                   .sect   ".text"
+     242                            .clink
+     243                            .thumbfunc Task_ButtonPress
+     244 00000000                   .thumb
+     245                            .global Task_ButtonPress
+     246                    
+     247                    $C$DW$28        .dwtag  DW_TAG_subprogram
+     248                            .dwattr $C$DW$28, DW_AT_name("Task_ButtonPress")
+     249                            .dwattr $C$DW$28, DW_AT_low_pc(Task_ButtonPress)
+     250                            .dwattr $C$DW$28, DW_AT_high_pc(0x00)
+     251                            .dwattr $C$DW$28, DW_AT_TI_symbol_name("Task_ButtonPress")
+     252                            .dwattr $C$DW$28, DW_AT_external
+     253                            .dwattr $C$DW$28, DW_AT_TI_begin_file("../Tasks/Task_ButtonPress.c")
+     254                            .dwattr $C$DW$28, DW_AT_TI_begin_line(0x2e)
+     255                            .dwattr $C$DW$28, DW_AT_TI_begin_column(0x0d)
+     256                            .dwattr $C$DW$28, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+     257                            .dwattr $C$DW$28, DW_AT_decl_line(0x2e)
+     258                            .dwattr $C$DW$28, DW_AT_decl_column(0x0d)
+     259                            .dwattr $C$DW$28, DW_AT_TI_max_frame_size(0x08)
+     260                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 46,column 32,is_stmt,address Task_ButtonPress,
+     261                    
+     262                            .dwfde $C$DW$CIE, Task_ButtonPress
+     263                    
+     264                    ;*****************************************************************************
+     265                    ;* FUNCTION NAME: Task_ButtonPress                                           *
+     266                    ;*                                                                           *
+     267                    ;*   Regs Modified     : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     268                    ;*   Regs Used         : A1,A2,A3,A4,V9,SP,LR,SR                             *
+     269                    ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     270                    ;*****************************************************************************
+     271 00000000           Task_ButtonPress:
+     272                    ;* --------------------------------------------------------------------------*
+     273                            .dwcfi  cfa_offset, 0
+     274 00000000 B508              PUSH      {A4, LR}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     275                            .dwcfi  cfa_offset, 8
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    6
+
+     276                            .dwcfi  save_reg_to_mem, 14, -4
+     277                            .dwcfi  save_reg_to_mem, 3, -8
+     278                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 49,column 2,is_stmt,isa 1
+     279 00000002 487C              LDR       A1, $C$CON1           ; [DPU_3_PIPE] |49|  ; [ORIG 16-BIT INS]
+     280 00000004 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |49|  ; [ORIG 16-BIT INS]
+     281 00000006 B9A8              CBNZ      A1, ||$C$L1||         ; []  ; [ORIG 16-BIT INS]
+     282                            ; BRANCHCC OCCURS {||$C$L1||}    ; [] |49| 
+     283                    ;* --------------------------------------------------------------------------*
+     284                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 51,column 3,is_stmt,isa 1
+     285 00000008 487B              LDR       A1, $C$CON2           ; [DPU_3_PIPE] |51|  ; [ORIG 16-BIT INS]
+     286                    $C$DW$29        .dwtag  DW_TAG_TI_branch
+     287                            .dwattr $C$DW$29, DW_AT_low_pc(0x00)
+     288                            .dwattr $C$DW$29, DW_AT_name("SysCtlPeripheralEnable")
+     289                            .dwattr $C$DW$29, DW_AT_TI_call
+     290                    
+     291 0000000a FFFEF7FF!         BL        SysCtlPeripheralEnable ; [DPU_3_PIPE] |51|  ; [KEEP 32-BIT INS]
+     292                            ; CALL OCCURS {SysCtlPeripheralEnable }  ; [] |51| 
+     293                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 54,column 3,is_stmt,isa 1
+     294 0000000e 487B              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |54|  ; [ORIG 16-BIT INS]
+     295 00000010 21F8              MOVS      A2, #248              ; [DPU_3_PIPE] |54|  ; [ORIG 16-BIT INS]
+     296                    $C$DW$30        .dwtag  DW_TAG_TI_branch
+     297                            .dwattr $C$DW$30, DW_AT_low_pc(0x00)
+     298                            .dwattr $C$DW$30, DW_AT_name("GPIOPinTypeGPIOInput")
+     299                            .dwattr $C$DW$30, DW_AT_TI_call
+     300                    
+     301 00000012 FFFEF7FF!         BL        GPIOPinTypeGPIOInput  ; [DPU_3_PIPE] |54|  ; [KEEP 32-BIT INS]
+     302                            ; CALL OCCURS {GPIOPinTypeGPIOInput }  ; [] |54| 
+     303                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 55,column 3,is_stmt,isa 1
+     304 00000016 4879              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     305 00000018 21F8              MOVS      A2, #248              ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     306 0000001a 2200              MOVS      A3, #0                ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     307 0000001c 230A              MOVS      A4, #10               ; [DPU_3_PIPE] |55|  ; [ORIG 16-BIT INS]
+     308                    $C$DW$31        .dwtag  DW_TAG_TI_branch
+     309                            .dwattr $C$DW$31, DW_AT_low_pc(0x00)
+     310                            .dwattr $C$DW$31, DW_AT_name("GPIOPadConfigSet")
+     311                            .dwattr $C$DW$31, DW_AT_TI_call
+     312                    
+     313 0000001e FFFEF7FF!         BL        GPIOPadConfigSet      ; [DPU_3_PIPE] |55|  ; [KEEP 32-BIT INS]
+     314                            ; CALL OCCURS {GPIOPadConfigSet }  ; [] |55| 
+     315                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 57,column 3,is_stmt,isa 1
+     316 00000022 4974              LDR       A2, $C$CON1           ; [DPU_3_PIPE] |57|  ; [ORIG 16-BIT INS]
+     317 00000024 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |57|  ; [ORIG 16-BIT INS]
+     318 00000026 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |57|  ; [ORIG 16-BIT INS]
+     319                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 58,column 3,is_stmt,isa 1
+     320 00000028 4876              LDR       A1, $C$CON5           ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     321 0000002a 4975              LDR       A2, $C$CON4           ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     322 0000002c 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     323 0000002e 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |58|  ; [ORIG 16-BIT INS]
+     324                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 61,column 3,is_stmt,isa 1
+     325                    $C$DW$32        .dwtag  DW_TAG_TI_branch
+     326                            .dwattr $C$DW$32, DW_AT_low_pc(0x00)
+     327                            .dwattr $C$DW$32, DW_AT_name("UARTStdio_Initialization")
+     328                            .dwattr $C$DW$32, DW_AT_TI_call
+     329                    
+     330 00000030 FFFEF7FF!         BL        UARTStdio_Initialization ; [DPU_3_PIPE] |61|  ; [KEEP 32-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    7
+
+     331                            ; CALL OCCURS {UARTStdio_Initialization }  ; [] |61| 
+     332                    ;* --------------------------------------------------------------------------*
+     333 00000034           ||$C$L1||:    
+     334                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 65,column 2,is_stmt,isa 1
+     335 00000034 4872              LDR       A1, $C$CON4           ; [DPU_3_PIPE] |65|  ; [ORIG 16-BIT INS]
+     336 00000036 4973              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |65|  ; [ORIG 16-BIT INS]
+     337 00000038 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |65|  ; [ORIG 16-BIT INS]
+     338 0000003a 6809              LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |65|  ; [ORIG 16-BIT INS]
+     339 0000003c 4288              CMP       A1, A2                ; [DPU_3_PIPE] |65|  ; [ORIG 16-BIT INS]
+     340 0000003e 80A4F200          BHI       ||$C$L13||            ; [DPU_3_PIPE] |65|  ; [KEEP 32-BIT INS]
+     341                            ; BRANCHCC OCCURS {||$C$L13||}   ; [] |65| 
+     342                    ;* --------------------------------------------------------------------------*
+     343                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 66,column 3,is_stmt,isa 1
+     344 00000042 486E              LDR       A1, $C$CON3           ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+     345 00000044 21F8              MOVS      A2, #248              ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+     346                    $C$DW$33        .dwtag  DW_TAG_TI_branch
+     347                            .dwattr $C$DW$33, DW_AT_low_pc(0x00)
+     348                            .dwattr $C$DW$33, DW_AT_name("GPIOPinRead")
+     349                            .dwattr $C$DW$33, DW_AT_TI_call
+     350                    
+     351 00000046 FFFEF7FF!         BL        GPIOPinRead           ; [DPU_3_PIPE] |66|  ; [KEEP 32-BIT INS]
+     352                            ; CALL OCCURS {GPIOPinRead }     ; [] |66| 
+     353 0000004a 496F              LDR       A2, $C$CON6           ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+     354 0000004c 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |66|  ; [ORIG 16-BIT INS]
+     355                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 67,column 3,is_stmt,isa 1
+     356 0000004e 496D              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     357 00000050 486E              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     358 00000052 680A              LDR       A3, [A2, #0]          ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     359 00000054 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     360 00000056 496A              LDR       A2, $C$CON4           ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     361 00000058 737AF44F          MOV       A4, #1000             ; [DPU_3_PIPE] |67|  ; [KEEP 32-BIT INS]
+     362 0000005c F0F3FBB0          UDIV      A1, A1, A4            ; [DPU_3_PIPE] |67|  ; [KEEP 32-BIT INS]
+     363 00000060 1880              ADDS      A1, A1, A3            ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     364 00000062 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |67|  ; [ORIG 16-BIT INS]
+     365                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 71,column 2,is_stmt,isa 1
+     366 00000064 E091              B         ||$C$L13||            ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     367                            ; BRANCH OCCURS {||$C$L13||}     ; [] |71| 
+     368                    ;* --------------------------------------------------------------------------*
+     369 00000066           ||$C$L2||:    
+     370                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 73,column 4,is_stmt,isa 1
+     371 00000066 4868              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     372 00000068 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     373 0000006a 28F8              CMP       A1, #248              ; [DPU_3_PIPE] |73|  ; [ORIG 16-BIT INS]
+     374 0000006c 809AF000          BEQ       ||$C$L14||            ; [DPU_3_PIPE] |73|  ; [KEEP 32-BIT INS]
+     375                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |73| 
+     376                    ;* --------------------------------------------------------------------------*
+     377                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 74,column 5,is_stmt,isa 1
+     378 00000070 4967              LDR       A2, $C$CON8           ; [DPU_3_PIPE] |74|  ; [ORIG 16-BIT INS]
+     379 00000072 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |74|  ; [ORIG 16-BIT INS]
+     380 00000074 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |74|  ; [ORIG 16-BIT INS]
+     381                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 75,column 5,is_stmt,isa 1
+     382 00000076 4865              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     383 00000078 4A66              LDR       A3, $C$CON9           ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     384 0000007a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     385 0000007c 2164              MOVS      A2, #100              ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    8
+
+     386 0000007e F0F1FBB0          UDIV      A1, A1, A2            ; [DPU_3_PIPE] |75|  ; [KEEP 32-BIT INS]
+     387 00000082 6010              STR       A1, [A3, #0]          ; [DPU_3_PIPE] |75|  ; [ORIG 16-BIT INS]
+     388                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 76,column 5,is_stmt,isa 1
+     389 00000084 495F              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     390 00000086 4863              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     391 00000088 680A              LDR       A3, [A2, #0]          ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     392 0000008a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     393 0000008c 4962              LDR       A2, $C$CON10          ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     394 0000008e 1880              ADDS      A1, A1, A3            ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     395 00000090 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |76|  ; [ORIG 16-BIT INS]
+     396                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 78,column 4,is_stmt,isa 1
+     397 00000092 E087              B         ||$C$L14||            ; [DPU_3_PIPE] |78|  ; [ORIG 16-BIT INS]
+     398                            ; BRANCH OCCURS {||$C$L14||}     ; [] |78| 
+     399                    ;* --------------------------------------------------------------------------*
+     400 00000094           ||$C$L3||:    
+     401                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 80,column 4,is_stmt,isa 1
+     402 00000094 4860              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |80|  ; [ORIG 16-BIT INS]
+     403 00000096 495B              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |80|  ; [ORIG 16-BIT INS]
+     404 00000098 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |80|  ; [ORIG 16-BIT INS]
+     405 0000009a 6809              LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |80|  ; [ORIG 16-BIT INS]
+     406 0000009c 4288              CMP       A1, A2                ; [DPU_3_PIPE] |80|  ; [ORIG 16-BIT INS]
+     407 0000009e 8081F200          BHI       ||$C$L14||            ; [DPU_3_PIPE] |80|  ; [KEEP 32-BIT INS]
+     408                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |80| 
+     409                    ;* --------------------------------------------------------------------------*
+     410                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 81,column 5,is_stmt,isa 1
+     411 000000a2 4859              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |81|  ; [ORIG 16-BIT INS]
+     412 000000a4 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |81|  ; [ORIG 16-BIT INS]
+     413 000000a6 28F8              CMP       A1, #248              ; [DPU_3_PIPE] |81|  ; [ORIG 16-BIT INS]
+     414 000000a8 D019              BEQ       ||$C$L4||             ; [DPU_3_PIPE] |81|  ; [ORIG 16-BIT INS]
+     415                            ; BRANCHCC OCCURS {||$C$L4||}    ; [] |81| 
+     416                    ;* --------------------------------------------------------------------------*
+     417                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 82,column 6,is_stmt,isa 1
+     418 000000aa 4858              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |82|  ; [ORIG 16-BIT INS]
+     419 000000ac 4A59              LDR       A3, $C$CON9           ; [DPU_3_PIPE] |82|  ; [ORIG 16-BIT INS]
+     420 000000ae 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |82|  ; [ORIG 16-BIT INS]
+     421 000000b0 210A              MOVS      A2, #10               ; [DPU_3_PIPE] |82|  ; [ORIG 16-BIT INS]
+     422 000000b2 0040              LSLS      A1, A1, #1            ; [DPU_3_PIPE] |82|  ; [ORIG 16-BIT INS]
+     423 000000b4 F0F1FBB0          UDIV      A1, A1, A2            ; [DPU_3_PIPE] |82|  ; [KEEP 32-BIT INS]
+     424 000000b8 6010              STR       A1, [A3, #0]          ; [DPU_3_PIPE] |82|  ; [ORIG 16-BIT INS]
+     425                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 83,column 6,is_stmt,isa 1
+     426 000000ba 4952              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     427 000000bc 4855              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     428 000000be 680A              LDR       A3, [A2, #0]          ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     429 000000c0 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     430 000000c2 4955              LDR       A2, $C$CON10          ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     431 000000c4 1880              ADDS      A1, A1, A3            ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     432 000000c6 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |83|  ; [ORIG 16-BIT INS]
+     433                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 84,column 6,is_stmt,isa 1
+     434 000000c8 4951              LDR       A2, $C$CON8           ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     435 000000ca 2002              MOVS      A1, #2                ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     436 000000cc 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |84|  ; [ORIG 16-BIT INS]
+     437                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 85,column 6,is_stmt,isa 1
+     438 000000ce 4953              LDR       A2, $C$CON11          ; [DPU_3_PIPE] |85|  ; [ORIG 16-BIT INS]
+     439 000000d0 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |85|  ; [ORIG 16-BIT INS]
+     440 000000d2 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |85|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE    9
+
+     441                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 87,column 6,is_stmt,isa 1
+     442 000000d4 484C              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |87|  ; [ORIG 16-BIT INS]
+     443 000000d6 4952              LDR       A2, $C$CON12          ; [DPU_3_PIPE] |87|  ; [ORIG 16-BIT INS]
+     444 000000d8 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |87|  ; [ORIG 16-BIT INS]
+     445 000000da 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |87|  ; [ORIG 16-BIT INS]
+     446                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 88,column 5,is_stmt,isa 1
+     447 000000dc E062              B         ||$C$L14||            ; [DPU_3_PIPE] |88|  ; [ORIG 16-BIT INS]
+     448                            ; BRANCH OCCURS {||$C$L14||}     ; [] |88| 
+     449                    ;* --------------------------------------------------------------------------*
+     450 000000de           ||$C$L4||:    
+     451                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 89,column 6,is_stmt,isa 1
+     452 000000de 494C              LDR       A2, $C$CON8           ; [DPU_3_PIPE] |89|  ; [ORIG 16-BIT INS]
+     453 000000e0 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |89|  ; [ORIG 16-BIT INS]
+     454 000000e2 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |89|  ; [ORIG 16-BIT INS]
+     455                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 92,column 4,is_stmt,isa 1
+     456 000000e4 E05E              B         ||$C$L14||            ; [DPU_3_PIPE] |92|  ; [ORIG 16-BIT INS]
+     457                            ; BRANCH OCCURS {||$C$L14||}     ; [] |92| 
+     458                    ;* --------------------------------------------------------------------------*
+     459 000000e6           ||$C$L5||:    
+     460                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 94,column 4,is_stmt,isa 1
+     461 000000e6 484C              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |94|  ; [ORIG 16-BIT INS]
+     462 000000e8 4946              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |94|  ; [ORIG 16-BIT INS]
+     463 000000ea 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |94|  ; [ORIG 16-BIT INS]
+     464 000000ec 6809              LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |94|  ; [ORIG 16-BIT INS]
+     465 000000ee 4288              CMP       A1, A2                ; [DPU_3_PIPE] |94|  ; [ORIG 16-BIT INS]
+     466 000000f0 D858              BHI       ||$C$L14||            ; [DPU_3_PIPE] |94|  ; [ORIG 16-BIT INS]
+     467                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |94| 
+     468                    ;* --------------------------------------------------------------------------*
+     469                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 95,column 5,is_stmt,isa 1
+     470 000000f2 494A              LDR       A2, $C$CON11          ; [DPU_3_PIPE] |95|  ; [ORIG 16-BIT INS]
+     471 000000f4 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |95|  ; [ORIG 16-BIT INS]
+     472 000000f6 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |95|  ; [ORIG 16-BIT INS]
+     473                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 96,column 5,is_stmt,isa 1
+     474 000000f8 4843              LDR       A1, $C$CON6           ; [DPU_3_PIPE] |96|  ; [ORIG 16-BIT INS]
+     475 000000fa 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |96|  ; [ORIG 16-BIT INS]
+     476 000000fc 28F8              CMP       A1, #248              ; [DPU_3_PIPE] |96|  ; [ORIG 16-BIT INS]
+     477 000000fe D151              BNE       ||$C$L14||            ; [DPU_3_PIPE] |96|  ; [ORIG 16-BIT INS]
+     478                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |96| 
+     479                    ;* --------------------------------------------------------------------------*
+     480                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 97,column 6,is_stmt,isa 1
+     481 00000100 4943              LDR       A2, $C$CON8           ; [DPU_3_PIPE] |97|  ; [ORIG 16-BIT INS]
+     482 00000102 2003              MOVS      A1, #3                ; [DPU_3_PIPE] |97|  ; [ORIG 16-BIT INS]
+     483 00000104 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |97|  ; [ORIG 16-BIT INS]
+     484                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 98,column 6,is_stmt,isa 1
+     485 00000106 4841              LDR       A1, $C$CON7           ; [DPU_3_PIPE] |98|  ; [ORIG 16-BIT INS]
+     486 00000108 4A42              LDR       A3, $C$CON9           ; [DPU_3_PIPE] |98|  ; [ORIG 16-BIT INS]
+     487 0000010a 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |98|  ; [ORIG 16-BIT INS]
+     488 0000010c 210A              MOVS      A2, #10               ; [DPU_3_PIPE] |98|  ; [ORIG 16-BIT INS]
+     489 0000010e 0080EB00          ADD       A1, A1, A1, LSL #2    ; [DPU_3_PIPE] |98|  ; [KEEP 32-BIT INS]
+     490 00000112 F0F1FBB0          UDIV      A1, A1, A2            ; [DPU_3_PIPE] |98|  ; [KEEP 32-BIT INS]
+     491 00000116 6010              STR       A1, [A3, #0]          ; [DPU_3_PIPE] |98|  ; [ORIG 16-BIT INS]
+     492                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 99,column 6,is_stmt,isa 1
+     493 00000118 493A              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     494 0000011a 483E              LDR       A1, $C$CON9           ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     495 0000011c 680A              LDR       A3, [A2, #0]          ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   10
+
+     496 0000011e 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     497 00000120 493D              LDR       A2, $C$CON10          ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     498 00000122 1880              ADDS      A1, A1, A3            ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     499 00000124 6008              STR       A1, [A2, #0]          ; [DPU_3_PIPE] |99|  ; [ORIG 16-BIT INS]
+     500                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 100,column 6,is_stmt,isa 1
+     501 00000126 493D              LDR       A2, $C$CON11          ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     502 00000128 2001              MOVS      A1, #1                ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     503 0000012a 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |100|  ; [ORIG 16-BIT INS]
+     504                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 103,column 4,is_stmt,isa 1
+     505 0000012c E03A              B         ||$C$L14||            ; [DPU_3_PIPE] |103|  ; [ORIG 16-BIT INS]
+     506                            ; BRANCH OCCURS {||$C$L14||}     ; [] |103| 
+     507                    ;* --------------------------------------------------------------------------*
+     508 0000012e           ||$C$L6||:    
+     509                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 105,column 4,is_stmt,isa 1
+     510 0000012e 483A              LDR       A1, $C$CON10          ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     511 00000130 4934              LDR       A2, $C$CON5           ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     512 00000132 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     513 00000134 6809              LDR       A2, [A2, #0]          ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     514 00000136 4288              CMP       A1, A2                ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     515 00000138 D834              BHI       ||$C$L14||            ; [DPU_3_PIPE] |105|  ; [ORIG 16-BIT INS]
+     516                            ; BRANCHCC OCCURS {||$C$L14||}   ; [] |105| 
+     517                    ;* --------------------------------------------------------------------------*
+     518                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 106,column 5,is_stmt,isa 1
+     519 0000013a 4938              LDR       A2, $C$CON11          ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     520 0000013c 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     521 0000013e 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |106|  ; [ORIG 16-BIT INS]
+     522                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 107,column 5,is_stmt,isa 1
+     523 00000140 4933              LDR       A2, $C$CON8           ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     524 00000142 2000              MOVS      A1, #0                ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     525 00000144 7008              STRB      A1, [A2, #0]          ; [DPU_3_PIPE] |107|  ; [ORIG 16-BIT INS]
+     526                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 108,column 5,is_stmt,isa 1
+     527 00000146 E013              B         ||$C$L12||            ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     528                            ; BRANCH OCCURS {||$C$L12||}     ; [] |108| 
+     529                    ;* --------------------------------------------------------------------------*
+     530 00000148           ||$C$L7||:    
+     531                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 110,column 7,is_stmt,isa 1
+     532 00000148 A017              ADR       A1, $C$SL1            ; [DPU_3_PIPE] |110|  ; [ORIG 16-BIT INS]
+     533                    $C$DW$34        .dwtag  DW_TAG_TI_branch
+     534                            .dwattr $C$DW$34, DW_AT_low_pc(0x00)
+     535                            .dwattr $C$DW$34, DW_AT_name("UARTprintf")
+     536                            .dwattr $C$DW$34, DW_AT_TI_call
+     537                    
+     538 0000014a FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |110|  ; [KEEP 32-BIT INS]
+     539                            ; CALL OCCURS {UARTprintf }      ; [] |110| 
+     540                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 111,column 7,is_stmt,isa 1
+     541 0000014e E029              B         ||$C$L14||            ; [DPU_3_PIPE] |111|  ; [ORIG 16-BIT INS]
+     542                            ; BRANCH OCCURS {||$C$L14||}     ; [] |111| 
+     543                    ;* --------------------------------------------------------------------------*
+     544 00000150           ||$C$L8||:    
+     545                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 113,column 7,is_stmt,isa 1
+     546 00000150 A019              ADR       A1, $C$SL2            ; [DPU_3_PIPE] |113|  ; [ORIG 16-BIT INS]
+     547                    $C$DW$35        .dwtag  DW_TAG_TI_branch
+     548                            .dwattr $C$DW$35, DW_AT_low_pc(0x00)
+     549                            .dwattr $C$DW$35, DW_AT_name("UARTprintf")
+     550                            .dwattr $C$DW$35, DW_AT_TI_call
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   11
+
+     551                    
+     552 00000152 FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |113|  ; [KEEP 32-BIT INS]
+     553                            ; CALL OCCURS {UARTprintf }      ; [] |113| 
+     554                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 114,column 7,is_stmt,isa 1
+     555 00000156 E025              B         ||$C$L14||            ; [DPU_3_PIPE] |114|  ; [ORIG 16-BIT INS]
+     556                            ; BRANCH OCCURS {||$C$L14||}     ; [] |114| 
+     557                    ;* --------------------------------------------------------------------------*
+     558 00000158           ||$C$L9||:    
+     559                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 116,column 7,is_stmt,isa 1
+     560 00000158 A01B              ADR       A1, $C$SL3            ; [DPU_3_PIPE] |116|  ; [ORIG 16-BIT INS]
+     561                    $C$DW$36        .dwtag  DW_TAG_TI_branch
+     562                            .dwattr $C$DW$36, DW_AT_low_pc(0x00)
+     563                            .dwattr $C$DW$36, DW_AT_name("UARTprintf")
+     564                            .dwattr $C$DW$36, DW_AT_TI_call
+     565                    
+     566 0000015a FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |116|  ; [KEEP 32-BIT INS]
+     567                            ; CALL OCCURS {UARTprintf }      ; [] |116| 
+     568                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 117,column 7,is_stmt,isa 1
+     569 0000015e E021              B         ||$C$L14||            ; [DPU_3_PIPE] |117|  ; [ORIG 16-BIT INS]
+     570                            ; BRANCH OCCURS {||$C$L14||}     ; [] |117| 
+     571                    ;* --------------------------------------------------------------------------*
+     572 00000160           ||$C$L10||:    
+     573                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 119,column 7,is_stmt,isa 1
+     574 00000160 A01D              ADR       A1, $C$SL4            ; [DPU_3_PIPE] |119|  ; [ORIG 16-BIT INS]
+     575                    $C$DW$37        .dwtag  DW_TAG_TI_branch
+     576                            .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+     577                            .dwattr $C$DW$37, DW_AT_name("UARTprintf")
+     578                            .dwattr $C$DW$37, DW_AT_TI_call
+     579                    
+     580 00000162 FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |119|  ; [KEEP 32-BIT INS]
+     581                            ; CALL OCCURS {UARTprintf }      ; [] |119| 
+     582                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 120,column 7,is_stmt,isa 1
+     583 00000166 E01D              B         ||$C$L14||            ; [DPU_3_PIPE] |120|  ; [ORIG 16-BIT INS]
+     584                            ; BRANCH OCCURS {||$C$L14||}     ; [] |120| 
+     585                    ;* --------------------------------------------------------------------------*
+     586 00000168           ||$C$L11||:    
+     587                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 122,column 7,is_stmt,isa 1
+     588 00000168 A01F              ADR       A1, $C$SL5            ; [DPU_3_PIPE] |122|  ; [ORIG 16-BIT INS]
+     589                    $C$DW$38        .dwtag  DW_TAG_TI_branch
+     590                            .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     591                            .dwattr $C$DW$38, DW_AT_name("UARTprintf")
+     592                            .dwattr $C$DW$38, DW_AT_TI_call
+     593                    
+     594 0000016a FFFEF7FF!         BL        UARTprintf            ; [DPU_3_PIPE] |122|  ; [KEEP 32-BIT INS]
+     595                            ; CALL OCCURS {UARTprintf }      ; [] |122| 
+     596                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 123,column 7,is_stmt,isa 1
+     597 0000016e E019              B         ||$C$L14||            ; [DPU_3_PIPE] |123|  ; [ORIG 16-BIT INS]
+     598                            ; BRANCH OCCURS {||$C$L14||}     ; [] |123| 
+     599                    ;* --------------------------------------------------------------------------*
+     600                    ;* --------------------------------------------------------------------------*
+     601 00000170           ||$C$L12||:    
+     602                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 108,column 5,is_stmt,isa 1
+     603 00000170 482B              LDR       A1, $C$CON12          ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     604 00000172 6800              LDR       A1, [A1, #0]          ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     605 00000174 3878              SUBS      A1, A1, #120          ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   12
+
+     606 00000176 D0E7              BEQ       ||$C$L7||             ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     607                            ; BRANCHCC OCCURS {||$C$L7||}    ; [] |108| 
+     608                    ;* --------------------------------------------------------------------------*
+     609 00000178 3840              SUBS      A1, A1, #64           ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     610 0000017a D0E9              BEQ       ||$C$L8||             ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     611                            ; BRANCHCC OCCURS {||$C$L8||}    ; [] |108| 
+     612                    ;* --------------------------------------------------------------------------*
+     613 0000017c 3820              SUBS      A1, A1, #32           ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     614 0000017e D0EB              BEQ       ||$C$L9||             ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     615                            ; BRANCHCC OCCURS {||$C$L9||}    ; [] |108| 
+     616                    ;* --------------------------------------------------------------------------*
+     617 00000180 3810              SUBS      A1, A1, #16           ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     618 00000182 D0ED              BEQ       ||$C$L10||            ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     619                            ; BRANCHCC OCCURS {||$C$L10||}   ; [] |108| 
+     620                    ;* --------------------------------------------------------------------------*
+     621 00000184 3808              SUBS      A1, A1, #8            ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     622 00000186 D0EF              BEQ       ||$C$L11||            ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     623                            ; BRANCHCC OCCURS {||$C$L11||}   ; [] |108| 
+     624                    ;* --------------------------------------------------------------------------*
+     625 00000188 E00C              B         ||$C$L14||            ; [DPU_3_PIPE] |108|  ; [ORIG 16-BIT INS]
+     626                            ; BRANCH OCCURS {||$C$L14||}     ; [] |108| 
+     627                    ;* --------------------------------------------------------------------------*
+     628                    ;* --------------------------------------------------------------------------*
+     629 0000018a           ||$C$L13||:    
+     630                            .dwpsn  file "../Tasks/Task_ButtonPress.c",line 71,column 2,is_stmt,isa 1
+     631 0000018a 4821              LDR       A1, $C$CON8           ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     632 0000018c 7800              LDRB      A1, [A1, #0]          ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     633 0000018e 2800              CMP       A1, #0                ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     634 00000190 AF69F43F          BEQ       ||$C$L2||             ; [DPU_3_PIPE] |71|  ; [KEEP 32-BIT INS]
+     635                            ; BRANCHCC OCCURS {||$C$L2||}    ; [] |71| 
+     636                    ;* --------------------------------------------------------------------------*
+     637 00000194 1E40              SUBS      A1, A1, #1            ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     638 00000196 AF7DF43F          BEQ       ||$C$L3||             ; [DPU_3_PIPE] |71|  ; [KEEP 32-BIT INS]
+     639                            ; BRANCHCC OCCURS {||$C$L3||}    ; [] |71| 
+     640                    ;* --------------------------------------------------------------------------*
+     641 0000019a 1E40              SUBS      A1, A1, #1            ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     642 0000019c D0A3              BEQ       ||$C$L5||             ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     643                            ; BRANCHCC OCCURS {||$C$L5||}    ; [] |71| 
+     644                    ;* --------------------------------------------------------------------------*
+     645 0000019e 1E40              SUBS      A1, A1, #1            ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     646 000001a0 D0C5              BEQ       ||$C$L6||             ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     647                            ; BRANCHCC OCCURS {||$C$L6||}    ; [] |71| 
+     648                    ;* --------------------------------------------------------------------------*
+     649 000001a2 E7FF              B         ||$C$L14||            ; [DPU_3_PIPE] |71|  ; [ORIG 16-BIT INS]
+     650                            ; BRANCH OCCURS {||$C$L14||}     ; [] |71| 
+     651                    ;* --------------------------------------------------------------------------*
+     652                    ;* --------------------------------------------------------------------------*
+     653                    ||$C$L14||:    
+     654                    $C$DW$39        .dwtag  DW_TAG_TI_branch
+     655                            .dwattr $C$DW$39, DW_AT_low_pc(0x00)
+     656                            .dwattr $C$DW$39, DW_AT_TI_return
+     657                    
+     658 000001a4 BD08              POP       {A4, PC}              ; [DPU_3_PIPE]  ; [ORIG 16-BIT INS]
+     659                            .dwcfi  cfa_offset, 0
+     660                            ; BRANCH OCCURS                  ; [] 
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   13
+
+     661                            .dwattr $C$DW$28, DW_AT_TI_end_file("../Tasks/Task_ButtonPress.c")
+     662                            .dwattr $C$DW$28, DW_AT_TI_end_line(0x80)
+     663                            .dwattr $C$DW$28, DW_AT_TI_end_column(0x01)
+     664                            .dwendentry
+     665                            .dwendtag $C$DW$28
+     666                    
+     667                    ;******************************************************************************
+     668                    ;* STRINGS                                                                    *
+     669                    ;******************************************************************************
+     670 000001a6                   .sect   ".text"
+     671                            .align  4
+     672 000001a8 42        ||$C$SL1||:     .string "Button: Select",10,0
+         000001a9 75       
+         000001aa 74       
+         000001ab 74       
+         000001ac 6F       
+         000001ad 6E       
+         000001ae 3A       
+         000001af 20       
+         000001b0 53       
+         000001b1 65       
+         000001b2 6C       
+         000001b3 65       
+         000001b4 63       
+         000001b5 74       
+         000001b6 0A       
+         000001b7 00       
+     673                            .align  4
+     674 000001b8 42        ||$C$SL2||:     .string "Button: Right",10,0
+         000001b9 75       
+         000001ba 74       
+         000001bb 74       
+         000001bc 6F       
+         000001bd 6E       
+         000001be 3A       
+         000001bf 20       
+         000001c0 52       
+         000001c1 69       
+         000001c2 67       
+         000001c3 68       
+         000001c4 74       
+         000001c5 0A       
+         000001c6 00       
+     675                            .align  4
+     676 000001c8 42        ||$C$SL3||:     .string "Button: Left",10,0
+         000001c9 75       
+         000001ca 74       
+         000001cb 74       
+         000001cc 6F       
+         000001cd 6E       
+         000001ce 3A       
+         000001cf 20       
+         000001d0 4C       
+         000001d1 65       
+         000001d2 66       
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   14
+
+         000001d3 74       
+         000001d4 0A       
+         000001d5 00       
+     677                            .align  4
+     678 000001d8 42        ||$C$SL4||:     .string "Button: Down",10,0
+         000001d9 75       
+         000001da 74       
+         000001db 74       
+         000001dc 6F       
+         000001dd 6E       
+         000001de 3A       
+         000001df 20       
+         000001e0 44       
+         000001e1 6F       
+         000001e2 77       
+         000001e3 6E       
+         000001e4 0A       
+         000001e5 00       
+     679                            .align  4
+     680 000001e8 42        ||$C$SL5||:     .string "Button: Up",10,0
+         000001e9 75       
+         000001ea 74       
+         000001eb 74       
+         000001ec 6F       
+         000001ed 6E       
+         000001ee 3A       
+         000001ef 20       
+         000001f0 55       
+         000001f1 70       
+         000001f2 0A       
+         000001f3 00       
+     681                    ;******************************************************************************
+     682                    ;* CONSTANT TABLE                                                             *
+     683                    ;******************************************************************************
+     684 000001f4                   .sect   ".text"
+     685                            .align  4
+     686 000001f2 0000000A! ||$C$CON1||:    .bits   Task_ButtonPress_Initialized,32
+         000001f6 00000000 
+     687                            .align  4
+     688 000001f6 00400000  ||$C$CON2||:    .bits   536870976,32
+         000001fa 00002000 
+     689                            .align  4
+     690 000001fa 60002000  ||$C$CON3||:    .bits   1073897472,32
+         000001fe 00004002 
+     691                            .align  4
+     692 000001fe 00004002! ||$C$CON4||:    .bits   nextButtonCheck,32
+         00000202 00000000 
+     693                            .align  4
+     694 00000202 00000000! ||$C$CON5||:    .bits   SysTickCount_Nbr,32
+         00000206 00000000 
+     695                            .align  4
+     696 00000206 00000000! ||$C$CON6||:    .bits   Button_Data,32
+         0000020a 00000000 
+     697                            .align  4
+     698 0000020a 00000000! ||$C$CON7||:    .bits   SysTickFrequency_Nbr,32
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   15
+
+         0000020e 00000000 
+     699                            .align  4
+     700 0000020e 00000000! ||$C$CON8||:    .bits   currentState,32
+         00000212 00000000 
+     701                            .align  4
+     702 00000212 00000000! ||$C$CON9||:    .bits   bufferPeriod_Delta,32
+         00000216 00000000 
+     703                            .align  4
+     704 00000216 00000000! ||$C$CON10||:   .bits   bufferOver,32
+         0000021a 00000000 
+     705                            .align  4
+     706 0000021a 00000000! ||$C$CON11||:   .bits   buttonSound,32
+         0000021e 00000000 
+     707                            .align  4
+     708 0000021e 00000000! ||$C$CON12||:   .bits   prev,32
+         00000222 00000000 
+     709                    ;*****************************************************************************
+     710                    ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     711                    ;*****************************************************************************
+     712                            .global SysCtlPeripheralEnable
+     713                            .global GPIOPadConfigSet
+     714                            .global GPIOPinRead
+     715                            .global GPIOPinTypeGPIOInput
+     716                            .global UARTStdio_Initialization
+     717                            .global UARTprintf
+     718                            .global SysTickFrequency_Nbr
+     719                            .global SysTickCount_Nbr
+     720                            .global buttonSound
+     721                    
+     722                    ;******************************************************************************
+     723                    ;* BUILD ATTRIBUTES                                                           *
+     724                    ;******************************************************************************
+     725                            .battr "aeabi", Tag_File, 1, Tag_ABI_PCS_wchar_t(2)
+     726                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_rounding(0)
+     727                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_denormal(0)
+     728                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_exceptions(0)
+     729                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_number_model(1)
+     730                            .battr "aeabi", Tag_File, 1, Tag_ABI_enum_size(1)
+     731                            .battr "aeabi", Tag_File, 1, Tag_ABI_optimization_goals(5)
+     732                            .battr "aeabi", Tag_File, 1, Tag_ABI_FP_optimization_goals(0)
+     733                            .battr "TI", Tag_File, 1, Tag_Bitfield_layout(2)
+     734                            .battr "TI", Tag_File, 1, Tag_FP_interface(1)
+     735                    
+     736                    ;******************************************************************************
+     737                    ;* TYPE INFORMATION                                                           *
+     738                    ;******************************************************************************
+     739                    $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     740                            .dwattr $C$DW$T$2, DW_AT_name("void")
+     741                    
+     742                    $C$DW$T$3       .dwtag  DW_TAG_pointer_type
+     743                            .dwattr $C$DW$T$3, DW_AT_type(*$C$DW$T$2)
+     744                            .dwattr $C$DW$T$3, DW_AT_address_class(0x20)
+     745                    
+     746                    $C$DW$T$4       .dwtag  DW_TAG_base_type
+     747                            .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   16
+
+     748                            .dwattr $C$DW$T$4, DW_AT_name("bool")
+     749                            .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     750                    
+     751                    $C$DW$T$5       .dwtag  DW_TAG_base_type
+     752                            .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     753                            .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     754                            .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     755                    
+     756                    $C$DW$T$32      .dwtag  DW_TAG_typedef
+     757                            .dwattr $C$DW$T$32, DW_AT_name("int8_t")
+     758                            .dwattr $C$DW$T$32, DW_AT_type(*$C$DW$T$5)
+     759                            .dwattr $C$DW$T$32, DW_AT_language(DW_LANG_C)
+     760                            .dwattr $C$DW$T$32, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     761                            .dwattr $C$DW$T$32, DW_AT_decl_line(0x2a)
+     762                            .dwattr $C$DW$T$32, DW_AT_decl_column(0x1d)
+     763                    
+     764                    $C$DW$T$33      .dwtag  DW_TAG_typedef
+     765                            .dwattr $C$DW$T$33, DW_AT_name("int_least8_t")
+     766                            .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$T$32)
+     767                            .dwattr $C$DW$T$33, DW_AT_language(DW_LANG_C)
+     768                            .dwattr $C$DW$T$33, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     769                            .dwattr $C$DW$T$33, DW_AT_decl_line(0x37)
+     770                            .dwattr $C$DW$T$33, DW_AT_decl_column(0x17)
+     771                    
+     772                    $C$DW$T$6       .dwtag  DW_TAG_base_type
+     773                            .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     774                            .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     775                            .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     776                    
+     777                    $C$DW$T$34      .dwtag  DW_TAG_typedef
+     778                            .dwattr $C$DW$T$34, DW_AT_name("tBoolean")
+     779                            .dwattr $C$DW$T$34, DW_AT_type(*$C$DW$T$6)
+     780                            .dwattr $C$DW$T$34, DW_AT_language(DW_LANG_C)
+     781                            .dwattr $C$DW$T$34, DW_AT_decl_file("C:/TI_CodeComposer/StellarisWare-LM3S1968/inc/hw_types.h"
+     782                            .dwattr $C$DW$T$34, DW_AT_decl_line(0x30)
+     783                            .dwattr $C$DW$T$34, DW_AT_decl_column(0x17)
+     784                    
+     785                    $C$DW$T$35      .dwtag  DW_TAG_typedef
+     786                            .dwattr $C$DW$T$35, DW_AT_name("uint8_t")
+     787                            .dwattr $C$DW$T$35, DW_AT_type(*$C$DW$T$6)
+     788                            .dwattr $C$DW$T$35, DW_AT_language(DW_LANG_C)
+     789                            .dwattr $C$DW$T$35, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     790                            .dwattr $C$DW$T$35, DW_AT_decl_line(0x2b)
+     791                            .dwattr $C$DW$T$35, DW_AT_decl_column(0x1c)
+     792                    
+     793                    $C$DW$T$36      .dwtag  DW_TAG_typedef
+     794                            .dwattr $C$DW$T$36, DW_AT_name("uint_least8_t")
+     795                            .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$T$35)
+     796                            .dwattr $C$DW$T$36, DW_AT_language(DW_LANG_C)
+     797                            .dwattr $C$DW$T$36, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     798                            .dwattr $C$DW$T$36, DW_AT_decl_line(0x38)
+     799                            .dwattr $C$DW$T$36, DW_AT_decl_column(0x16)
+     800                    
+     801                    $C$DW$T$7       .dwtag  DW_TAG_base_type
+     802                            .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   17
+
+     803                            .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     804                            .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     805                    
+     806                    $C$DW$T$8       .dwtag  DW_TAG_base_type
+     807                            .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     808                            .dwattr $C$DW$T$8, DW_AT_name("short")
+     809                            .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     810                    
+     811                    $C$DW$T$37      .dwtag  DW_TAG_typedef
+     812                            .dwattr $C$DW$T$37, DW_AT_name("int16_t")
+     813                            .dwattr $C$DW$T$37, DW_AT_type(*$C$DW$T$8)
+     814                            .dwattr $C$DW$T$37, DW_AT_language(DW_LANG_C)
+     815                            .dwattr $C$DW$T$37, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     816                            .dwattr $C$DW$T$37, DW_AT_decl_line(0x2c)
+     817                            .dwattr $C$DW$T$37, DW_AT_decl_column(0x1d)
+     818                    
+     819                    $C$DW$T$38      .dwtag  DW_TAG_typedef
+     820                            .dwattr $C$DW$T$38, DW_AT_name("int_least16_t")
+     821                            .dwattr $C$DW$T$38, DW_AT_type(*$C$DW$T$37)
+     822                            .dwattr $C$DW$T$38, DW_AT_language(DW_LANG_C)
+     823                            .dwattr $C$DW$T$38, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     824                            .dwattr $C$DW$T$38, DW_AT_decl_line(0x3a)
+     825                            .dwattr $C$DW$T$38, DW_AT_decl_column(0x17)
+     826                    
+     827                    $C$DW$T$9       .dwtag  DW_TAG_base_type
+     828                            .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     829                            .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     830                            .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     831                    
+     832                    $C$DW$T$39      .dwtag  DW_TAG_typedef
+     833                            .dwattr $C$DW$T$39, DW_AT_name("uint16_t")
+     834                            .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$9)
+     835                            .dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+     836                            .dwattr $C$DW$T$39, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     837                            .dwattr $C$DW$T$39, DW_AT_decl_line(0x2d)
+     838                            .dwattr $C$DW$T$39, DW_AT_decl_column(0x1c)
+     839                    
+     840                    $C$DW$T$40      .dwtag  DW_TAG_typedef
+     841                            .dwattr $C$DW$T$40, DW_AT_name("uint_least16_t")
+     842                            .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$39)
+     843                            .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+     844                            .dwattr $C$DW$T$40, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     845                            .dwattr $C$DW$T$40, DW_AT_decl_line(0x3b)
+     846                            .dwattr $C$DW$T$40, DW_AT_decl_column(0x16)
+     847                    
+     848                    $C$DW$T$41      .dwtag  DW_TAG_typedef
+     849                            .dwattr $C$DW$T$41, DW_AT_name("wchar_t")
+     850                            .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$9)
+     851                            .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+     852                            .dwattr $C$DW$T$41, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     853                            .dwattr $C$DW$T$41, DW_AT_decl_line(0x41)
+     854                            .dwattr $C$DW$T$41, DW_AT_decl_column(0x1a)
+     855                    
+     856                    $C$DW$T$10      .dwtag  DW_TAG_base_type
+     857                            .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   18
+
+     858                            .dwattr $C$DW$T$10, DW_AT_name("int")
+     859                            .dwattr $C$DW$T$10, DW_AT_byte_size(0x04)
+     860                    
+     861                    $C$DW$T$42      .dwtag  DW_TAG_typedef
+     862                            .dwattr $C$DW$T$42, DW_AT_name("int32_t")
+     863                            .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$10)
+     864                            .dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+     865                            .dwattr $C$DW$T$42, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     866                            .dwattr $C$DW$T$42, DW_AT_decl_line(0x2e)
+     867                            .dwattr $C$DW$T$42, DW_AT_decl_column(0x1d)
+     868                    
+     869                    $C$DW$T$43      .dwtag  DW_TAG_typedef
+     870                            .dwattr $C$DW$T$43, DW_AT_name("int_fast16_t")
+     871                            .dwattr $C$DW$T$43, DW_AT_type(*$C$DW$T$42)
+     872                            .dwattr $C$DW$T$43, DW_AT_language(DW_LANG_C)
+     873                            .dwattr $C$DW$T$43, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     874                            .dwattr $C$DW$T$43, DW_AT_decl_line(0x47)
+     875                            .dwattr $C$DW$T$43, DW_AT_decl_column(0x17)
+     876                    
+     877                    $C$DW$T$44      .dwtag  DW_TAG_typedef
+     878                            .dwattr $C$DW$T$44, DW_AT_name("int_fast32_t")
+     879                            .dwattr $C$DW$T$44, DW_AT_type(*$C$DW$T$42)
+     880                            .dwattr $C$DW$T$44, DW_AT_language(DW_LANG_C)
+     881                            .dwattr $C$DW$T$44, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     882                            .dwattr $C$DW$T$44, DW_AT_decl_line(0x4a)
+     883                            .dwattr $C$DW$T$44, DW_AT_decl_column(0x17)
+     884                    
+     885                    $C$DW$T$45      .dwtag  DW_TAG_typedef
+     886                            .dwattr $C$DW$T$45, DW_AT_name("int_fast8_t")
+     887                            .dwattr $C$DW$T$45, DW_AT_type(*$C$DW$T$42)
+     888                            .dwattr $C$DW$T$45, DW_AT_language(DW_LANG_C)
+     889                            .dwattr $C$DW$T$45, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     890                            .dwattr $C$DW$T$45, DW_AT_decl_line(0x45)
+     891                            .dwattr $C$DW$T$45, DW_AT_decl_column(0x17)
+     892                    
+     893                    $C$DW$T$46      .dwtag  DW_TAG_typedef
+     894                            .dwattr $C$DW$T$46, DW_AT_name("int_least32_t")
+     895                            .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$T$42)
+     896                            .dwattr $C$DW$T$46, DW_AT_language(DW_LANG_C)
+     897                            .dwattr $C$DW$T$46, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     898                            .dwattr $C$DW$T$46, DW_AT_decl_line(0x3c)
+     899                            .dwattr $C$DW$T$46, DW_AT_decl_column(0x17)
+     900                    
+     901                    $C$DW$T$47      .dwtag  DW_TAG_typedef
+     902                            .dwattr $C$DW$T$47, DW_AT_name("intptr_t")
+     903                            .dwattr $C$DW$T$47, DW_AT_type(*$C$DW$T$10)
+     904                            .dwattr $C$DW$T$47, DW_AT_language(DW_LANG_C)
+     905                            .dwattr $C$DW$T$47, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     906                            .dwattr $C$DW$T$47, DW_AT_decl_line(0x52)
+     907                            .dwattr $C$DW$T$47, DW_AT_decl_column(0x1a)
+     908                    
+     909                    $C$DW$T$48      .dwtag  DW_TAG_typedef
+     910                            .dwattr $C$DW$T$48, DW_AT_name("ptrdiff_t")
+     911                            .dwattr $C$DW$T$48, DW_AT_type(*$C$DW$T$10)
+     912                            .dwattr $C$DW$T$48, DW_AT_language(DW_LANG_C)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   19
+
+     913                            .dwattr $C$DW$T$48, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     914                            .dwattr $C$DW$T$48, DW_AT_decl_line(0x36)
+     915                            .dwattr $C$DW$T$48, DW_AT_decl_column(0x1c)
+     916                    
+     917                    $C$DW$T$11      .dwtag  DW_TAG_base_type
+     918                            .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     919                            .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     920                            .dwattr $C$DW$T$11, DW_AT_byte_size(0x04)
+     921                    
+     922                    $C$DW$T$49      .dwtag  DW_TAG_typedef
+     923                            .dwattr $C$DW$T$49, DW_AT_name("size_t")
+     924                            .dwattr $C$DW$T$49, DW_AT_type(*$C$DW$T$11)
+     925                            .dwattr $C$DW$T$49, DW_AT_language(DW_LANG_C)
+     926                            .dwattr $C$DW$T$49, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     927                            .dwattr $C$DW$T$49, DW_AT_decl_line(0x3a)
+     928                            .dwattr $C$DW$T$49, DW_AT_decl_column(0x19)
+     929                    
+     930                    $C$DW$T$50      .dwtag  DW_TAG_typedef
+     931                            .dwattr $C$DW$T$50, DW_AT_name("uint32_t")
+     932                            .dwattr $C$DW$T$50, DW_AT_type(*$C$DW$T$11)
+     933                            .dwattr $C$DW$T$50, DW_AT_language(DW_LANG_C)
+     934                            .dwattr $C$DW$T$50, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     935                            .dwattr $C$DW$T$50, DW_AT_decl_line(0x2f)
+     936                            .dwattr $C$DW$T$50, DW_AT_decl_column(0x1c)
+     937                    
+     938                    $C$DW$T$53      .dwtag  DW_TAG_typedef
+     939                            .dwattr $C$DW$T$53, DW_AT_name("uint_fast16_t")
+     940                            .dwattr $C$DW$T$53, DW_AT_type(*$C$DW$T$50)
+     941                            .dwattr $C$DW$T$53, DW_AT_language(DW_LANG_C)
+     942                            .dwattr $C$DW$T$53, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     943                            .dwattr $C$DW$T$53, DW_AT_decl_line(0x48)
+     944                            .dwattr $C$DW$T$53, DW_AT_decl_column(0x16)
+     945                    
+     946                    $C$DW$T$54      .dwtag  DW_TAG_typedef
+     947                            .dwattr $C$DW$T$54, DW_AT_name("uint_fast32_t")
+     948                            .dwattr $C$DW$T$54, DW_AT_type(*$C$DW$T$50)
+     949                            .dwattr $C$DW$T$54, DW_AT_language(DW_LANG_C)
+     950                            .dwattr $C$DW$T$54, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     951                            .dwattr $C$DW$T$54, DW_AT_decl_line(0x4b)
+     952                            .dwattr $C$DW$T$54, DW_AT_decl_column(0x16)
+     953                    
+     954                    $C$DW$T$55      .dwtag  DW_TAG_typedef
+     955                            .dwattr $C$DW$T$55, DW_AT_name("uint_fast8_t")
+     956                            .dwattr $C$DW$T$55, DW_AT_type(*$C$DW$T$50)
+     957                            .dwattr $C$DW$T$55, DW_AT_language(DW_LANG_C)
+     958                            .dwattr $C$DW$T$55, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     959                            .dwattr $C$DW$T$55, DW_AT_decl_line(0x46)
+     960                            .dwattr $C$DW$T$55, DW_AT_decl_column(0x16)
+     961                    
+     962                    $C$DW$T$56      .dwtag  DW_TAG_typedef
+     963                            .dwattr $C$DW$T$56, DW_AT_name("uint_least32_t")
+     964                            .dwattr $C$DW$T$56, DW_AT_type(*$C$DW$T$50)
+     965                            .dwattr $C$DW$T$56, DW_AT_language(DW_LANG_C)
+     966                            .dwattr $C$DW$T$56, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     967                            .dwattr $C$DW$T$56, DW_AT_decl_line(0x3d)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   20
+
+     968                            .dwattr $C$DW$T$56, DW_AT_decl_column(0x16)
+     969                    
+     970                    $C$DW$T$57      .dwtag  DW_TAG_typedef
+     971                            .dwattr $C$DW$T$57, DW_AT_name("uintptr_t")
+     972                            .dwattr $C$DW$T$57, DW_AT_type(*$C$DW$T$11)
+     973                            .dwattr $C$DW$T$57, DW_AT_language(DW_LANG_C)
+     974                            .dwattr $C$DW$T$57, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     975                            .dwattr $C$DW$T$57, DW_AT_decl_line(0x53)
+     976                            .dwattr $C$DW$T$57, DW_AT_decl_column(0x1a)
+     977                    
+     978                    $C$DW$T$12      .dwtag  DW_TAG_base_type
+     979                            .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     980                            .dwattr $C$DW$T$12, DW_AT_name("long")
+     981                            .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+     982                    
+     983                    $C$DW$T$13      .dwtag  DW_TAG_base_type
+     984                            .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     985                            .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     986                            .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+     987                    
+     988                    $C$DW$T$14      .dwtag  DW_TAG_base_type
+     989                            .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     990                            .dwattr $C$DW$T$14, DW_AT_name("long long")
+     991                            .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+     992                    
+     993                    $C$DW$T$60      .dwtag  DW_TAG_typedef
+     994                            .dwattr $C$DW$T$60, DW_AT_name("int64_t")
+     995                            .dwattr $C$DW$T$60, DW_AT_type(*$C$DW$T$14)
+     996                            .dwattr $C$DW$T$60, DW_AT_language(DW_LANG_C)
+     997                            .dwattr $C$DW$T$60, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+     998                            .dwattr $C$DW$T$60, DW_AT_decl_line(0x32)
+     999                            .dwattr $C$DW$T$60, DW_AT_decl_column(0x21)
+    1000                    
+    1001                    $C$DW$T$61      .dwtag  DW_TAG_typedef
+    1002                            .dwattr $C$DW$T$61, DW_AT_name("int_fast64_t")
+    1003                            .dwattr $C$DW$T$61, DW_AT_type(*$C$DW$T$60)
+    1004                            .dwattr $C$DW$T$61, DW_AT_language(DW_LANG_C)
+    1005                            .dwattr $C$DW$T$61, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1006                            .dwattr $C$DW$T$61, DW_AT_decl_line(0x4e)
+    1007                            .dwattr $C$DW$T$61, DW_AT_decl_column(0x17)
+    1008                    
+    1009                    $C$DW$T$62      .dwtag  DW_TAG_typedef
+    1010                            .dwattr $C$DW$T$62, DW_AT_name("int_least64_t")
+    1011                            .dwattr $C$DW$T$62, DW_AT_type(*$C$DW$T$60)
+    1012                            .dwattr $C$DW$T$62, DW_AT_language(DW_LANG_C)
+    1013                            .dwattr $C$DW$T$62, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1014                            .dwattr $C$DW$T$62, DW_AT_decl_line(0x40)
+    1015                            .dwattr $C$DW$T$62, DW_AT_decl_column(0x17)
+    1016                    
+    1017                    $C$DW$T$63      .dwtag  DW_TAG_typedef
+    1018                            .dwattr $C$DW$T$63, DW_AT_name("intmax_t")
+    1019                            .dwattr $C$DW$T$63, DW_AT_type(*$C$DW$T$14)
+    1020                            .dwattr $C$DW$T$63, DW_AT_language(DW_LANG_C)
+    1021                            .dwattr $C$DW$T$63, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1022                            .dwattr $C$DW$T$63, DW_AT_decl_line(0x56)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   21
+
+    1023                            .dwattr $C$DW$T$63, DW_AT_decl_column(0x20)
+    1024                    
+    1025                    $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1026                            .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1027                            .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1028                            .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1029                    
+    1030                    $C$DW$T$64      .dwtag  DW_TAG_typedef
+    1031                            .dwattr $C$DW$T$64, DW_AT_name("uint64_t")
+    1032                            .dwattr $C$DW$T$64, DW_AT_type(*$C$DW$T$15)
+    1033                            .dwattr $C$DW$T$64, DW_AT_language(DW_LANG_C)
+    1034                            .dwattr $C$DW$T$64, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1035                            .dwattr $C$DW$T$64, DW_AT_decl_line(0x33)
+    1036                            .dwattr $C$DW$T$64, DW_AT_decl_column(0x20)
+    1037                    
+    1038                    $C$DW$T$65      .dwtag  DW_TAG_typedef
+    1039                            .dwattr $C$DW$T$65, DW_AT_name("uint_fast64_t")
+    1040                            .dwattr $C$DW$T$65, DW_AT_type(*$C$DW$T$64)
+    1041                            .dwattr $C$DW$T$65, DW_AT_language(DW_LANG_C)
+    1042                            .dwattr $C$DW$T$65, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1043                            .dwattr $C$DW$T$65, DW_AT_decl_line(0x4f)
+    1044                            .dwattr $C$DW$T$65, DW_AT_decl_column(0x16)
+    1045                    
+    1046                    $C$DW$T$66      .dwtag  DW_TAG_typedef
+    1047                            .dwattr $C$DW$T$66, DW_AT_name("uint_least64_t")
+    1048                            .dwattr $C$DW$T$66, DW_AT_type(*$C$DW$T$64)
+    1049                            .dwattr $C$DW$T$66, DW_AT_language(DW_LANG_C)
+    1050                            .dwattr $C$DW$T$66, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1051                            .dwattr $C$DW$T$66, DW_AT_decl_line(0x41)
+    1052                            .dwattr $C$DW$T$66, DW_AT_decl_column(0x16)
+    1053                    
+    1054                    $C$DW$T$67      .dwtag  DW_TAG_typedef
+    1055                            .dwattr $C$DW$T$67, DW_AT_name("uintmax_t")
+    1056                            .dwattr $C$DW$T$67, DW_AT_type(*$C$DW$T$15)
+    1057                            .dwattr $C$DW$T$67, DW_AT_language(DW_LANG_C)
+    1058                            .dwattr $C$DW$T$67, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1059                            .dwattr $C$DW$T$67, DW_AT_decl_line(0x57)
+    1060                            .dwattr $C$DW$T$67, DW_AT_decl_column(0x20)
+    1061                    
+    1062                    $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1063                            .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1064                            .dwattr $C$DW$T$16, DW_AT_name("float")
+    1065                            .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1066                    
+    1067                    $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1068                            .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1069                            .dwattr $C$DW$T$17, DW_AT_name("double")
+    1070                            .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1071                    
+    1072                    $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1073                            .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1074                            .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1075                            .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1076                    
+    1077                    $C$DW$T$27      .dwtag  DW_TAG_const_type
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   22
+
+    1078                            .dwattr $C$DW$T$27, DW_AT_type(*$C$DW$T$6)
+    1079                    
+    1080                    $C$DW$T$28      .dwtag  DW_TAG_pointer_type
+    1081                            .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$27)
+    1082                            .dwattr $C$DW$T$28, DW_AT_address_class(0x20)
+    1083                    
+    1084                    $C$DW$T$76      .dwtag  DW_TAG_base_type
+    1085                            .dwattr $C$DW$T$76, DW_AT_encoding(DW_ATE_unsigned_char)
+    1086                            .dwattr $C$DW$T$76, DW_AT_name("unsigned char")
+    1087                            .dwattr $C$DW$T$76, DW_AT_byte_size(0x01)
+    1088                    
+    1089                    
+    1090                    $C$DW$T$19      .dwtag  DW_TAG_structure_type
+    1091                            .dwattr $C$DW$T$19, DW_AT_name("__va_list")
+    1092                            .dwattr $C$DW$T$19, DW_AT_byte_size(0x04)
+    1093                    $C$DW$40        .dwtag  DW_TAG_member
+    1094                            .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$3)
+    1095                            .dwattr $C$DW$40, DW_AT_name("__ap")
+    1096                            .dwattr $C$DW$40, DW_AT_TI_symbol_name("__ap")
+    1097                            .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1098                            .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
+    1099                            .dwattr $C$DW$40, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.1.
+    1100                            .dwattr $C$DW$40, DW_AT_decl_line(0x38)
+    1101                            .dwattr $C$DW$40, DW_AT_decl_column(0x0c)
+    1102                    
+    1103                            .dwattr $C$DW$T$19, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1104                            .dwattr $C$DW$T$19, DW_AT_decl_line(0x37)
+    1105                            .dwattr $C$DW$T$19, DW_AT_decl_column(0x10)
+    1106                            .dwendtag $C$DW$T$19
+    1107                    
+    1108                    $C$DW$T$77      .dwtag  DW_TAG_typedef
+    1109                            .dwattr $C$DW$T$77, DW_AT_name("va_list")
+    1110                            .dwattr $C$DW$T$77, DW_AT_type(*$C$DW$T$19)
+    1111                            .dwattr $C$DW$T$77, DW_AT_language(DW_LANG_C)
+    1112                            .dwattr $C$DW$T$77, DW_AT_decl_file("C:/TI_CodeComposer/ccsv6/tools/compiler/ti-cgt-arm_15.12.
+    1113                            .dwattr $C$DW$T$77, DW_AT_decl_line(0x39)
+    1114                            .dwattr $C$DW$T$77, DW_AT_decl_column(0x03)
+    1115                    
+    1116                    
+    1117                    $C$DW$T$78      .dwtag  DW_TAG_enumeration_type
+    1118                            .dwattr $C$DW$T$78, DW_AT_name("state")
+    1119                            .dwattr $C$DW$T$78, DW_AT_byte_size(0x01)
+    1120                    $C$DW$41        .dwtag  DW_TAG_enumerator
+    1121                            .dwattr $C$DW$41, DW_AT_name("notPushed")
+    1122                            .dwattr $C$DW$41, DW_AT_const_value(0x00)
+    1123                            .dwattr $C$DW$41, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+    1124                            .dwattr $C$DW$41, DW_AT_decl_line(0x1b)
+    1125                            .dwattr $C$DW$41, DW_AT_decl_column(0x0d)
+    1126                    
+    1127                    $C$DW$42        .dwtag  DW_TAG_enumerator
+    1128                            .dwattr $C$DW$42, DW_AT_name("debounce")
+    1129                            .dwattr $C$DW$42, DW_AT_const_value(0x01)
+    1130                            .dwattr $C$DW$42, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+    1131                            .dwattr $C$DW$42, DW_AT_decl_line(0x1b)
+    1132                            .dwattr $C$DW$42, DW_AT_decl_column(0x18)
+TI ARM Assembler PC v15.12.1 Tue Sep 27 14:52:54 2016
+
+Tools Copyright (c) 1996-2015 Texas Instruments Incorporated
+Task_ButtonPress.asm                                                 PAGE   23
+
+    1133                    
+    1134                    $C$DW$43        .dwtag  DW_TAG_enumerator
+    1135                            .dwattr $C$DW$43, DW_AT_name("pushed")
+    1136                            .dwattr $C$DW$43, DW_AT_const_value(0x02)
+    1137                            .dwattr $C$DW$43, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+    1138                            .dwattr $C$DW$43, DW_AT_decl_line(0x1b)
+    1139                            .dwattr $C$DW$43, DW_AT_decl_column(0x22)
+    1140                    
+    1141                    $C$DW$44        .dwtag  DW_TAG_enumerator
+    1142                            .dwattr $C$DW$44, DW_AT_name("released")
+    1143                            .dwattr $C$DW$44, DW_AT_const_value(0x03)
+    1144                            .dwattr $C$DW$44, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+    1145                            .dwattr $C$DW$44, DW_AT_decl_line(0x1b)
+    1146                            .dwattr $C$DW$44, DW_AT_decl_column(0x2a)
+    1147                    
+    1148                            .dwattr $C$DW$T$78, DW_AT_decl_file("../Tasks/Task_ButtonPress.c")
+    1149                            .dwattr $C$DW$T$78, DW_AT_decl_line(0x1b)
+    1150                            .dwattr $C$DW$T$78, DW_AT_decl_column(0x06)
+    1151                            .dwendtag $C$DW$T$78
+    1152                    
+    1153                            .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1154                    
+    1155                    ;***************************************************************
+    1156                    ;* DWARF CIE ENTRIES                                           *
+    1157                    ;***************************************************************
+    1158                    
+    1159                    $C$DW$CIE       .dwcie 14
+    1160                            .dwcfi  cfa_register, 13
+    1161                            .dwcfi  cfa_offset, 0
+    1162                            .dwcfi  undefined, 0
+    1163                            .dwcfi  undefined, 1
+    1164                            .dwcfi  undefined, 2
+    1165                            .dwcfi  undefined, 3
+    1166                            .dwcfi  same_value, 4
+    1167                            .dwcfi  same_value, 5
+    1168                            .dwcfi  same_value, 6
+    1169                            .dwcfi  same_value, 7
+    1170                            .dwcfi  same_value, 8
+    1171                            .dwcfi  same_value, 9
+    1172                            .dwcfi  same_value, 10
+    1173                            .dwcfi  same_value, 11
+    1174                            .dwcfi  undefined, 12
+    1175                            .dwcfi  undefined, 13
+    1176                            .dwcfi  undefined, 14
+    1177                            .dwcfi  undefined, 14
+    1178                            .dwcfi  undefined, 7
+    1179                            .dwendentry
+    1180                            .dwendtag $C$DW$CU
+    1181                    
+
+--------------------------
+Thumb2 Statistics
+--------------------------
+Number of Thumb2 ins converted to Thumb = 0 (0%)
+Number of Thumb ins in input = 173 (89%)
+Number of Thumb2 ins encoded as Thumb2 = 21 (100%)
+Number of Thumb2 ins converted to 2 OPND Thumb = 5
+
+
+No Assembly Errors, No Assembly Warnings
